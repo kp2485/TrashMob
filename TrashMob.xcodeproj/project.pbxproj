@@ -13,6 +13,8 @@
 		D6F980F92815D4830073088D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F980F82815D4830073088D /* Preview Assets.xcassets */; };
 		D6F980FB2815D4830073088D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F980FA2815D4830073088D /* Persistence.swift */; };
 		D6F980FE2815D4830073088D /* TrashMob.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6F980FC2815D4830073088D /* TrashMob.xcdatamodeld */; };
+		D6F98109281728890073088D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F98108281728890073088D /* CloudKit.framework */; };
+		D6F9810B28172FFA0073088D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9810A28172FFA0073088D /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,9 @@
 		D6F980F82815D4830073088D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D6F980FA2815D4830073088D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D6F980FD2815D4830073088D /* TrashMob.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrashMob.xcdatamodel; sourceTree = "<group>"; };
+		D6F98106281727180073088D /* TrashMob.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrashMob.entitlements; sourceTree = "<group>"; };
+		D6F98108281728890073088D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		D6F9810A28172FFA0073088D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F98109281728890073088D /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +47,7 @@
 			children = (
 				D6F980F02815D4820073088D /* TrashMob */,
 				D6F980EF2815D4820073088D /* Products */,
+				D6F98107281728890073088D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,8 +62,11 @@
 		D6F980F02815D4820073088D /* TrashMob */ = {
 			isa = PBXGroup;
 			children = (
+				D6F98106281727180073088D /* TrashMob.entitlements */,
+				D6F981042815D7670073088D /* Core */,
 				D6F980F12815D4820073088D /* TrashMobApp.swift */,
 				D6F980F32815D4820073088D /* ContentView.swift */,
+				D6F9810A28172FFA0073088D /* LoginView.swift */,
 				D6F980F52815D4830073088D /* Assets.xcassets */,
 				D6F980FA2815D4830073088D /* Persistence.swift */,
 				D6F980FC2815D4830073088D /* TrashMob.xcdatamodeld */,
@@ -71,6 +81,29 @@
 				D6F980F82815D4830073088D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D6F981042815D7670073088D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D6F981052815D7790073088D /* data */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D6F981052815D7790073088D /* data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		D6F98107281728890073088D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6F98108281728890073088D /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +179,7 @@
 				D6F980FB2815D4830073088D /* Persistence.swift in Sources */,
 				D6F980FE2815D4830073088D /* TrashMob.xcdatamodeld in Sources */,
 				D6F980F42815D4820073088D /* ContentView.swift in Sources */,
+				D6F9810B28172FFA0073088D /* LoginView.swift in Sources */,
 				D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +306,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TrashMob/TrashMob.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TrashMob/Preview Content\"";
@@ -301,6 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TrashMob/TrashMob.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TrashMob/Preview Content\"";
