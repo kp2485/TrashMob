@@ -48,7 +48,7 @@ class CloudKitCRUDViewModel: ObservableObject {
     func fetchMobs() {
         
         let predicate = NSPredicate(value: true)
-//        let predicate = NSPredicate(format: "name = %@", argumentArray: ["tagName"])
+        //        let predicate = NSPredicate(format: "name = %@", argumentArray: ["elementToBeFiltered"])
         let query = CKQuery(recordType: "Mobs", predicate: predicate)
         query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         let queryOperation = CKQueryOperation(query: query)
@@ -56,9 +56,8 @@ class CloudKitCRUDViewModel: ObservableObject {
         
         var returnedMobs: [MobModel] = []
         
-        
         if #available(iOS 15.0, *) {
-                queryOperation.recordMatchedBlock = { (returnedRecordID, returnedResult) in
+            queryOperation.recordMatchedBlock = { (returnedRecordID, returnedResult) in
                 switch returnedResult {
                 case .success(let record):
                     guard let name = record["name"] as? String else { return }
@@ -66,13 +65,13 @@ class CloudKitCRUDViewModel: ObservableObject {
                 case .failure(let error):
                     print("Error recordMatchedBlock: \(error)")
                 }
-                }
-            } else {
-                queryOperation.recordFetchedBlock = { (returnedRecord) in
-                    guard let name = returnedRecord["name"] as? String else { return }
-                    returnedMobs.append(MobModel(name: name, record: returnedRecord))
-                }
             }
+        } else {
+            queryOperation.recordFetchedBlock = { (returnedRecord) in
+                guard let name = returnedRecord["name"] as? String else { return }
+                returnedMobs.append(MobModel(name: name, record: returnedRecord))
+            }
+        }
         
         
         if #available(iOS 15.0, *) {
@@ -91,7 +90,6 @@ class CloudKitCRUDViewModel: ObservableObject {
                 }
             }
         }
-        
         
         addOperation(operation: queryOperation)
     }
@@ -117,7 +115,6 @@ class CloudKitCRUDViewModel: ObservableObject {
             }
         }
     }
-    
 }
 
 struct CloudKitCRUDView: View {
