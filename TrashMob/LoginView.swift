@@ -10,11 +10,15 @@ import CloudKit
 
 class LoginViewModel: ObservableObject {
     
+    @Published var permissionStatus: Bool = false
     @Published var isSignedIntoiCloud: Bool = false
     @Published var error: String = ""
+    @Published var userName: String = ""
     
     init() {
         getiCloudStatus()
+        requestPermission()
+        fetchiCloudUserID()
     }
     
     private func getiCloudStatus() {
@@ -43,6 +47,34 @@ class LoginViewModel: ObservableObject {
         case iCloudAccountUnknown
     }
     
+    func requestPermission() {
+        CKContainer.default().requestApplicationPermission([.userDiscoverability]) { [weak self] returnedStatus, returnedError in
+            DispatchQueue.main.async {
+                if returnedStatus == .granted {
+                    self?.permissionStatus = true
+                }
+            }
+        }
+    }
+    
+    func fetchiCloudUserID() {
+        CKContainer.default().fetchUserRecordID { [weak self] returnedID, returnedError in
+            if let id  = returnedID {
+                self?.discoveriCloudUser(id: id)
+            }
+        }
+    }
+    
+    func discoveriCloudUser(id: CKRecord.ID) {
+        CKContainer.default().discoverUserIdentity(withUserRecordID: id) { [weak self] returnedIdentity, returnedError in
+            DispatchQueue.main.async {
+                if let name = returnedIdentity?.nameComponents?.givenName {
+                    self?.userName = name
+                }
+            }
+        }
+    }
+    
 }
 
 struct LoginView: View {
@@ -53,6 +85,8 @@ struct LoginView: View {
         VStack {
             Text("IS SIGNED IN: \(vm.isSignedIntoiCloud.description.uppercased())")
             Text(vm.error)
+            Text("Permission: \(vm.permissionStatus.description.uppercased())")
+            Text("NAME: \(vm.userName)")
         }
     }
 }

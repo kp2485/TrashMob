@@ -15,6 +15,7 @@
 		D6F980FE2815D4830073088D /* TrashMob.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6F980FC2815D4830073088D /* TrashMob.xcdatamodeld */; };
 		D6F98109281728890073088D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F98108281728890073088D /* CloudKit.framework */; };
 		D6F9810B28172FFA0073088D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9810A28172FFA0073088D /* LoginView.swift */; };
+		D6F9810D28185BD00073088D /* CloudKitCRUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9810C28185BD00073088D /* CloudKitCRUDView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D6F98106281727180073088D /* TrashMob.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrashMob.entitlements; sourceTree = "<group>"; };
 		D6F98108281728890073088D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D6F9810A28172FFA0073088D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D6F9810C28185BD00073088D /* CloudKitCRUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitCRUDView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				D6F980F12815D4820073088D /* TrashMobApp.swift */,
 				D6F980F32815D4820073088D /* ContentView.swift */,
 				D6F9810A28172FFA0073088D /* LoginView.swift */,
+				D6F9810C28185BD00073088D /* CloudKitCRUDView.swift */,
 				D6F980F52815D4830073088D /* Assets.xcassets */,
 				D6F980FA2815D4830073088D /* Persistence.swift */,
 				D6F980FC2815D4830073088D /* TrashMob.xcdatamodeld */,
@@ -179,6 +182,7 @@
 				D6F980FB2815D4830073088D /* Persistence.swift in Sources */,
 				D6F980FE2815D4830073088D /* TrashMob.xcdatamodeld in Sources */,
 				D6F980F42815D4820073088D /* ContentView.swift in Sources */,
+				D6F9810D28185BD00073088D /* CloudKitCRUDView.swift in Sources */,
 				D6F9810B28172FFA0073088D /* LoginView.swift in Sources */,
 				D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */,
 			);
