@@ -73,7 +73,6 @@ class CloudKitCRUDViewModel: ObservableObject {
             }
         }
         
-        
         if #available(iOS 15.0, *) {
             queryOperation.queryResultBlock = { [weak self] returnedResult in
                 print("RETURNED queryResultBlock: \(returnedResult)")

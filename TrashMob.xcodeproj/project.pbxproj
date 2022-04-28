@@ -16,6 +16,12 @@
 		D6F98109281728890073088D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F98108281728890073088D /* CloudKit.framework */; };
 		D6F9810B28172FFA0073088D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9810A28172FFA0073088D /* LoginView.swift */; };
 		D6F9810D28185BD00073088D /* CloudKitCRUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9810C28185BD00073088D /* CloudKitCRUDView.swift */; };
+		D6F98110281B1C280073088D /* CameraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9810F281B1C280073088D /* CameraError.swift */; };
+		D6F98112281B1C700073088D /* CGImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98111281B1C700073088D /* CGImageExtension.swift */; };
+		D6F98114281B1CC60073088D /* TakePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98113281B1CC60073088D /* TakePictureView.swift */; };
+		D6F98116281B1D290073088D /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98115281B1D290073088D /* ControlView.swift */; };
+		D6F98118281B1D790073088D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98117281B1D790073088D /* ErrorView.swift */; };
+		D6F9811A281B1E100073088D /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98119281B1E100073088D /* ToggleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		D6F98108281728890073088D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D6F9810A28172FFA0073088D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D6F9810C28185BD00073088D /* CloudKitCRUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitCRUDView.swift; sourceTree = "<group>"; };
+		D6F9810F281B1C280073088D /* CameraError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraError.swift; sourceTree = "<group>"; };
+		D6F98111281B1C700073088D /* CGImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImageExtension.swift; sourceTree = "<group>"; };
+		D6F98113281B1CC60073088D /* TakePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureView.swift; sourceTree = "<group>"; };
+		D6F98115281B1D290073088D /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
+		D6F98117281B1D790073088D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		D6F98119281B1E100073088D /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +82,7 @@
 				D6F980F32815D4820073088D /* ContentView.swift */,
 				D6F9810A28172FFA0073088D /* LoginView.swift */,
 				D6F9810C28185BD00073088D /* CloudKitCRUDView.swift */,
+				D6F9810E281B1BD40073088D /* TakePicture */,
 				D6F980F52815D4830073088D /* Assets.xcassets */,
 				D6F980FA2815D4830073088D /* Persistence.swift */,
 				D6F980FC2815D4830073088D /* TrashMob.xcdatamodeld */,
@@ -107,6 +120,19 @@
 				D6F98108281728890073088D /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6F9810E281B1BD40073088D /* TakePicture */ = {
+			isa = PBXGroup;
+			children = (
+				D6F9810F281B1C280073088D /* CameraError.swift */,
+				D6F98111281B1C700073088D /* CGImageExtension.swift */,
+				D6F98113281B1CC60073088D /* TakePictureView.swift */,
+				D6F98115281B1D290073088D /* ControlView.swift */,
+				D6F98117281B1D790073088D /* ErrorView.swift */,
+				D6F98119281B1E100073088D /* ToggleButton.swift */,
+			);
+			path = TakePicture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,9 +208,15 @@
 				D6F980FB2815D4830073088D /* Persistence.swift in Sources */,
 				D6F980FE2815D4830073088D /* TrashMob.xcdatamodeld in Sources */,
 				D6F980F42815D4820073088D /* ContentView.swift in Sources */,
+				D6F98112281B1C700073088D /* CGImageExtension.swift in Sources */,
+				D6F98116281B1D290073088D /* ControlView.swift in Sources */,
 				D6F9810D28185BD00073088D /* CloudKitCRUDView.swift in Sources */,
 				D6F9810B28172FFA0073088D /* LoginView.swift in Sources */,
+				D6F9811A281B1E100073088D /* ToggleButton.swift in Sources */,
 				D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */,
+				D6F98110281B1C280073088D /* CameraError.swift in Sources */,
+				D6F98114281B1CC60073088D /* TakePictureView.swift in Sources */,
+				D6F98118281B1D790073088D /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
