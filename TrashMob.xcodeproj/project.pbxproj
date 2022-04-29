@@ -22,6 +22,7 @@
 		D6F98116281B1D290073088D /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98115281B1D290073088D /* ControlView.swift */; };
 		D6F98118281B1D790073088D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98117281B1D790073088D /* ErrorView.swift */; };
 		D6F9811A281B1E100073088D /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98119281B1E100073088D /* ToggleButton.swift */; };
+		D6F9811E281B1F010073088D /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9811D281B1F010073088D /* FrameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		D6F98115281B1D290073088D /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		D6F98117281B1D790073088D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		D6F98119281B1E100073088D /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
+		D6F9811D281B1F010073088D /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				D6F98115281B1D290073088D /* ControlView.swift */,
 				D6F98117281B1D790073088D /* ErrorView.swift */,
 				D6F98119281B1E100073088D /* ToggleButton.swift */,
+				D6F9811D281B1F010073088D /* FrameView.swift */,
 			);
 			path = TakePicture;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			files = (
 				D6F980FB2815D4830073088D /* Persistence.swift in Sources */,
 				D6F980FE2815D4830073088D /* TrashMob.xcdatamodeld in Sources */,
+				D6F9811E281B1F010073088D /* FrameView.swift in Sources */,
 				D6F980F42815D4820073088D /* ContentView.swift in Sources */,
 				D6F98112281B1C700073088D /* CGImageExtension.swift in Sources */,
 				D6F98116281B1D290073088D /* ControlView.swift in Sources */,

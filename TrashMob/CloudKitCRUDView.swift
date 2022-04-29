@@ -76,7 +76,7 @@ class CloudKitCRUDViewModel: ObservableObject {
         if #available(iOS 15.0, *) {
             queryOperation.queryResultBlock = { [weak self] returnedResult in
                 print("RETURNED queryResultBlock: \(returnedResult)")
-                DispatchQueue.main.sync {
+                DispatchQueue.main.async {
                     self?.mobs = returnedMobs
                 }
                 
@@ -84,7 +84,7 @@ class CloudKitCRUDViewModel: ObservableObject {
         } else {
             queryOperation.queryCompletionBlock = { [weak self] (returnedCursor, returnedError) in
                 print("RETURNED queryCompletionBlock")
-                DispatchQueue.main.sync {
+                DispatchQueue.main.async {
                     self?.mobs = returnedMobs
                 }
             }
