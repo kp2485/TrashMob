@@ -16,5 +16,7 @@ struct RecyclingLocationView: View {
 struct RecyclingLocationView_Previews: PreviewProvider {
     static var previews: some View {
         RecyclingLocationView()
+            .padding()
+            .previewLayout(.sizeThatFits)
     }
 }

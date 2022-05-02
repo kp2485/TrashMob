@@ -16,5 +16,7 @@ struct RecyclingContactsView: View {
 struct RecyclingContactsView_Previews: PreviewProvider {
     static var previews: some View {
         RecyclingContactsView()
+            .padding()
+            .previewLayout(.sizeThatFits)
     }
 }

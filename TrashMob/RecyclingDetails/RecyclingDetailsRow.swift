@@ -16,5 +16,6 @@ struct RecyclingDetailsRow: View {
 struct RecyclingDetailsRow_Previews: PreviewProvider {
     static var previews: some View {
         RecyclingDetailsRow()
+            .previewLayout(.sizeThatFits)
     }
 }
