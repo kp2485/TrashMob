@@ -46,6 +46,8 @@
 		D6F981632820306B0073088D /* EmptyResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F981622820306B0073088D /* EmptyResultsView.swift */; };
 		D6F981652820317B0073088D /* SuggestionsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F981642820317B0073088D /* SuggestionsGrid.swift */; };
 		D6F98167282032030073088D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98166282032030073088D /* SearchView.swift */; };
+		D6F98169282033CE0073088D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98168282033CE0073088D /* MainView.swift */; };
+		D6F9816D282034A50073088D /* TrashMobsNearYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9816C282034A50073088D /* TrashMobsNearYouView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +92,8 @@
 		D6F981622820306B0073088D /* EmptyResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResultsView.swift; sourceTree = "<group>"; };
 		D6F981642820317B0073088D /* SuggestionsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsGrid.swift; sourceTree = "<group>"; };
 		D6F98166282032030073088D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		D6F98168282033CE0073088D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D6F9816C282034A50073088D /* TrashMobsNearYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobsNearYouView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 				D6F980F32815D4820073088D /* ContentView.swift */,
 				D6F981042815D7670073088D /* Core */,
 				D6F98138282016070073088D /* TrashMobDetails */,
+				D6F9816B2820344E0073088D /* TrashMobsNearYou */,
 				D6F9814228201B1A0073088D /* RecyclingDetails */,
 				D6F981522820262F0073088D /* RecyclingNearYou */,
 				D6F98156282027130073088D /* Search */,
@@ -136,6 +141,7 @@
 				D6F98137282014E40073088D /* CKLoginCRUD */,
 				D6F980F52815D4830073088D /* Assets.xcassets */,
 				D6F980F72815D4830073088D /* Preview Content */,
+				D6F98168282033CE0073088D /* MainView.swift */,
 			);
 			path = TrashMob;
 			sourceTree = "<group>";
@@ -351,6 +357,22 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		D6F9816B2820344E0073088D /* TrashMobsNearYou */ = {
+			isa = PBXGroup;
+			children = (
+				D6F9816E282035050073088D /* views */,
+			);
+			path = TrashMobsNearYou;
+			sourceTree = "<group>";
+		};
+		D6F9816E282035050073088D /* views */ = {
+			isa = PBXGroup;
+			children = (
+				D6F9816C282034A50073088D /* TrashMobsNearYouView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -431,6 +453,7 @@
 				D6F9814C28201BBF0073088D /* RecyclingContactLink.swift in Sources */,
 				D6F9814E28201BD40073088D /* RecyclingLocationView.swift in Sources */,
 				D6F9814628201B680073088D /* RecyclingDetailsRow.swift in Sources */,
+				D6F9816D282034A50073088D /* TrashMobsNearYouView.swift in Sources */,
 				D6F981632820306B0073088D /* EmptyResultsView.swift in Sources */,
 				D6F9812D282010700073088D /* User.swift in Sources */,
 				D6F9813F282016C80073088D /* TrashMobDetailCard.swift in Sources */,
@@ -445,6 +468,7 @@
 				D6F9810B28172FFA0073088D /* LoginView.swift in Sources */,
 				D6F98122282009B00073088D /* APIConstants.swift in Sources */,
 				D6F9811A281B1E100073088D /* ToggleButton.swift in Sources */,
+				D6F98169282033CE0073088D /* MainView.swift in Sources */,
 				D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */,
 				D6F9814828201B9E0073088D /* RecyclingDetailCard.swift in Sources */,
 				D6F98110281B1C280073088D /* CameraError.swift in Sources */,
