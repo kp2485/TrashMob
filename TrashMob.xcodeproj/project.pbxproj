@@ -28,6 +28,16 @@
 		D6F9812D282010700073088D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9812C282010700073088D /* User.swift */; };
 		D6F98130282010C40073088D /* AddressFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9812F282010C40073088D /* AddressFetcher.swift */; };
 		D6F98132282011BE0073088D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98131282011BE0073088D /* LocationManager.swift */; };
+		D6F9813B282016780073088D /* TrashMobDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9813A282016780073088D /* TrashMobDetailsView.swift */; };
+		D6F9813D282016A00073088D /* TrashMobDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9813C282016A00073088D /* TrashMobDetailRow.swift */; };
+		D6F9813F282016C80073088D /* TrashMobDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9813E282016C80073088D /* TrashMobDetailCard.swift */; };
+		D6F9814428201B430073088D /* RecyclingDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9814328201B430073088D /* RecyclingDetailsView.swift */; };
+		D6F9814628201B680073088D /* RecyclingDetailsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9814528201B680073088D /* RecyclingDetailsRow.swift */; };
+		D6F9814828201B9E0073088D /* RecyclingDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9814728201B9E0073088D /* RecyclingDetailCard.swift */; };
+		D6F9814A28201BAC0073088D /* RecyclingContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9814928201BAC0073088D /* RecyclingContactsView.swift */; };
+		D6F9814C28201BBF0073088D /* RecyclingContactLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9814B28201BBF0073088D /* RecyclingContactLink.swift */; };
+		D6F9814E28201BD40073088D /* RecyclingLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9814D28201BD40073088D /* RecyclingLocationView.swift */; };
+		D6F9815028201BEF0073088D /* RecyclingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9814F28201BEF0073088D /* RecyclingHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +64,16 @@
 		D6F9812C282010700073088D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D6F9812F282010C40073088D /* AddressFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressFetcher.swift; sourceTree = "<group>"; };
 		D6F98131282011BE0073088D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		D6F9813A282016780073088D /* TrashMobDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobDetailsView.swift; sourceTree = "<group>"; };
+		D6F9813C282016A00073088D /* TrashMobDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobDetailRow.swift; sourceTree = "<group>"; };
+		D6F9813E282016C80073088D /* TrashMobDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobDetailCard.swift; sourceTree = "<group>"; };
+		D6F9814328201B430073088D /* RecyclingDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingDetailsView.swift; sourceTree = "<group>"; };
+		D6F9814528201B680073088D /* RecyclingDetailsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingDetailsRow.swift; sourceTree = "<group>"; };
+		D6F9814728201B9E0073088D /* RecyclingDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingDetailCard.swift; sourceTree = "<group>"; };
+		D6F9814928201BAC0073088D /* RecyclingContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingContactsView.swift; sourceTree = "<group>"; };
+		D6F9814B28201BBF0073088D /* RecyclingContactLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingContactLink.swift; sourceTree = "<group>"; };
+		D6F9814D28201BD40073088D /* RecyclingLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingLocationView.swift; sourceTree = "<group>"; };
+		D6F9814F28201BEF0073088D /* RecyclingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,13 +108,14 @@
 		D6F980F02815D4820073088D /* TrashMob */ = {
 			isa = PBXGroup;
 			children = (
+				D6F9814228201B1A0073088D /* RecyclingDetails */,
 				D6F98106281727180073088D /* TrashMob.entitlements */,
-				D6F981042815D7670073088D /* Core */,
 				D6F980F12815D4820073088D /* TrashMobApp.swift */,
 				D6F980F32815D4820073088D /* ContentView.swift */,
-				D6F9810A28172FFA0073088D /* LoginView.swift */,
-				D6F9810C28185BD00073088D /* CloudKitCRUDView.swift */,
+				D6F981042815D7670073088D /* Core */,
+				D6F98138282016070073088D /* TrashMobDetails */,
 				D6F9810E281B1BD40073088D /* TakePicture */,
+				D6F98137282014E40073088D /* CKLoginCRUD */,
 				D6F980F52815D4830073088D /* Assets.xcassets */,
 				D6F980F72815D4830073088D /* Preview Content */,
 			);
@@ -170,6 +191,7 @@
 		D6F9812528200BAF0073088D /* model */ = {
 			isa = PBXGroup;
 			children = (
+				D6F98135282012880073088D /* mob */,
 				D6F9812B282010650073088D /* user */,
 				D6F9812828200F680073088D /* organization */,
 				D6F9812628200D130073088D /* recyclingLocations */,
@@ -207,6 +229,54 @@
 				D6F98131282011BE0073088D /* LocationManager.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		D6F98135282012880073088D /* mob */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mob;
+			sourceTree = "<group>";
+		};
+		D6F98137282014E40073088D /* CKLoginCRUD */ = {
+			isa = PBXGroup;
+			children = (
+				D6F9810A28172FFA0073088D /* LoginView.swift */,
+				D6F9810C28185BD00073088D /* CloudKitCRUDView.swift */,
+			);
+			path = CKLoginCRUD;
+			sourceTree = "<group>";
+		};
+		D6F98138282016070073088D /* TrashMobDetails */ = {
+			isa = PBXGroup;
+			children = (
+				D6F981392820165E0073088D /* views */,
+			);
+			path = TrashMobDetails;
+			sourceTree = "<group>";
+		};
+		D6F981392820165E0073088D /* views */ = {
+			isa = PBXGroup;
+			children = (
+				D6F9813A282016780073088D /* TrashMobDetailsView.swift */,
+				D6F9813C282016A00073088D /* TrashMobDetailRow.swift */,
+				D6F9813E282016C80073088D /* TrashMobDetailCard.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		D6F9814228201B1A0073088D /* RecyclingDetails */ = {
+			isa = PBXGroup;
+			children = (
+				D6F9814328201B430073088D /* RecyclingDetailsView.swift */,
+				D6F9814528201B680073088D /* RecyclingDetailsRow.swift */,
+				D6F9814728201B9E0073088D /* RecyclingDetailCard.swift */,
+				D6F9814928201BAC0073088D /* RecyclingContactsView.swift */,
+				D6F9814B28201BBF0073088D /* RecyclingContactLink.swift */,
+				D6F9814D28201BD40073088D /* RecyclingLocationView.swift */,
+				D6F9814F28201BEF0073088D /* RecyclingHeaderView.swift */,
+			);
+			path = RecyclingDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,22 +349,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F9813B282016780073088D /* TrashMobDetailsView.swift in Sources */,
 				D6F980FB2815D4830073088D /* Persistence.swift in Sources */,
 				D6F980FE2815D4830073088D /* TrashMob.xcdatamodeld in Sources */,
 				D6F9811E281B1F010073088D /* FrameView.swift in Sources */,
 				D6F980F42815D4820073088D /* ContentView.swift in Sources */,
+				D6F9814C28201BBF0073088D /* RecyclingContactLink.swift in Sources */,
+				D6F9814E28201BD40073088D /* RecyclingLocationView.swift in Sources */,
+				D6F9814628201B680073088D /* RecyclingDetailsRow.swift in Sources */,
 				D6F9812D282010700073088D /* User.swift in Sources */,
+				D6F9813F282016C80073088D /* TrashMobDetailCard.swift in Sources */,
 				D6F98112281B1C700073088D /* CGImageExtension.swift in Sources */,
+				D6F9814A28201BAC0073088D /* RecyclingContactsView.swift in Sources */,
 				D6F98130282010C40073088D /* AddressFetcher.swift in Sources */,
 				D6F98116281B1D290073088D /* ControlView.swift in Sources */,
 				D6F98132282011BE0073088D /* LocationManager.swift in Sources */,
 				D6F9810D28185BD00073088D /* CloudKitCRUDView.swift in Sources */,
+				D6F9815028201BEF0073088D /* RecyclingHeaderView.swift in Sources */,
 				D6F9810B28172FFA0073088D /* LoginView.swift in Sources */,
 				D6F98122282009B00073088D /* APIConstants.swift in Sources */,
 				D6F9811A281B1E100073088D /* ToggleButton.swift in Sources */,
 				D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */,
+				D6F9814828201B9E0073088D /* RecyclingDetailCard.swift in Sources */,
 				D6F98110281B1C280073088D /* CameraError.swift in Sources */,
 				D6F98114281B1CC60073088D /* TakePictureView.swift in Sources */,
+				D6F9814428201B430073088D /* RecyclingDetailsView.swift in Sources */,
+				D6F9813D282016A00073088D /* TrashMobDetailRow.swift in Sources */,
 				D6F9812A28200F850073088D /* Organization.swift in Sources */,
 				D6F98118281B1D790073088D /* ErrorView.swift in Sources */,
 			);
