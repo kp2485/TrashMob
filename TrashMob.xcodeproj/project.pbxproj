@@ -38,6 +38,11 @@
 		D6F9814C28201BBF0073088D /* RecyclingContactLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9814B28201BBF0073088D /* RecyclingContactLink.swift */; };
 		D6F9814E28201BD40073088D /* RecyclingLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9814D28201BD40073088D /* RecyclingLocationView.swift */; };
 		D6F9815028201BEF0073088D /* RecyclingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9814F28201BEF0073088D /* RecyclingHeaderView.swift */; };
+		D6F98155282026550073088D /* RecyclingNearYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98154282026550073088D /* RecyclingNearYouView.swift */; };
+		D6F9815A282028E00073088D /* TrashMobSearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98159282028E00073088D /* TrashMobSearchType.swift */; };
+		D6F9815C28202BD40073088D /* TrashMobSearchStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9815B28202BD40073088D /* TrashMobSearchStatus.swift */; };
+		D6F9815E28202D340073088D /* RecyclingSearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9815D28202D340073088D /* RecyclingSearchType.swift */; };
+		D6F9816128202F680073088D /* TrashMobTypeSuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9816028202F680073088D /* TrashMobTypeSuggestionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +79,11 @@
 		D6F9814B28201BBF0073088D /* RecyclingContactLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingContactLink.swift; sourceTree = "<group>"; };
 		D6F9814D28201BD40073088D /* RecyclingLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingLocationView.swift; sourceTree = "<group>"; };
 		D6F9814F28201BEF0073088D /* RecyclingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingHeaderView.swift; sourceTree = "<group>"; };
+		D6F98154282026550073088D /* RecyclingNearYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingNearYouView.swift; sourceTree = "<group>"; };
+		D6F98159282028E00073088D /* TrashMobSearchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobSearchType.swift; sourceTree = "<group>"; };
+		D6F9815B28202BD40073088D /* TrashMobSearchStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobSearchStatus.swift; sourceTree = "<group>"; };
+		D6F9815D28202D340073088D /* RecyclingSearchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingSearchType.swift; sourceTree = "<group>"; };
+		D6F9816028202F680073088D /* TrashMobTypeSuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobTypeSuggestionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +124,8 @@
 				D6F981042815D7670073088D /* Core */,
 				D6F98138282016070073088D /* TrashMobDetails */,
 				D6F9814228201B1A0073088D /* RecyclingDetails */,
+				D6F981522820262F0073088D /* RecyclingNearYou */,
+				D6F98156282027130073088D /* Search */,
 				D6F9810E281B1BD40073088D /* TakePicture */,
 				D6F98137282014E40073088D /* CKLoginCRUD */,
 				D6F980F52815D4830073088D /* Assets.xcassets */,
@@ -268,6 +280,14 @@
 		D6F9814228201B1A0073088D /* RecyclingDetails */ = {
 			isa = PBXGroup;
 			children = (
+				D6F98151282021A70073088D /* views */,
+			);
+			path = RecyclingDetails;
+			sourceTree = "<group>";
+		};
+		D6F98151282021A70073088D /* views */ = {
+			isa = PBXGroup;
+			children = (
 				D6F9814328201B430073088D /* RecyclingDetailsView.swift */,
 				D6F9814528201B680073088D /* RecyclingDetailsRow.swift */,
 				D6F9814728201B9E0073088D /* RecyclingDetailCard.swift */,
@@ -276,7 +296,50 @@
 				D6F9814D28201BD40073088D /* RecyclingLocationView.swift */,
 				D6F9814F28201BEF0073088D /* RecyclingHeaderView.swift */,
 			);
-			path = RecyclingDetails;
+			path = views;
+			sourceTree = "<group>";
+		};
+		D6F981522820262F0073088D /* RecyclingNearYou */ = {
+			isa = PBXGroup;
+			children = (
+				D6F98153282026450073088D /* views */,
+			);
+			path = RecyclingNearYou;
+			sourceTree = "<group>";
+		};
+		D6F98153282026450073088D /* views */ = {
+			isa = PBXGroup;
+			children = (
+				D6F98154282026550073088D /* RecyclingNearYouView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		D6F98156282027130073088D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				D6F9815F28202F040073088D /* views */,
+				D6F981572820272E0073088D /* models */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		D6F981572820272E0073088D /* models */ = {
+			isa = PBXGroup;
+			children = (
+				D6F98159282028E00073088D /* TrashMobSearchType.swift */,
+				D6F9815B28202BD40073088D /* TrashMobSearchStatus.swift */,
+				D6F9815D28202D340073088D /* RecyclingSearchType.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		D6F9815F28202F040073088D /* views */ = {
+			isa = PBXGroup;
+			children = (
+				D6F9816028202F680073088D /* TrashMobTypeSuggestionView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +417,7 @@
 				D6F980FE2815D4830073088D /* TrashMob.xcdatamodeld in Sources */,
 				D6F9811E281B1F010073088D /* FrameView.swift in Sources */,
 				D6F980F42815D4820073088D /* ContentView.swift in Sources */,
+				D6F9816128202F680073088D /* TrashMobTypeSuggestionView.swift in Sources */,
 				D6F9814C28201BBF0073088D /* RecyclingContactLink.swift in Sources */,
 				D6F9814E28201BD40073088D /* RecyclingLocationView.swift in Sources */,
 				D6F9814628201B680073088D /* RecyclingDetailsRow.swift in Sources */,
@@ -361,6 +425,7 @@
 				D6F9813F282016C80073088D /* TrashMobDetailCard.swift in Sources */,
 				D6F98112281B1C700073088D /* CGImageExtension.swift in Sources */,
 				D6F9814A28201BAC0073088D /* RecyclingContactsView.swift in Sources */,
+				D6F9815E28202D340073088D /* RecyclingSearchType.swift in Sources */,
 				D6F98130282010C40073088D /* AddressFetcher.swift in Sources */,
 				D6F98116281B1D290073088D /* ControlView.swift in Sources */,
 				D6F98132282011BE0073088D /* LocationManager.swift in Sources */,
@@ -373,6 +438,9 @@
 				D6F9814828201B9E0073088D /* RecyclingDetailCard.swift in Sources */,
 				D6F98110281B1C280073088D /* CameraError.swift in Sources */,
 				D6F98114281B1CC60073088D /* TakePictureView.swift in Sources */,
+				D6F9815C28202BD40073088D /* TrashMobSearchStatus.swift in Sources */,
+				D6F98155282026550073088D /* RecyclingNearYouView.swift in Sources */,
+				D6F9815A282028E00073088D /* TrashMobSearchType.swift in Sources */,
 				D6F9814428201B430073088D /* RecyclingDetailsView.swift in Sources */,
 				D6F9813D282016A00073088D /* TrashMobDetailRow.swift in Sources */,
 				D6F9812A28200F850073088D /* Organization.swift in Sources */,
