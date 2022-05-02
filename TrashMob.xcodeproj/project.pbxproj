@@ -24,6 +24,7 @@
 		D6F9811A281B1E100073088D /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98119281B1E100073088D /* ToggleButton.swift */; };
 		D6F9811E281B1F010073088D /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9811D281B1F010073088D /* FrameView.swift */; };
 		D6F98122282009B00073088D /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98121282009B00073088D /* APIConstants.swift */; };
+		D6F9812A28200F850073088D /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9812928200F850073088D /* Organization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		D6F98119281B1E100073088D /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 		D6F9811D281B1F010073088D /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
 		D6F98121282009B00073088D /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		D6F9812928200F850073088D /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +90,6 @@
 				D6F9810C28185BD00073088D /* CloudKitCRUDView.swift */,
 				D6F9810E281B1BD40073088D /* TakePicture */,
 				D6F980F52815D4830073088D /* Assets.xcassets */,
-				D6F980FA2815D4830073088D /* Persistence.swift */,
-				D6F980FC2815D4830073088D /* TrashMob.xcdatamodeld */,
 				D6F980F72815D4830073088D /* Preview Content */,
 			);
 			path = TrashMob;
@@ -106,6 +106,7 @@
 		D6F981042815D7670073088D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D6F9812528200BAF0073088D /* model */,
 				D6F981052815D7790073088D /* data */,
 			);
 			path = Core;
@@ -114,6 +115,7 @@
 		D6F981052815D7790073088D /* data */ = {
 			isa = PBXGroup;
 			children = (
+				D6F9812328200AA40073088D /* coreData */,
 				D6F981202820097C0073088D /* api */,
 			);
 			path = data;
@@ -147,6 +149,39 @@
 				D6F98121282009B00073088D /* APIConstants.swift */,
 			);
 			path = api;
+			sourceTree = "<group>";
+		};
+		D6F9812328200AA40073088D /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+				D6F980FC2815D4830073088D /* TrashMob.xcdatamodeld */,
+				D6F980FA2815D4830073088D /* Persistence.swift */,
+			);
+			path = coreData;
+			sourceTree = "<group>";
+		};
+		D6F9812528200BAF0073088D /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D6F9812828200F680073088D /* organization */,
+				D6F9812628200D130073088D /* recyclingLocations */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		D6F9812628200D130073088D /* recyclingLocations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = recyclingLocations;
+			sourceTree = "<group>";
+		};
+		D6F9812828200F680073088D /* organization */ = {
+			isa = PBXGroup;
+			children = (
+				D6F9812928200F850073088D /* Organization.swift */,
+			);
+			path = organization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +267,7 @@
 				D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */,
 				D6F98110281B1C280073088D /* CameraError.swift in Sources */,
 				D6F98114281B1CC60073088D /* TakePictureView.swift in Sources */,
+				D6F9812A28200F850073088D /* Organization.swift in Sources */,
 				D6F98118281B1D790073088D /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
