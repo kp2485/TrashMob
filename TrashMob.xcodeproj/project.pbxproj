@@ -43,6 +43,9 @@
 		D6F9815C28202BD40073088D /* TrashMobSearchStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9815B28202BD40073088D /* TrashMobSearchStatus.swift */; };
 		D6F9815E28202D340073088D /* RecyclingSearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9815D28202D340073088D /* RecyclingSearchType.swift */; };
 		D6F9816128202F680073088D /* TrashMobTypeSuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9816028202F680073088D /* TrashMobTypeSuggestionView.swift */; };
+		D6F981632820306B0073088D /* EmptyResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F981622820306B0073088D /* EmptyResultsView.swift */; };
+		D6F981652820317B0073088D /* SuggestionsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F981642820317B0073088D /* SuggestionsGrid.swift */; };
+		D6F98167282032030073088D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98166282032030073088D /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +87,9 @@
 		D6F9815B28202BD40073088D /* TrashMobSearchStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobSearchStatus.swift; sourceTree = "<group>"; };
 		D6F9815D28202D340073088D /* RecyclingSearchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingSearchType.swift; sourceTree = "<group>"; };
 		D6F9816028202F680073088D /* TrashMobTypeSuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobTypeSuggestionView.swift; sourceTree = "<group>"; };
+		D6F981622820306B0073088D /* EmptyResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResultsView.swift; sourceTree = "<group>"; };
+		D6F981642820317B0073088D /* SuggestionsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsGrid.swift; sourceTree = "<group>"; };
+		D6F98166282032030073088D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +344,9 @@
 			isa = PBXGroup;
 			children = (
 				D6F9816028202F680073088D /* TrashMobTypeSuggestionView.swift */,
+				D6F981622820306B0073088D /* EmptyResultsView.swift */,
+				D6F981642820317B0073088D /* SuggestionsGrid.swift */,
+				D6F98166282032030073088D /* SearchView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -413,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6F9813B282016780073088D /* TrashMobDetailsView.swift in Sources */,
+				D6F981652820317B0073088D /* SuggestionsGrid.swift in Sources */,
 				D6F980FB2815D4830073088D /* Persistence.swift in Sources */,
 				D6F980FE2815D4830073088D /* TrashMob.xcdatamodeld in Sources */,
 				D6F9811E281B1F010073088D /* FrameView.swift in Sources */,
@@ -421,6 +431,7 @@
 				D6F9814C28201BBF0073088D /* RecyclingContactLink.swift in Sources */,
 				D6F9814E28201BD40073088D /* RecyclingLocationView.swift in Sources */,
 				D6F9814628201B680073088D /* RecyclingDetailsRow.swift in Sources */,
+				D6F981632820306B0073088D /* EmptyResultsView.swift in Sources */,
 				D6F9812D282010700073088D /* User.swift in Sources */,
 				D6F9813F282016C80073088D /* TrashMobDetailCard.swift in Sources */,
 				D6F98112281B1C700073088D /* CGImageExtension.swift in Sources */,
@@ -438,6 +449,7 @@
 				D6F9814828201B9E0073088D /* RecyclingDetailCard.swift in Sources */,
 				D6F98110281B1C280073088D /* CameraError.swift in Sources */,
 				D6F98114281B1CC60073088D /* TakePictureView.swift in Sources */,
+				D6F98167282032030073088D /* SearchView.swift in Sources */,
 				D6F9815C28202BD40073088D /* TrashMobSearchStatus.swift in Sources */,
 				D6F98155282026550073088D /* RecyclingNearYouView.swift in Sources */,
 				D6F9815A282028E00073088D /* TrashMobSearchType.swift in Sources */,
