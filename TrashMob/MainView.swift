@@ -14,7 +14,6 @@ struct MainView: View {
             .tabItem {
               Label("Near you", systemImage: "location")
             }
-
           SearchView()
             .tabItem {
               Label("Search", systemImage: "magnifyingglass")

@@ -32,12 +32,12 @@ struct RecyclingDetailCard_Previews: PreviewProvider {
     HStack {
       RecyclingDetailCard(
         title: "Status",
-        value: "Open",
+        value: "Scheduled",
         color: .green
       )
       RecyclingDetailCard(
         title: "Type",
-        value: "Curbside",
+        value: "Drop-off",
         color: .blue
       )
     }

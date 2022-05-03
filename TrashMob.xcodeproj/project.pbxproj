@@ -48,6 +48,8 @@
 		D6F98167282032030073088D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98166282032030073088D /* SearchView.swift */; };
 		D6F98169282033CE0073088D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98168282033CE0073088D /* MainView.swift */; };
 		D6F9816D282034A50073088D /* TrashMobsNearYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9816C282034A50073088D /* TrashMobsNearYouView.swift */; };
+		D6F98170282166AE0073088D /* trashMob.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9816F282166AE0073088D /* trashMob.swift */; };
+		D6F98172282166E10073088D /* recyclingLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98171282166E10073088D /* recyclingLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,8 @@
 		D6F98166282032030073088D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		D6F98168282033CE0073088D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D6F9816C282034A50073088D /* TrashMobsNearYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobsNearYouView.swift; sourceTree = "<group>"; };
+		D6F9816F282166AE0073088D /* trashMob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trashMob.swift; sourceTree = "<group>"; };
+		D6F98171282166E10073088D /* recyclingLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recyclingLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 				D6F98106281727180073088D /* TrashMob.entitlements */,
 				D6F980F12815D4820073088D /* TrashMobApp.swift */,
 				D6F980F32815D4820073088D /* ContentView.swift */,
+				D6F98168282033CE0073088D /* MainView.swift */,
 				D6F981042815D7670073088D /* Core */,
 				D6F98138282016070073088D /* TrashMobDetails */,
 				D6F9816B2820344E0073088D /* TrashMobsNearYou */,
@@ -141,7 +146,6 @@
 				D6F98137282014E40073088D /* CKLoginCRUD */,
 				D6F980F52815D4830073088D /* Assets.xcassets */,
 				D6F980F72815D4830073088D /* Preview Content */,
-				D6F98168282033CE0073088D /* MainView.swift */,
 			);
 			path = TrashMob;
 			sourceTree = "<group>";
@@ -215,19 +219,20 @@
 		D6F9812528200BAF0073088D /* model */ = {
 			isa = PBXGroup;
 			children = (
-				D6F98135282012880073088D /* mob */,
+				D6F98135282012880073088D /* trashMob */,
 				D6F9812B282010650073088D /* user */,
 				D6F9812828200F680073088D /* organization */,
-				D6F9812628200D130073088D /* recyclingLocations */,
+				D6F9812628200D130073088D /* recyclingLocation */,
 			);
 			path = model;
 			sourceTree = "<group>";
 		};
-		D6F9812628200D130073088D /* recyclingLocations */ = {
+		D6F9812628200D130073088D /* recyclingLocation */ = {
 			isa = PBXGroup;
 			children = (
+				D6F98171282166E10073088D /* recyclingLocation.swift */,
 			);
-			path = recyclingLocations;
+			path = recyclingLocation;
 			sourceTree = "<group>";
 		};
 		D6F9812828200F680073088D /* organization */ = {
@@ -255,11 +260,12 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
-		D6F98135282012880073088D /* mob */ = {
+		D6F98135282012880073088D /* trashMob */ = {
 			isa = PBXGroup;
 			children = (
+				D6F9816F282166AE0073088D /* trashMob.swift */,
 			);
-			path = mob;
+			path = trashMob;
 			sourceTree = "<group>";
 		};
 		D6F98137282014E40073088D /* CKLoginCRUD */ = {
@@ -449,10 +455,12 @@
 				D6F980FE2815D4830073088D /* TrashMob.xcdatamodeld in Sources */,
 				D6F9811E281B1F010073088D /* FrameView.swift in Sources */,
 				D6F980F42815D4820073088D /* ContentView.swift in Sources */,
+				D6F98170282166AE0073088D /* trashMob.swift in Sources */,
 				D6F9816128202F680073088D /* TrashMobTypeSuggestionView.swift in Sources */,
 				D6F9814C28201BBF0073088D /* RecyclingContactLink.swift in Sources */,
 				D6F9814E28201BD40073088D /* RecyclingLocationView.swift in Sources */,
 				D6F9814628201B680073088D /* RecyclingDetailsRow.swift in Sources */,
+				D6F98172282166E10073088D /* recyclingLocation.swift in Sources */,
 				D6F9816D282034A50073088D /* TrashMobsNearYouView.swift in Sources */,
 				D6F981632820306B0073088D /* EmptyResultsView.swift in Sources */,
 				D6F9812D282010700073088D /* User.swift in Sources */,

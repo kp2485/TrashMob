@@ -11,7 +11,9 @@ enum TrashMobSearchType: String, CaseIterable {
   case none
   case park
   case sidewalk
-  case privateProperty = "private property"
+  case trail
+  case alley
+  case abandonedProperty = "abandoned property"
   case waterfront
 }
 
@@ -19,8 +21,8 @@ enum TrashMobSearchType: String, CaseIterable {
 extension TrashMobSearchType {
   var suggestionImage: Image {
     switch self {
-    case .privateProperty:
-      return Image("privateProperty")
+    case .abandonedProperty:
+      return Image("abandonedProperty")
     default:
       return Image(rawValue)
     }
