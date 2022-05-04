@@ -50,6 +50,10 @@
 		D6F9816D282034A50073088D /* TrashMobsNearYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9816C282034A50073088D /* TrashMobsNearYouView.swift */; };
 		D6F98170282166AE0073088D /* trashMob.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9816F282166AE0073088D /* trashMob.swift */; };
 		D6F98172282166E10073088D /* recyclingLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98171282166E10073088D /* recyclingLocation.swift */; };
+		D6F9817428228E910073088D /* trashMobsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9817328228E910073088D /* trashMobsMock.swift */; };
+		D6F981762822906D0073088D /* RecyclingLocationsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F981752822906D0073088D /* RecyclingLocationsMock.swift */; };
+		D6F98178282292850073088D /* RecyclingLocationsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = D6F98177282292850073088D /* RecyclingLocationsMock.json */; };
+		D6F9817A2822993A0073088D /* TrashMobsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = D6F981792822993A0073088D /* TrashMobsMock.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +102,11 @@
 		D6F9816C282034A50073088D /* TrashMobsNearYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobsNearYouView.swift; sourceTree = "<group>"; };
 		D6F9816F282166AE0073088D /* trashMob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trashMob.swift; sourceTree = "<group>"; };
 		D6F98171282166E10073088D /* recyclingLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recyclingLocation.swift; sourceTree = "<group>"; };
+		D6F9817328228E910073088D /* trashMobsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trashMobsMock.swift; sourceTree = "<group>"; };
+		D6F981752822906D0073088D /* RecyclingLocationsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingLocationsMock.swift; sourceTree = "<group>"; };
+		D6F98177282292850073088D /* RecyclingLocationsMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RecyclingLocationsMock.json; sourceTree = "<group>"; };
+		D6F981792822993A0073088D /* TrashMobsMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TrashMobsMock.json; sourceTree = "<group>"; };
+		D6F9817B2822C9360073088D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +141,7 @@
 		D6F980F02815D4820073088D /* TrashMob */ = {
 			isa = PBXGroup;
 			children = (
+				D6F9817B2822C9360073088D /* Info.plist */,
 				D6F98106281727180073088D /* TrashMob.entitlements */,
 				D6F980F12815D4820073088D /* TrashMobApp.swift */,
 				D6F980F32815D4820073088D /* ContentView.swift */,
@@ -231,6 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				D6F98171282166E10073088D /* recyclingLocation.swift */,
+				D6F981752822906D0073088D /* RecyclingLocationsMock.swift */,
+				D6F98177282292850073088D /* RecyclingLocationsMock.json */,
 			);
 			path = recyclingLocation;
 			sourceTree = "<group>";
@@ -264,6 +276,8 @@
 			isa = PBXGroup;
 			children = (
 				D6F9816F282166AE0073088D /* trashMob.swift */,
+				D6F9817328228E910073088D /* trashMobsMock.swift */,
+				D6F981792822993A0073088D /* TrashMobsMock.json */,
 			);
 			path = trashMob;
 			sourceTree = "<group>";
@@ -437,8 +451,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F98178282292850073088D /* RecyclingLocationsMock.json in Resources */,
 				D6F980F92815D4830073088D /* Preview Assets.xcassets in Resources */,
 				D6F980F62815D4830073088D /* Assets.xcassets in Resources */,
+				D6F9817A2822993A0073088D /* TrashMobsMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +490,7 @@
 				D6F9810D28185BD00073088D /* CloudKitCRUDView.swift in Sources */,
 				D6F9815028201BEF0073088D /* RecyclingHeaderView.swift in Sources */,
 				D6F9810B28172FFA0073088D /* LoginView.swift in Sources */,
+				D6F981762822906D0073088D /* RecyclingLocationsMock.swift in Sources */,
 				D6F98122282009B00073088D /* APIConstants.swift in Sources */,
 				D6F9811A281B1E100073088D /* ToggleButton.swift in Sources */,
 				D6F98169282033CE0073088D /* MainView.swift in Sources */,
@@ -483,6 +500,7 @@
 				D6F98114281B1CC60073088D /* TakePictureView.swift in Sources */,
 				D6F98167282032030073088D /* SearchView.swift in Sources */,
 				D6F9815C28202BD40073088D /* TrashMobSearchStatus.swift in Sources */,
+				D6F9817428228E910073088D /* trashMobsMock.swift in Sources */,
 				D6F98155282026550073088D /* RecyclingNearYouView.swift in Sources */,
 				D6F9815A282028E00073088D /* TrashMobSearchType.swift in Sources */,
 				D6F9814428201B430073088D /* RecyclingDetailsView.swift in Sources */,
@@ -621,9 +639,11 @@
 				DEVELOPMENT_TEAM = 588PCRUA35;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = TrashMob/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -651,9 +671,11 @@
 				DEVELOPMENT_TEAM = 588PCRUA35;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = TrashMob/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

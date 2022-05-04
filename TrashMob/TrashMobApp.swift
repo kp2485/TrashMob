@@ -13,7 +13,8 @@ struct TrashMobApp: App {
 
     var body: some Scene {
         WindowGroup {
-            CloudKitCRUDView()
+            MainView()
+//            CloudKitCRUDView()
 //            LoginView()
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)

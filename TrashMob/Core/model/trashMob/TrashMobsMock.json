@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Test TrashMob 1",
+    "createdBy": "Kyle",
+    "creationDate": 1648609140,
+    "mobDate": 1649091600,
+    "longitude": -112.812,
+    "latitude": 33.6499,
+    "status": "mobbed",
+    "type": "park",
+    "loves": 2149,
+    "comments": [{
+        "Ashlei":"🙌",
+        "Angel":"Looks great!!!",
+        "Dale":"Enjoyed the conversation,  let's do this again sometime!"
+        "Liling":"🙌 from 🇨🇳"
+    }]
+    "attendees": [{
+        "Ashlei", "Dale", "Kyle"
+    }]
+    "beforePicture": ""
+    "afterPicture": ""
+  },
+  {
+      "name": "Test TrashMob 2",
+      "createdBy": "Liling",
+      "creationDate": 1648609140,
+      "mobDate": 1649091600,
+      "longitude": -112.812,
+      "latitude": 33.6499,
+      "status": "mobbed",
+      "type": "park",
+      "loves": 2149,
+      "comments": [{
+          "Ashlei":"🙌",
+          "Angel":"Looks great!!!",
+          "Dale":"Enjoyed the conversation,  let's do this again sometime!"
+          "Liling":"🙌 from 🇨🇳"
+      }]
+      "attendees": [{
+          "Liling", "Fen", "Wei"
+      }]
+      "beforePicture": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fweartv.com%2Fresources%2Fmedia%2F711bad48-a498-48b6-af32-4d98fc90331d-medium16x9_IMG_0847.jpg%3F1651512307870&imgrefurl=https%3A%2F%2Fweartv.com%2Fnews%2Flocal%2Fcleanup-underway-at-trash-littered-maritime-park-following-freaknik-event&tbnid=oRWEqHoO5Pa6RM&vet=10CCcQMyh7ahcKEwiw0O2O6sX3AhUAAAAAHQAAAAAQAg..i&docid=E1Z1x9qFcgPPFM&w=648&h=364&itg=1&q=litter%20park%20before%20and%20after&ved=0CCcQMyh7ahcKEwiw0O2O6sX3AhUAAAAAHQAAAAAQAg"
+      "afterPicture": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fmedia.sciencephoto.com%2Fc0%2F23%2F92%2F67%2Fc0239267-800px-wm.jpg&imgrefurl=https%3A%2F%2Fwww.sciencephoto.com%2Fmedia%2F648691%2Fview%2Fvolunteers-clearing-park-litter&tbnid=t9yDZlCryRisCM&vet=10CDUQMyiBAWoXChMIsNDtjurF9wIVAAAAAB0AAAAAEAI..i&docid=x01AOlJ6HETISM&w=533&h=800&itg=1&q=litter%20park%20before%20and%20after&ved=0CDUQMyiBAWoXChMIsNDtjurF9wIVAAAAAB0AAAAAEAI"
+  }
+]
