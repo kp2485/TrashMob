@@ -7,7 +7,8 @@
 
 import CoreLocation
 
-struct RecyclingLocation: Codable {
+struct RecyclingLocation: Codable, Identifiable {
+    var id: String
     var curbside: Bool
     var description: String?
     var distance: Double

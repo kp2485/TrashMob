@@ -5,6 +5,8 @@
 //  Created by Kyle Peterson on 5/2/22.
 //
 
+import Foundation
+
 struct User: Codable {
     var name: String?
     var password: String?
@@ -12,4 +14,5 @@ struct User: Codable {
     var mobsTargeted: Int?
     var mobsCompleted: Int?
     var points: Int?
+    var profilePicture: URL?
 }
