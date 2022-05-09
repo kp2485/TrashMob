@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct TakePictureView: View {
+    
+    @StateObject private var model = TakePictureViewModel()
+    
     var body: some View {
         ZStack {
-          Color.black.edgesIgnoringSafeArea(.all)
-
-          Text("Filter the World!")
-            .foregroundColor(.white)
+            FrameView(image: model.frame)
+                .edgesIgnoringSafeArea(.all)
+            ErrorView(error: model.error)
+            ControlView(
+                comicSelected: $model.comicFilter,
+                monoSelected: $model.monoFilter,
+                crystalSelected: $model.crystalFilter)
         }
     }
 }

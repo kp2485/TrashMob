@@ -15,6 +15,9 @@
 		D696D86A28253D4F008B71ED /* AppUserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D86928253D4F008B71ED /* AppUserDefaultsKeys.swift */; };
 		D696D86D28254015008B71ED /* AccessTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D86C28254015008B71ED /* AccessTokenManager.swift */; };
 		D696D870282540A3008B71ED /* APIToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D86F282540A3008B71ED /* APIToken.swift */; };
+		D696D87628293793008B71ED /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D87528293793008B71ED /* CameraManager.swift */; };
+		D696D8782829404B008B71ED /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8772829404B008B71ED /* FrameManager.swift */; };
+		D696D87A28294166008B71ED /* TakePictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D87928294166008B71ED /* TakePictureViewModel.swift */; };
 		D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F980F12815D4820073088D /* TrashMobApp.swift */; };
 		D6F980F42815D4820073088D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F980F32815D4820073088D /* ContentView.swift */; };
 		D6F980F62815D4830073088D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F980F52815D4830073088D /* Assets.xcassets */; };
@@ -78,6 +81,9 @@
 		D696D86928253D4F008B71ED /* AppUserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserDefaultsKeys.swift; sourceTree = "<group>"; };
 		D696D86C28254015008B71ED /* AccessTokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenManager.swift; sourceTree = "<group>"; };
 		D696D86F282540A3008B71ED /* APIToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIToken.swift; sourceTree = "<group>"; };
+		D696D87528293793008B71ED /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		D696D8772829404B008B71ED /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
+		D696D87928294166008B71ED /* TakePictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureViewModel.swift; sourceTree = "<group>"; };
 		D6F980EE2815D4820073088D /* TrashMob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrashMob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F980F12815D4820073088D /* TrashMobApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobApp.swift; sourceTree = "<group>"; };
 		D6F980F32815D4820073088D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -208,9 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				D6F9817B2822C9360073088D /* Info.plist */,
-				D6F98106281727180073088D /* TrashMob.entitlements */,
-				D6F980F12815D4820073088D /* TrashMobApp.swift */,
-				D6F980F32815D4820073088D /* ContentView.swift */,
 				D6F98168282033CE0073088D /* MainView.swift */,
 				D6F981042815D7670073088D /* Core */,
 				D6F98138282016070073088D /* TrashMobDetails */,
@@ -218,6 +221,9 @@
 				D6F9814228201B1A0073088D /* RecyclingDetails */,
 				D6F981522820262F0073088D /* RecyclingNearYou */,
 				D6F98156282027130073088D /* Search */,
+				D6F98106281727180073088D /* TrashMob.entitlements */,
+				D6F980F12815D4820073088D /* TrashMobApp.swift */,
+				D6F980F32815D4820073088D /* ContentView.swift */,
 				D6F9810E281B1BD40073088D /* TakePicture */,
 				D6F98137282014E40073088D /* CKLoginCRUD */,
 				D6F980F52815D4830073088D /* Assets.xcassets */,
@@ -267,10 +273,13 @@
 				D6F9810F281B1C280073088D /* CameraError.swift */,
 				D6F98111281B1C700073088D /* CGImageExtension.swift */,
 				D6F98113281B1CC60073088D /* TakePictureView.swift */,
+				D696D87928294166008B71ED /* TakePictureViewModel.swift */,
 				D6F98115281B1D290073088D /* ControlView.swift */,
 				D6F98117281B1D790073088D /* ErrorView.swift */,
 				D6F98119281B1E100073088D /* ToggleButton.swift */,
 				D6F9811D281B1F010073088D /* FrameView.swift */,
+				D696D87528293793008B71ED /* CameraManager.swift */,
+				D696D8772829404B008B71ED /* FrameManager.swift */,
 			);
 			path = TakePicture;
 			sourceTree = "<group>";
@@ -591,6 +600,7 @@
 				D6F981852822E6900073088D /* NetworkError.swift in Sources */,
 				D6F9815028201BEF0073088D /* RecyclingHeaderView.swift in Sources */,
 				D6F9810B28172FFA0073088D /* LoginView.swift in Sources */,
+				D696D8782829404B008B71ED /* FrameManager.swift in Sources */,
 				D6F981762822906D0073088D /* RecyclingLocationsMock.swift in Sources */,
 				D6F98122282009B00073088D /* APIConstants.swift in Sources */,
 				D6F9811A281B1E100073088D /* ToggleButton.swift in Sources */,
@@ -610,10 +620,12 @@
 				D6F9817E2822CCBC0073088D /* RequestProtocol.swift in Sources */,
 				D6F9815A282028E00073088D /* TrashMobSearchType.swift in Sources */,
 				D6F9814428201B430073088D /* RecyclingDetailsView.swift in Sources */,
+				D696D87628293793008B71ED /* CameraManager.swift in Sources */,
 				D6F9813D282016A00073088D /* TrashMobDetailRow.swift in Sources */,
 				D696D866282534F3008B71ED /* AuthTokenRequest.swift in Sources */,
 				D6F9812A28200F850073088D /* Organization.swift in Sources */,
 				D6F98118281B1D790073088D /* ErrorView.swift in Sources */,
+				D696D87A28294166008B71ED /* TakePictureViewModel.swift in Sources */,
 				D696D870282540A3008B71ED /* APIToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,7 +13,8 @@ struct TrashMobApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MainView()
+            TakePictureView()
+//            MainView()
 //            CloudKitCRUDView()
 //            LoginView()
 //            ContentView()
