@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CloudKit
+import Combine
 
 class LoginViewModel: ObservableObject {
     
@@ -14,6 +15,7 @@ class LoginViewModel: ObservableObject {
     @Published var isSignedIntoiCloud: Bool = false
     @Published var error: String = ""
     @Published var userName: String = ""
+    var cancellables = Set<AnyCancellable>()
     
     init() {
         getiCloudStatus()
@@ -22,39 +24,53 @@ class LoginViewModel: ObservableObject {
     }
     
     private func getiCloudStatus() {
-        CKContainer.default().accountStatus { [weak self] returnedStatus, returnedError in
-            DispatchQueue.main.async {
-                switch returnedStatus {
-                case .available:
-                    self?.isSignedIntoiCloud = true
-                case .noAccount:
-                    self?.error = CloudKitError.iCloudAccountNotFound.rawValue
-                case .couldNotDetermine:
-                    self?.error = CloudKitError.iCloudAccountNotDetermined.rawValue
-                case .restricted:
-                    self?.error = CloudKitError.iCloudAccountRestricted.rawValue
-                default:
-                    self?.error = CloudKitError.iCloudAccountUnknown.rawValue
+        
+        CloudKitUtility.getiCloudStatus()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    self?.error = error.localizedDescription
                 }
+            } receiveValue: { [weak self] success in
+                self?.isSignedIntoiCloud = success
             }
-        }
-    }
-    
-    enum CloudKitError: String, LocalizedError {
-        case iCloudAccountNotFound
-        case iCloudAccountNotDetermined
-        case iCloudAccountRestricted
-        case iCloudAccountUnknown
+            .store(in: &cancellables)
     }
     
     func requestPermission() {
-        CKContainer.default().requestApplicationPermission([.userDiscoverability]) { [weak self] returnedStatus, returnedError in
-            DispatchQueue.main.async {
-                if returnedStatus == .granted {
-                    self?.permissionStatus = true
+        
+        CloudKitUtility.requestApplicationPermission()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    self?.error = error.localizedDescription
                 }
+            } receiveValue: { [weak self] success in
+                self?.permissionStatus = success
             }
-        }
+            .store(in: &cancellables)
+    }
+    
+    func getCurrentUserName() {
+        CloudKitUtility.discoverUserIdentity()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    self?.error = error.localizedDescription
+                }
+            } receiveValue: { [weak self] returnedName in
+                self?.userName = returnedName
+            }
+            .store(in: &cancellables)
     }
     
     func fetchiCloudUserID() {
@@ -87,16 +103,16 @@ struct LoginView: View {
                 .font(.system(.title))
                 .padding()
             Spacer()
-//            Text("IS SIGNED IN: \(vm.isSignedIntoiCloud.description.uppercased())")
-//            Text(vm.error)
-//            Text("Permission: \(vm.permissionStatus.description.uppercased())")
-//            Text("NAME: \(vm.userName)")
+            Text("IS SIGNED IN: \(vm.isSignedIntoiCloud.description.uppercased())")
+            Text(vm.error)
+            Text("Permission: \(vm.permissionStatus.description.uppercased())")
+            Text("NAME: \(vm.userName)")
             Spacer()
             Text("Your name or email will not be shared or otherwise utilized without your permission")
                 .padding()
                 .font(.system(.title))
             Text("Posting improper pictures or otherwise disrespectful behavior may lead to the suspension or termination of your account")
-            Spacer()
+//            Spacer()
         }
         .multilineTextAlignment(.center)
         

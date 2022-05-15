@@ -11,7 +11,7 @@ import CloudKit
 struct MobModel: Hashable {
     let name: String
     var loves: Int
-    var trashMobState: String
+//    var trashMobState: String
     let beforePicURL: URL?
     let record: CKRecord
 }
@@ -29,7 +29,7 @@ class CloudKitCRUDViewModel: ObservableObject {
     
     @Published var text: String = ""
     @Published var loves: Int = 0
-    @Published var trashMobState: TrashMobState
+//    @Published var trashMobState: String
     
     @Published var mobs: [MobModel] = []
     
@@ -97,7 +97,7 @@ class CloudKitCRUDViewModel: ObservableObject {
                     guard let name = record["name"] as? String else { return }
                     let imageAsset = record["image"] as? CKAsset
                     let imageURL = imageAsset?.fileURL
-                    returnedMobs.append(MobModel(name: name, loves: self.loves, trashMobState: "targeted", beforePicURL: imageURL, record: record))
+                    returnedMobs.append(MobModel(name: name, loves: self.loves, beforePicURL: imageURL, record: record))
                 case .failure(let error):
                     print("Error recordMatchedBlock: \(error)")
                 }
@@ -107,7 +107,7 @@ class CloudKitCRUDViewModel: ObservableObject {
                 guard let name = returnedRecord["name"] as? String else { return }
                 let imageAsset = returnedRecord["image"] as? CKAsset
                 let imageURL = imageAsset?.fileURL
-                returnedMobs.append(MobModel(name: name, loves: self.loves, trashMobState: <#String#>, beforePicURL: imageURL, record: returnedRecord))
+                returnedMobs.append(MobModel(name: name, loves: self.loves, beforePicURL: imageURL, record: returnedRecord))
             }
         }
         
