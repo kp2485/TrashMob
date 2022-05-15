@@ -18,6 +18,15 @@
 		D696D87628293793008B71ED /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D87528293793008B71ED /* CameraManager.swift */; };
 		D696D8782829404B008B71ED /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8772829404B008B71ED /* FrameManager.swift */; };
 		D696D87A28294166008B71ED /* TakePictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D87928294166008B71ED /* TakePictureViewModel.swift */; };
+		D696D893282C23E7008B71ED /* CloudKitPushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D892282C23E7008B71ED /* CloudKitPushNotification.swift */; };
+		D696D8B6282DA1A2008B71ED /* CameraService+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8B5282DA1A2008B71ED /* CameraService+Enums.swift */; };
+		D696D8B8282DA1FC008B71ED /* CameraService+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8B7282DA1FC008B71ED /* CameraService+Extensions.swift */; };
+		D696D8BA282DA253008B71ED /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8B9282DA253008B71ED /* CameraService.swift */; };
+		D696D8BC282DA27A008B71ED /* ImageResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8BB282DA27A008B71ED /* ImageResizer.swift */; };
+		D696D8BE282DA2AE008B71ED /* PhotoCaptureProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8BD282DA2AE008B71ED /* PhotoCaptureProcessor.swift */; };
+		D696D8C1282DA319008B71ED /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C0282DA319008B71ED /* CameraPreview.swift */; };
+		D696D8C3282EC4E0008B71ED /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C2282EC4E0008B71ED /* TabView.swift */; };
+		D696D8C528311874008B71ED /* CloudKitUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C428311874008B71ED /* CloudKitUtility.swift */; };
 		D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F980F12815D4820073088D /* TrashMobApp.swift */; };
 		D6F980F42815D4820073088D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F980F32815D4820073088D /* ContentView.swift */; };
 		D6F980F62815D4830073088D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F980F52815D4830073088D /* Assets.xcassets */; };
@@ -84,6 +93,15 @@
 		D696D87528293793008B71ED /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		D696D8772829404B008B71ED /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
 		D696D87928294166008B71ED /* TakePictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureViewModel.swift; sourceTree = "<group>"; };
+		D696D892282C23E7008B71ED /* CloudKitPushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitPushNotification.swift; sourceTree = "<group>"; };
+		D696D8B5282DA1A2008B71ED /* CameraService+Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraService+Enums.swift"; sourceTree = "<group>"; };
+		D696D8B7282DA1FC008B71ED /* CameraService+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraService+Extensions.swift"; sourceTree = "<group>"; };
+		D696D8B9282DA253008B71ED /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		D696D8BB282DA27A008B71ED /* ImageResizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResizer.swift; sourceTree = "<group>"; };
+		D696D8BD282DA2AE008B71ED /* PhotoCaptureProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureProcessor.swift; sourceTree = "<group>"; };
+		D696D8C0282DA319008B71ED /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		D696D8C2282EC4E0008B71ED /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		D696D8C428311874008B71ED /* CloudKitUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitUtility.swift; sourceTree = "<group>"; };
 		D6F980EE2815D4820073088D /* TrashMob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrashMob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F980F12815D4820073088D /* TrashMobApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobApp.swift; sourceTree = "<group>"; };
 		D6F980F32815D4820073088D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -193,6 +211,35 @@
 			name = model;
 			sourceTree = "<group>";
 		};
+		D696D8B3282DA179008B71ED /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				D696D8BF282DA2EF008B71ED /* view */,
+				D696D8B4282DA180008B71ED /* service */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		D696D8B4282DA180008B71ED /* service */ = {
+			isa = PBXGroup;
+			children = (
+				D696D8B5282DA1A2008B71ED /* CameraService+Enums.swift */,
+				D696D8B7282DA1FC008B71ED /* CameraService+Extensions.swift */,
+				D696D8B9282DA253008B71ED /* CameraService.swift */,
+				D696D8BB282DA27A008B71ED /* ImageResizer.swift */,
+				D696D8BD282DA2AE008B71ED /* PhotoCaptureProcessor.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		D696D8BF282DA2EF008B71ED /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D696D8C0282DA319008B71ED /* CameraPreview.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		D6F980E52815D4820073088D = {
 			isa = PBXGroup;
 			children = (
@@ -213,8 +260,11 @@
 		D6F980F02815D4820073088D /* TrashMob */ = {
 			isa = PBXGroup;
 			children = (
+				D6F980F12815D4820073088D /* TrashMobApp.swift */,
 				D6F9817B2822C9360073088D /* Info.plist */,
 				D6F98168282033CE0073088D /* MainView.swift */,
+				D696D8C2282EC4E0008B71ED /* TabView.swift */,
+				D696D8B3282DA179008B71ED /* Camera */,
 				D6F981042815D7670073088D /* Core */,
 				D6F98138282016070073088D /* TrashMobDetails */,
 				D6F9816B2820344E0073088D /* TrashMobsNearYou */,
@@ -222,7 +272,6 @@
 				D6F981522820262F0073088D /* RecyclingNearYou */,
 				D6F98156282027130073088D /* Search */,
 				D6F98106281727180073088D /* TrashMob.entitlements */,
-				D6F980F12815D4820073088D /* TrashMobApp.swift */,
 				D6F980F32815D4820073088D /* ContentView.swift */,
 				D6F9810E281B1BD40073088D /* TakePicture */,
 				D6F98137282014E40073088D /* CKLoginCRUD */,
@@ -369,6 +418,8 @@
 			children = (
 				D6F9810A28172FFA0073088D /* LoginView.swift */,
 				D6F9810C28185BD00073088D /* CloudKitCRUDView.swift */,
+				D696D892282C23E7008B71ED /* CloudKitPushNotification.swift */,
+				D696D8C428311874008B71ED /* CloudKitUtility.swift */,
 			);
 			path = CKLoginCRUD;
 			sourceTree = "<group>";
@@ -574,19 +625,25 @@
 				D696D86128244DFD008B71ED /* recyclingLocationsRequest.swift in Sources */,
 				D6F981652820317B0073088D /* SuggestionsGrid.swift in Sources */,
 				D6F980FB2815D4830073088D /* Persistence.swift in Sources */,
+				D696D8B6282DA1A2008B71ED /* CameraService+Enums.swift in Sources */,
+				D696D893282C23E7008B71ED /* CloudKitPushNotification.swift in Sources */,
 				D6F980FE2815D4830073088D /* TrashMob.xcdatamodeld in Sources */,
 				D6F9811E281B1F010073088D /* FrameView.swift in Sources */,
 				D6F980F42815D4820073088D /* ContentView.swift in Sources */,
+				D696D8C528311874008B71ED /* CloudKitUtility.swift in Sources */,
 				D6F98170282166AE0073088D /* trashMob.swift in Sources */,
 				D6F9816128202F680073088D /* TrashMobTypeSuggestionView.swift in Sources */,
 				D6F9814C28201BBF0073088D /* RecyclingContactLink.swift in Sources */,
 				D6F9814E28201BD40073088D /* RecyclingLocationView.swift in Sources */,
 				D6F981872822E94B0073088D /* RequestManager.swift in Sources */,
 				D6F9814628201B680073088D /* RecyclingDetailsRow.swift in Sources */,
+				D696D8BC282DA27A008B71ED /* ImageResizer.swift in Sources */,
 				D6F98172282166E10073088D /* recyclingLocation.swift in Sources */,
 				D6F981832822E3CE0073088D /* APIManager.swift in Sources */,
 				D6F9816D282034A50073088D /* TrashMobsNearYouView.swift in Sources */,
+				D696D8BE282DA2AE008B71ED /* PhotoCaptureProcessor.swift in Sources */,
 				D6F981632820306B0073088D /* EmptyResultsView.swift in Sources */,
+				D696D8C3282EC4E0008B71ED /* TabView.swift in Sources */,
 				D6F9812D282010700073088D /* User.swift in Sources */,
 				D6F9813F282016C80073088D /* TrashMobDetailCard.swift in Sources */,
 				D6F98112281B1C700073088D /* CGImageExtension.swift in Sources */,
@@ -598,12 +655,14 @@
 				D6F98132282011BE0073088D /* LocationManager.swift in Sources */,
 				D6F9810D28185BD00073088D /* CloudKitCRUDView.swift in Sources */,
 				D6F981852822E6900073088D /* NetworkError.swift in Sources */,
+				D696D8B8282DA1FC008B71ED /* CameraService+Extensions.swift in Sources */,
 				D6F9815028201BEF0073088D /* RecyclingHeaderView.swift in Sources */,
 				D6F9810B28172FFA0073088D /* LoginView.swift in Sources */,
 				D696D8782829404B008B71ED /* FrameManager.swift in Sources */,
 				D6F981762822906D0073088D /* RecyclingLocationsMock.swift in Sources */,
 				D6F98122282009B00073088D /* APIConstants.swift in Sources */,
 				D6F9811A281B1E100073088D /* ToggleButton.swift in Sources */,
+				D696D8C1282DA319008B71ED /* CameraPreview.swift in Sources */,
 				D696D85D28244CBB008B71ED /* DataParser.swift in Sources */,
 				D6F98169282033CE0073088D /* MainView.swift in Sources */,
 				D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */,
@@ -618,6 +677,7 @@
 				D696D86D28254015008B71ED /* AccessTokenManager.swift in Sources */,
 				D6F98155282026550073088D /* RecyclingNearYouView.swift in Sources */,
 				D6F9817E2822CCBC0073088D /* RequestProtocol.swift in Sources */,
+				D696D8BA282DA253008B71ED /* CameraService.swift in Sources */,
 				D6F9815A282028E00073088D /* TrashMobSearchType.swift in Sources */,
 				D6F9814428201B430073088D /* RecyclingDetailsView.swift in Sources */,
 				D696D87628293793008B71ED /* CameraManager.swift in Sources */,

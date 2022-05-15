@@ -74,7 +74,6 @@ class LoginViewModel: ObservableObject {
             }
         }
     }
-    
 }
 
 struct LoginView: View {
@@ -83,11 +82,24 @@ struct LoginView: View {
     
     var body: some View {
         VStack {
-            Text("IS SIGNED IN: \(vm.isSignedIntoiCloud.description.uppercased())")
-            Text(vm.error)
-            Text("Permission: \(vm.permissionStatus.description.uppercased())")
-            Text("NAME: \(vm.userName)")
+            Spacer()
+            Text("TrashMob validates all users with their iCloud account")
+                .font(.system(.title))
+                .padding()
+            Spacer()
+//            Text("IS SIGNED IN: \(vm.isSignedIntoiCloud.description.uppercased())")
+//            Text(vm.error)
+//            Text("Permission: \(vm.permissionStatus.description.uppercased())")
+//            Text("NAME: \(vm.userName)")
+            Spacer()
+            Text("Your name or email will not be shared or otherwise utilized without your permission")
+                .padding()
+                .font(.system(.title))
+            Text("Posting improper pictures or otherwise disrespectful behavior may lead to the suspension or termination of your account")
+            Spacer()
         }
+        .multilineTextAlignment(.center)
+        
     }
 }
 
