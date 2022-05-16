@@ -99,20 +99,30 @@ struct LoginView: View {
     var body: some View {
         VStack {
             Spacer()
-            Text("TrashMob validates all users with their iCloud account")
+            Text("TrashMob validates all participants with their iCloud account")
                 .font(.system(.title))
                 .padding()
             Spacer()
-            Text("IS SIGNED IN: \(vm.isSignedIntoiCloud.description.uppercased())")
-            Text(vm.error)
-            Text("Permission: \(vm.permissionStatus.description.uppercased())")
-            Text("NAME: \(vm.userName)")
+            
+            if vm.isSignedIntoiCloud == false {
+                Text("IS SIGNED IN: \(vm.isSignedIntoiCloud.description.uppercased())")
+                Text(vm.error)
+                Text("Permission: \(vm.permissionStatus.description.uppercased())")
+            } else {
+                Text("Welcome, \(vm.userName)!")
+                    .font(.largeTitle)
+            }
+            
             Spacer()
-            Text("Your name or email will not be shared or otherwise utilized without your permission")
-                .padding()
-                .font(.system(.title))
-            Text("Posting improper pictures or otherwise disrespectful behavior may lead to the suspension or termination of your account")
-//            Spacer()
+            Text("""
+Only your first name
+will be shared
+with fellow trash mobbers
+""")
+            .padding()
+            .font(.system(.title))
+            Text("Posting improper pictures or otherwise disrespectful behavior may lead to the suspension or termination of your TrashMob account")
+            //            Spacer()
         }
         .multilineTextAlignment(.center)
         

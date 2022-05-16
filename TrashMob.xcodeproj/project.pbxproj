@@ -20,6 +20,7 @@
 		D696D8C3282EC4E0008B71ED /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C2282EC4E0008B71ED /* TabView.swift */; };
 		D696D8C528311874008B71ED /* CloudKitUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C428311874008B71ED /* CloudKitUtility.swift */; };
 		D696D8C728326951008B71ED /* TrashMobFullscreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */; };
+		D696D8C928328742008B71ED /* TrashMobBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C828328742008B71ED /* TrashMobBackgroundImage.swift */; };
 		D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F980F12815D4820073088D /* TrashMobApp.swift */; };
 		D6F980F42815D4820073088D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F980F32815D4820073088D /* ContentView.swift */; };
 		D6F980F62815D4830073088D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F980F52815D4830073088D /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		D696D8C2282EC4E0008B71ED /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		D696D8C428311874008B71ED /* CloudKitUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitUtility.swift; sourceTree = "<group>"; };
 		D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobFullscreenView.swift; sourceTree = "<group>"; };
+		D696D8C828328742008B71ED /* TrashMobBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobBackgroundImage.swift; sourceTree = "<group>"; };
 		D6F980EE2815D4820073088D /* TrashMob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrashMob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F980F12815D4820073088D /* TrashMobApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobApp.swift; sourceTree = "<group>"; };
 		D6F980F32815D4820073088D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				D6F980F32815D4820073088D /* ContentView.swift */,
 				D6F980F72815D4830073088D /* Preview Content */,
 				D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */,
+				D696D8C828328742008B71ED /* TrashMobBackgroundImage.swift */,
 			);
 			path = TrashMob;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				D696D893282C23E7008B71ED /* CloudKitPushNotification.swift in Sources */,
 				D6F980FE2815D4830073088D /* TrashMob.xcdatamodeld in Sources */,
 				D6F9811E281B1F010073088D /* FrameView.swift in Sources */,
+				D696D8C928328742008B71ED /* TrashMobBackgroundImage.swift in Sources */,
 				D6F980F42815D4820073088D /* ContentView.swift in Sources */,
 				D696D8C528311874008B71ED /* CloudKitUtility.swift in Sources */,
 				D6F98170282166AE0073088D /* trashMob.swift in Sources */,
