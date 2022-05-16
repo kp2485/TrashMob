@@ -7,21 +7,31 @@
 
 import Foundation
 import SwiftUI
-
-struct TrashMob: Codable {
-    var name: String?
-    var createdBy: String?
-    var creationDate: Int?
-    var mobDate: Int?
-    var latitude: Double?
-    var longitude: Double?
-    var status: String?
-    var type: String?
-//    var suppliesNeeded: [String]?
-//    var suppliesVolunteered: [String]?
-    var loves: Int?
-    var comments: [String:String]?
-    var attendees: [String]?
-    var beforePicture: URL?
-    var afterPicture: URL?
-}
+//
+//    struct MobModel: Hashable {
+//        let name: String
+//        let targetedDate: Date
+//        let possibleDates: [Date]?
+//        let scheduledDate: Date?
+//        let startedDate: Date?
+//        let completedDate: Date?
+//        let archivedDate: Date?
+//        var trashMobState: String
+//        let latitude: Double
+//        let longitude: Double
+//        let beforePicURL: URL?
+//        let afterPicURL: URL?
+//        var loves: Int
+//        var attendees: [String]
+//        let record: CKRecord
+//    }
+//
+//    enum TrashMobState {
+//        case loading
+//        case targeted
+//        case scheduling
+//        case scheduled
+//        case inProgress
+//        case completed
+//        case archived
+//    }

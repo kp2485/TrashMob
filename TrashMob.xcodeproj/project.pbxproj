@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D696D85D28244CBB008B71ED /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D85C28244CBB008B71ED /* DataParser.swift */; };
-		D696D86128244DFD008B71ED /* recyclingLocationsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D86028244DFD008B71ED /* recyclingLocationsRequest.swift */; };
-		D696D86328244F7A008B71ED /* recyclingLocationsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D86228244F7A008B71ED /* recyclingLocationsContainer.swift */; };
-		D696D866282534F3008B71ED /* AuthTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D865282534F3008B71ED /* AuthTokenRequest.swift */; };
-		D696D86828253AE3008B71ED /* RecyclingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D86728253AE3008B71ED /* RecyclingRow.swift */; };
-		D696D86A28253D4F008B71ED /* AppUserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D86928253D4F008B71ED /* AppUserDefaultsKeys.swift */; };
-		D696D86D28254015008B71ED /* AccessTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D86C28254015008B71ED /* AccessTokenManager.swift */; };
-		D696D870282540A3008B71ED /* APIToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D86F282540A3008B71ED /* APIToken.swift */; };
 		D696D87628293793008B71ED /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D87528293793008B71ED /* CameraManager.swift */; };
 		D696D8782829404B008B71ED /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8772829404B008B71ED /* FrameManager.swift */; };
 		D696D87A28294166008B71ED /* TakePictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D87928294166008B71ED /* TakePictureViewModel.swift */; };
@@ -27,6 +19,7 @@
 		D696D8C1282DA319008B71ED /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C0282DA319008B71ED /* CameraPreview.swift */; };
 		D696D8C3282EC4E0008B71ED /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C2282EC4E0008B71ED /* TabView.swift */; };
 		D696D8C528311874008B71ED /* CloudKitUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C428311874008B71ED /* CloudKitUtility.swift */; };
+		D696D8C728326951008B71ED /* TrashMobFullscreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */; };
 		D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F980F12815D4820073088D /* TrashMobApp.swift */; };
 		D6F980F42815D4820073088D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F980F32815D4820073088D /* ContentView.swift */; };
 		D6F980F62815D4830073088D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F980F52815D4830073088D /* Assets.xcassets */; };
@@ -43,53 +36,14 @@
 		D6F98118281B1D790073088D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98117281B1D790073088D /* ErrorView.swift */; };
 		D6F9811A281B1E100073088D /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98119281B1E100073088D /* ToggleButton.swift */; };
 		D6F9811E281B1F010073088D /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9811D281B1F010073088D /* FrameView.swift */; };
-		D6F98122282009B00073088D /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98121282009B00073088D /* APIConstants.swift */; };
-		D6F9812A28200F850073088D /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9812928200F850073088D /* Organization.swift */; };
 		D6F9812D282010700073088D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9812C282010700073088D /* User.swift */; };
 		D6F98130282010C40073088D /* AddressFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9812F282010C40073088D /* AddressFetcher.swift */; };
 		D6F98132282011BE0073088D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98131282011BE0073088D /* LocationManager.swift */; };
-		D6F9813B282016780073088D /* TrashMobDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9813A282016780073088D /* TrashMobDetailsView.swift */; };
-		D6F9813D282016A00073088D /* TrashMobDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9813C282016A00073088D /* TrashMobDetailRow.swift */; };
-		D6F9813F282016C80073088D /* TrashMobDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9813E282016C80073088D /* TrashMobDetailCard.swift */; };
-		D6F9814428201B430073088D /* RecyclingDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9814328201B430073088D /* RecyclingDetailsView.swift */; };
-		D6F9814628201B680073088D /* RecyclingDetailsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9814528201B680073088D /* RecyclingDetailsRow.swift */; };
-		D6F9814828201B9E0073088D /* RecyclingDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9814728201B9E0073088D /* RecyclingDetailCard.swift */; };
-		D6F9814A28201BAC0073088D /* RecyclingContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9814928201BAC0073088D /* RecyclingContactsView.swift */; };
-		D6F9814C28201BBF0073088D /* RecyclingContactLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9814B28201BBF0073088D /* RecyclingContactLink.swift */; };
-		D6F9814E28201BD40073088D /* RecyclingLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9814D28201BD40073088D /* RecyclingLocationView.swift */; };
-		D6F9815028201BEF0073088D /* RecyclingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9814F28201BEF0073088D /* RecyclingHeaderView.swift */; };
-		D6F98155282026550073088D /* RecyclingNearYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98154282026550073088D /* RecyclingNearYouView.swift */; };
-		D6F9815A282028E00073088D /* TrashMobSearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98159282028E00073088D /* TrashMobSearchType.swift */; };
-		D6F9815C28202BD40073088D /* TrashMobSearchStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9815B28202BD40073088D /* TrashMobSearchStatus.swift */; };
-		D6F9815E28202D340073088D /* RecyclingSearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9815D28202D340073088D /* RecyclingSearchType.swift */; };
-		D6F9816128202F680073088D /* TrashMobTypeSuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9816028202F680073088D /* TrashMobTypeSuggestionView.swift */; };
-		D6F981632820306B0073088D /* EmptyResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F981622820306B0073088D /* EmptyResultsView.swift */; };
-		D6F981652820317B0073088D /* SuggestionsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F981642820317B0073088D /* SuggestionsGrid.swift */; };
-		D6F98167282032030073088D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98166282032030073088D /* SearchView.swift */; };
 		D6F98169282033CE0073088D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98168282033CE0073088D /* MainView.swift */; };
-		D6F9816D282034A50073088D /* TrashMobsNearYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9816C282034A50073088D /* TrashMobsNearYouView.swift */; };
 		D6F98170282166AE0073088D /* trashMob.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9816F282166AE0073088D /* trashMob.swift */; };
-		D6F98172282166E10073088D /* recyclingLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98171282166E10073088D /* recyclingLocation.swift */; };
-		D6F9817428228E910073088D /* trashMobsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9817328228E910073088D /* trashMobsMock.swift */; };
-		D6F981762822906D0073088D /* RecyclingLocationsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F981752822906D0073088D /* RecyclingLocationsMock.swift */; };
-		D6F98178282292850073088D /* RecyclingLocationsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = D6F98177282292850073088D /* RecyclingLocationsMock.json */; };
-		D6F9817A2822993A0073088D /* TrashMobsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = D6F981792822993A0073088D /* TrashMobsMock.json */; };
-		D6F9817E2822CCBC0073088D /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9817D2822CCBC0073088D /* RequestProtocol.swift */; };
-		D6F981802822D39F0073088D /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9817F2822D39F0073088D /* RequestType.swift */; };
-		D6F981832822E3CE0073088D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F981822822E3CE0073088D /* APIManager.swift */; };
-		D6F981852822E6900073088D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F981842822E6900073088D /* NetworkError.swift */; };
-		D6F981872822E94B0073088D /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F981862822E94B0073088D /* RequestManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D696D85C28244CBB008B71ED /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
-		D696D86028244DFD008B71ED /* recyclingLocationsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recyclingLocationsRequest.swift; sourceTree = "<group>"; };
-		D696D86228244F7A008B71ED /* recyclingLocationsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recyclingLocationsContainer.swift; sourceTree = "<group>"; };
-		D696D865282534F3008B71ED /* AuthTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenRequest.swift; sourceTree = "<group>"; };
-		D696D86728253AE3008B71ED /* RecyclingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingRow.swift; sourceTree = "<group>"; };
-		D696D86928253D4F008B71ED /* AppUserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserDefaultsKeys.swift; sourceTree = "<group>"; };
-		D696D86C28254015008B71ED /* AccessTokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenManager.swift; sourceTree = "<group>"; };
-		D696D86F282540A3008B71ED /* APIToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIToken.swift; sourceTree = "<group>"; };
 		D696D87528293793008B71ED /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		D696D8772829404B008B71ED /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
 		D696D87928294166008B71ED /* TakePictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureViewModel.swift; sourceTree = "<group>"; };
@@ -102,6 +56,7 @@
 		D696D8C0282DA319008B71ED /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 		D696D8C2282EC4E0008B71ED /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		D696D8C428311874008B71ED /* CloudKitUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitUtility.swift; sourceTree = "<group>"; };
+		D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobFullscreenView.swift; sourceTree = "<group>"; };
 		D6F980EE2815D4820073088D /* TrashMob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrashMob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F980F12815D4820073088D /* TrashMobApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobApp.swift; sourceTree = "<group>"; };
 		D6F980F32815D4820073088D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,43 +75,12 @@
 		D6F98117281B1D790073088D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		D6F98119281B1E100073088D /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 		D6F9811D281B1F010073088D /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
-		D6F98121282009B00073088D /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
-		D6F9812928200F850073088D /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		D6F9812C282010700073088D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D6F9812F282010C40073088D /* AddressFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressFetcher.swift; sourceTree = "<group>"; };
 		D6F98131282011BE0073088D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		D6F9813A282016780073088D /* TrashMobDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobDetailsView.swift; sourceTree = "<group>"; };
-		D6F9813C282016A00073088D /* TrashMobDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobDetailRow.swift; sourceTree = "<group>"; };
-		D6F9813E282016C80073088D /* TrashMobDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobDetailCard.swift; sourceTree = "<group>"; };
-		D6F9814328201B430073088D /* RecyclingDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingDetailsView.swift; sourceTree = "<group>"; };
-		D6F9814528201B680073088D /* RecyclingDetailsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingDetailsRow.swift; sourceTree = "<group>"; };
-		D6F9814728201B9E0073088D /* RecyclingDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingDetailCard.swift; sourceTree = "<group>"; };
-		D6F9814928201BAC0073088D /* RecyclingContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingContactsView.swift; sourceTree = "<group>"; };
-		D6F9814B28201BBF0073088D /* RecyclingContactLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingContactLink.swift; sourceTree = "<group>"; };
-		D6F9814D28201BD40073088D /* RecyclingLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingLocationView.swift; sourceTree = "<group>"; };
-		D6F9814F28201BEF0073088D /* RecyclingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingHeaderView.swift; sourceTree = "<group>"; };
-		D6F98154282026550073088D /* RecyclingNearYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingNearYouView.swift; sourceTree = "<group>"; };
-		D6F98159282028E00073088D /* TrashMobSearchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobSearchType.swift; sourceTree = "<group>"; };
-		D6F9815B28202BD40073088D /* TrashMobSearchStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobSearchStatus.swift; sourceTree = "<group>"; };
-		D6F9815D28202D340073088D /* RecyclingSearchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingSearchType.swift; sourceTree = "<group>"; };
-		D6F9816028202F680073088D /* TrashMobTypeSuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobTypeSuggestionView.swift; sourceTree = "<group>"; };
-		D6F981622820306B0073088D /* EmptyResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResultsView.swift; sourceTree = "<group>"; };
-		D6F981642820317B0073088D /* SuggestionsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsGrid.swift; sourceTree = "<group>"; };
-		D6F98166282032030073088D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		D6F98168282033CE0073088D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		D6F9816C282034A50073088D /* TrashMobsNearYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobsNearYouView.swift; sourceTree = "<group>"; };
 		D6F9816F282166AE0073088D /* trashMob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trashMob.swift; sourceTree = "<group>"; };
-		D6F98171282166E10073088D /* recyclingLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recyclingLocation.swift; sourceTree = "<group>"; };
-		D6F9817328228E910073088D /* trashMobsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trashMobsMock.swift; sourceTree = "<group>"; };
-		D6F981752822906D0073088D /* RecyclingLocationsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingLocationsMock.swift; sourceTree = "<group>"; };
-		D6F98177282292850073088D /* RecyclingLocationsMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RecyclingLocationsMock.json; sourceTree = "<group>"; };
-		D6F981792822993A0073088D /* TrashMobsMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TrashMobsMock.json; sourceTree = "<group>"; };
 		D6F9817B2822C9360073088D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		D6F9817D2822CCBC0073088D /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
-		D6F9817F2822D39F0073088D /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
-		D6F981822822E3CE0073088D /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		D6F981842822E6900073088D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		D6F981862822E94B0073088D /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,46 +95,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D696D85E28244CCB008B71ED /* parser */ = {
-			isa = PBXGroup;
-			children = (
-				D696D85C28244CBB008B71ED /* DataParser.swift */,
-			);
-			path = parser;
-			sourceTree = "<group>";
-		};
-		D696D85F28244DC7008B71ED /* recyclingLocations */ = {
-			isa = PBXGroup;
-			children = (
-				D696D86028244DFD008B71ED /* recyclingLocationsRequest.swift */,
-			);
-			path = recyclingLocations;
-			sourceTree = "<group>";
-		};
-		D696D864282534DB008B71ED /* auth */ = {
-			isa = PBXGroup;
-			children = (
-				D696D865282534F3008B71ED /* AuthTokenRequest.swift */,
-			);
-			path = auth;
-			sourceTree = "<group>";
-		};
-		D696D86B28253FFF008B71ED /* token */ = {
-			isa = PBXGroup;
-			children = (
-				D696D86C28254015008B71ED /* AccessTokenManager.swift */,
-			);
-			path = token;
-			sourceTree = "<group>";
-		};
-		D696D86E28254093008B71ED /* model */ = {
-			isa = PBXGroup;
-			children = (
-				D696D86F282540A3008B71ED /* APIToken.swift */,
-			);
-			name = model;
-			sourceTree = "<group>";
-		};
 		D696D8B3282DA179008B71ED /* Camera */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,17 +150,13 @@
 				D696D8C2282EC4E0008B71ED /* TabView.swift */,
 				D696D8B3282DA179008B71ED /* Camera */,
 				D6F981042815D7670073088D /* Core */,
-				D6F98138282016070073088D /* TrashMobDetails */,
-				D6F9816B2820344E0073088D /* TrashMobsNearYou */,
-				D6F9814228201B1A0073088D /* RecyclingDetails */,
-				D6F981522820262F0073088D /* RecyclingNearYou */,
-				D6F98156282027130073088D /* Search */,
 				D6F98106281727180073088D /* TrashMob.entitlements */,
-				D6F980F32815D4820073088D /* ContentView.swift */,
 				D6F9810E281B1BD40073088D /* TakePicture */,
 				D6F98137282014E40073088D /* CKLoginCRUD */,
 				D6F980F52815D4830073088D /* Assets.xcassets */,
+				D6F980F32815D4820073088D /* ContentView.swift */,
 				D6F980F72815D4830073088D /* Preview Content */,
+				D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */,
 			);
 			path = TrashMob;
 			sourceTree = "<group>";
@@ -303,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				D6F9812328200AA40073088D /* coreData */,
-				D6F981202820097C0073088D /* api */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -333,19 +212,6 @@
 			path = TakePicture;
 			sourceTree = "<group>";
 		};
-		D6F981202820097C0073088D /* api */ = {
-			isa = PBXGroup;
-			children = (
-				D696D86E28254093008B71ED /* model */,
-				D696D86B28253FFF008B71ED /* token */,
-				D696D85E28244CCB008B71ED /* parser */,
-				D6F981812822E3BA0073088D /* network */,
-				D6F9817C2822CC620073088D /* request */,
-				D6F98121282009B00073088D /* APIConstants.swift */,
-			);
-			path = api;
-			sourceTree = "<group>";
-		};
 		D6F9812328200AA40073088D /* coreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,29 +226,8 @@
 			children = (
 				D6F98135282012880073088D /* trashMob */,
 				D6F9812B282010650073088D /* user */,
-				D6F9812828200F680073088D /* organization */,
-				D6F9812628200D130073088D /* recyclingLocation */,
 			);
 			path = model;
-			sourceTree = "<group>";
-		};
-		D6F9812628200D130073088D /* recyclingLocation */ = {
-			isa = PBXGroup;
-			children = (
-				D6F98171282166E10073088D /* recyclingLocation.swift */,
-				D696D86228244F7A008B71ED /* recyclingLocationsContainer.swift */,
-				D6F981752822906D0073088D /* RecyclingLocationsMock.swift */,
-				D6F98177282292850073088D /* RecyclingLocationsMock.json */,
-			);
-			path = recyclingLocation;
-			sourceTree = "<group>";
-		};
-		D6F9812828200F680073088D /* organization */ = {
-			isa = PBXGroup;
-			children = (
-				D6F9812928200F850073088D /* Organization.swift */,
-			);
-			path = organization;
 			sourceTree = "<group>";
 		};
 		D6F9812B282010650073088D /* user */ = {
@@ -398,7 +243,6 @@
 			children = (
 				D6F9812F282010C40073088D /* AddressFetcher.swift */,
 				D6F98131282011BE0073088D /* LocationManager.swift */,
-				D696D86928253D4F008B71ED /* AppUserDefaultsKeys.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -407,8 +251,6 @@
 			isa = PBXGroup;
 			children = (
 				D6F9816F282166AE0073088D /* trashMob.swift */,
-				D6F9817328228E910073088D /* trashMobsMock.swift */,
-				D6F981792822993A0073088D /* TrashMobsMock.json */,
 			);
 			path = trashMob;
 			sourceTree = "<group>";
@@ -422,130 +264,6 @@
 				D696D8C428311874008B71ED /* CloudKitUtility.swift */,
 			);
 			path = CKLoginCRUD;
-			sourceTree = "<group>";
-		};
-		D6F98138282016070073088D /* TrashMobDetails */ = {
-			isa = PBXGroup;
-			children = (
-				D6F981392820165E0073088D /* views */,
-			);
-			path = TrashMobDetails;
-			sourceTree = "<group>";
-		};
-		D6F981392820165E0073088D /* views */ = {
-			isa = PBXGroup;
-			children = (
-				D6F9813A282016780073088D /* TrashMobDetailsView.swift */,
-				D6F9813C282016A00073088D /* TrashMobDetailRow.swift */,
-				D6F9813E282016C80073088D /* TrashMobDetailCard.swift */,
-			);
-			path = views;
-			sourceTree = "<group>";
-		};
-		D6F9814228201B1A0073088D /* RecyclingDetails */ = {
-			isa = PBXGroup;
-			children = (
-				D6F98151282021A70073088D /* views */,
-			);
-			path = RecyclingDetails;
-			sourceTree = "<group>";
-		};
-		D6F98151282021A70073088D /* views */ = {
-			isa = PBXGroup;
-			children = (
-				D6F9814328201B430073088D /* RecyclingDetailsView.swift */,
-				D6F9814528201B680073088D /* RecyclingDetailsRow.swift */,
-				D6F9814728201B9E0073088D /* RecyclingDetailCard.swift */,
-				D6F9814928201BAC0073088D /* RecyclingContactsView.swift */,
-				D6F9814B28201BBF0073088D /* RecyclingContactLink.swift */,
-				D6F9814D28201BD40073088D /* RecyclingLocationView.swift */,
-				D6F9814F28201BEF0073088D /* RecyclingHeaderView.swift */,
-			);
-			path = views;
-			sourceTree = "<group>";
-		};
-		D6F981522820262F0073088D /* RecyclingNearYou */ = {
-			isa = PBXGroup;
-			children = (
-				D6F98153282026450073088D /* views */,
-			);
-			path = RecyclingNearYou;
-			sourceTree = "<group>";
-		};
-		D6F98153282026450073088D /* views */ = {
-			isa = PBXGroup;
-			children = (
-				D6F98154282026550073088D /* RecyclingNearYouView.swift */,
-				D696D86728253AE3008B71ED /* RecyclingRow.swift */,
-			);
-			path = views;
-			sourceTree = "<group>";
-		};
-		D6F98156282027130073088D /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				D6F9815F28202F040073088D /* views */,
-				D6F981572820272E0073088D /* models */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		D6F981572820272E0073088D /* models */ = {
-			isa = PBXGroup;
-			children = (
-				D6F98159282028E00073088D /* TrashMobSearchType.swift */,
-				D6F9815B28202BD40073088D /* TrashMobSearchStatus.swift */,
-				D6F9815D28202D340073088D /* RecyclingSearchType.swift */,
-			);
-			path = models;
-			sourceTree = "<group>";
-		};
-		D6F9815F28202F040073088D /* views */ = {
-			isa = PBXGroup;
-			children = (
-				D6F9816028202F680073088D /* TrashMobTypeSuggestionView.swift */,
-				D6F981622820306B0073088D /* EmptyResultsView.swift */,
-				D6F981642820317B0073088D /* SuggestionsGrid.swift */,
-				D6F98166282032030073088D /* SearchView.swift */,
-			);
-			path = views;
-			sourceTree = "<group>";
-		};
-		D6F9816B2820344E0073088D /* TrashMobsNearYou */ = {
-			isa = PBXGroup;
-			children = (
-				D6F9816E282035050073088D /* views */,
-			);
-			path = TrashMobsNearYou;
-			sourceTree = "<group>";
-		};
-		D6F9816E282035050073088D /* views */ = {
-			isa = PBXGroup;
-			children = (
-				D6F9816C282034A50073088D /* TrashMobsNearYouView.swift */,
-			);
-			path = views;
-			sourceTree = "<group>";
-		};
-		D6F9817C2822CC620073088D /* request */ = {
-			isa = PBXGroup;
-			children = (
-				D696D864282534DB008B71ED /* auth */,
-				D696D85F28244DC7008B71ED /* recyclingLocations */,
-				D6F9817D2822CCBC0073088D /* RequestProtocol.swift */,
-				D6F9817F2822D39F0073088D /* RequestType.swift */,
-			);
-			path = request;
-			sourceTree = "<group>";
-		};
-		D6F981812822E3BA0073088D /* network */ = {
-			isa = PBXGroup;
-			children = (
-				D6F981822822E3CE0073088D /* APIManager.swift */,
-				D6F981842822E6900073088D /* NetworkError.swift */,
-				D6F981862822E94B0073088D /* RequestManager.swift */,
-			);
-			path = network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -606,10 +324,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6F98178282292850073088D /* RecyclingLocationsMock.json in Resources */,
 				D6F980F92815D4830073088D /* Preview Assets.xcassets in Resources */,
 				D6F980F62815D4830073088D /* Assets.xcassets in Resources */,
-				D6F9817A2822993A0073088D /* TrashMobsMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,10 +336,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6F9813B282016780073088D /* TrashMobDetailsView.swift in Sources */,
-				D696D86A28253D4F008B71ED /* AppUserDefaultsKeys.swift in Sources */,
-				D696D86128244DFD008B71ED /* recyclingLocationsRequest.swift in Sources */,
-				D6F981652820317B0073088D /* SuggestionsGrid.swift in Sources */,
 				D6F980FB2815D4830073088D /* Persistence.swift in Sources */,
 				D696D8B6282DA1A2008B71ED /* CameraService+Enums.swift in Sources */,
 				D696D893282C23E7008B71ED /* CloudKitPushNotification.swift in Sources */,
@@ -632,61 +344,29 @@
 				D6F980F42815D4820073088D /* ContentView.swift in Sources */,
 				D696D8C528311874008B71ED /* CloudKitUtility.swift in Sources */,
 				D6F98170282166AE0073088D /* trashMob.swift in Sources */,
-				D6F9816128202F680073088D /* TrashMobTypeSuggestionView.swift in Sources */,
-				D6F9814C28201BBF0073088D /* RecyclingContactLink.swift in Sources */,
-				D6F9814E28201BD40073088D /* RecyclingLocationView.swift in Sources */,
-				D6F981872822E94B0073088D /* RequestManager.swift in Sources */,
-				D6F9814628201B680073088D /* RecyclingDetailsRow.swift in Sources */,
+				D696D8C728326951008B71ED /* TrashMobFullscreenView.swift in Sources */,
 				D696D8BC282DA27A008B71ED /* ImageResizer.swift in Sources */,
-				D6F98172282166E10073088D /* recyclingLocation.swift in Sources */,
-				D6F981832822E3CE0073088D /* APIManager.swift in Sources */,
-				D6F9816D282034A50073088D /* TrashMobsNearYouView.swift in Sources */,
 				D696D8BE282DA2AE008B71ED /* PhotoCaptureProcessor.swift in Sources */,
-				D6F981632820306B0073088D /* EmptyResultsView.swift in Sources */,
 				D696D8C3282EC4E0008B71ED /* TabView.swift in Sources */,
 				D6F9812D282010700073088D /* User.swift in Sources */,
-				D6F9813F282016C80073088D /* TrashMobDetailCard.swift in Sources */,
 				D6F98112281B1C700073088D /* CGImageExtension.swift in Sources */,
-				D6F9814A28201BAC0073088D /* RecyclingContactsView.swift in Sources */,
-				D6F9815E28202D340073088D /* RecyclingSearchType.swift in Sources */,
-				D6F981802822D39F0073088D /* RequestType.swift in Sources */,
 				D6F98130282010C40073088D /* AddressFetcher.swift in Sources */,
 				D6F98116281B1D290073088D /* ControlView.swift in Sources */,
 				D6F98132282011BE0073088D /* LocationManager.swift in Sources */,
 				D6F9810D28185BD00073088D /* CloudKitCRUDView.swift in Sources */,
-				D6F981852822E6900073088D /* NetworkError.swift in Sources */,
 				D696D8B8282DA1FC008B71ED /* CameraService+Extensions.swift in Sources */,
-				D6F9815028201BEF0073088D /* RecyclingHeaderView.swift in Sources */,
 				D6F9810B28172FFA0073088D /* LoginView.swift in Sources */,
 				D696D8782829404B008B71ED /* FrameManager.swift in Sources */,
-				D6F981762822906D0073088D /* RecyclingLocationsMock.swift in Sources */,
-				D6F98122282009B00073088D /* APIConstants.swift in Sources */,
 				D6F9811A281B1E100073088D /* ToggleButton.swift in Sources */,
 				D696D8C1282DA319008B71ED /* CameraPreview.swift in Sources */,
-				D696D85D28244CBB008B71ED /* DataParser.swift in Sources */,
 				D6F98169282033CE0073088D /* MainView.swift in Sources */,
 				D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */,
-				D6F9814828201B9E0073088D /* RecyclingDetailCard.swift in Sources */,
-				D696D86828253AE3008B71ED /* RecyclingRow.swift in Sources */,
 				D6F98110281B1C280073088D /* CameraError.swift in Sources */,
 				D6F98114281B1CC60073088D /* TakePictureView.swift in Sources */,
-				D6F98167282032030073088D /* SearchView.swift in Sources */,
-				D6F9815C28202BD40073088D /* TrashMobSearchStatus.swift in Sources */,
-				D696D86328244F7A008B71ED /* recyclingLocationsContainer.swift in Sources */,
-				D6F9817428228E910073088D /* trashMobsMock.swift in Sources */,
-				D696D86D28254015008B71ED /* AccessTokenManager.swift in Sources */,
-				D6F98155282026550073088D /* RecyclingNearYouView.swift in Sources */,
-				D6F9817E2822CCBC0073088D /* RequestProtocol.swift in Sources */,
 				D696D8BA282DA253008B71ED /* CameraService.swift in Sources */,
-				D6F9815A282028E00073088D /* TrashMobSearchType.swift in Sources */,
-				D6F9814428201B430073088D /* RecyclingDetailsView.swift in Sources */,
 				D696D87628293793008B71ED /* CameraManager.swift in Sources */,
-				D6F9813D282016A00073088D /* TrashMobDetailRow.swift in Sources */,
-				D696D866282534F3008B71ED /* AuthTokenRequest.swift in Sources */,
-				D6F9812A28200F850073088D /* Organization.swift in Sources */,
 				D6F98118281B1D790073088D /* ErrorView.swift in Sources */,
 				D696D87A28294166008B71ED /* TakePictureViewModel.swift in Sources */,
-				D696D870282540A3008B71ED /* APIToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

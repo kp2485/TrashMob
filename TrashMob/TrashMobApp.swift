@@ -28,8 +28,8 @@ struct TrashMobApp: App {
 //            CameraPreview(session: session)
 //            MainView()
 //            CloudKitPushNotifications()
-//            CloudKitCRUDView()
-            LoginView()
+            CloudKitCRUDView()
+//            LoginView()
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

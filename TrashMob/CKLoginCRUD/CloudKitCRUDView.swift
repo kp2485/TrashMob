@@ -28,8 +28,8 @@ enum TrashMobState {
 class CloudKitCRUDViewModel: ObservableObject {
     
     @Published var text: String = ""
-    @Published var loves: Int = 0
-//    @Published var trashMobState: String
+    @Published var loves: Int = 1
+    @Published var trashMobState = "targeted"
     
     @Published var mobs: [MobModel] = []
     
@@ -48,6 +48,8 @@ class CloudKitCRUDViewModel: ObservableObject {
         let newMob = CKRecord(recordType: "Mobs")
         newMob["name"] = name
         newMob["loves"] = loves
+        newMob["trashMobState"] = trashMobState
+        
         
         // switch to image from TakeAPictureView
         guard
