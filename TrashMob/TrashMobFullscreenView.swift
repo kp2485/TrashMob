@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct TrashMobFullscreenView: View {
+    @State private var image: Image?
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            image?
+                .resizable()
+                .scaledToFit()
+        }
+        .onAppear(perform: loadImage)
+    }
+    
+    func loadImage() {
+        image = Image("trashyProperty")
     }
 }
 

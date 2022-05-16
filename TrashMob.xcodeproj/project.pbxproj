@@ -39,7 +39,6 @@
 		D6F9812D282010700073088D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9812C282010700073088D /* User.swift */; };
 		D6F98130282010C40073088D /* AddressFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9812F282010C40073088D /* AddressFetcher.swift */; };
 		D6F98132282011BE0073088D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98131282011BE0073088D /* LocationManager.swift */; };
-		D6F98169282033CE0073088D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98168282033CE0073088D /* MainView.swift */; };
 		D6F98170282166AE0073088D /* trashMob.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9816F282166AE0073088D /* trashMob.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,7 +77,6 @@
 		D6F9812C282010700073088D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D6F9812F282010C40073088D /* AddressFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressFetcher.swift; sourceTree = "<group>"; };
 		D6F98131282011BE0073088D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		D6F98168282033CE0073088D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D6F9816F282166AE0073088D /* trashMob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trashMob.swift; sourceTree = "<group>"; };
 		D6F9817B2822C9360073088D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,7 +144,6 @@
 			children = (
 				D6F980F12815D4820073088D /* TrashMobApp.swift */,
 				D6F9817B2822C9360073088D /* Info.plist */,
-				D6F98168282033CE0073088D /* MainView.swift */,
 				D696D8C2282EC4E0008B71ED /* TabView.swift */,
 				D696D8B3282DA179008B71ED /* Camera */,
 				D6F981042815D7670073088D /* Core */,
@@ -359,7 +356,6 @@
 				D696D8782829404B008B71ED /* FrameManager.swift in Sources */,
 				D6F9811A281B1E100073088D /* ToggleButton.swift in Sources */,
 				D696D8C1282DA319008B71ED /* CameraPreview.swift in Sources */,
-				D6F98169282033CE0073088D /* MainView.swift in Sources */,
 				D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */,
 				D6F98110281B1C280073088D /* CameraError.swift in Sources */,
 				D6F98114281B1CC60073088D /* TakePictureView.swift in Sources */,
