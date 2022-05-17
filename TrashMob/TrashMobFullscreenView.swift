@@ -22,7 +22,7 @@ struct TrashMobFullscreenView: View {
     }
     
     @State var trashMobStatus = "scheduled"
-    @State var loves = 14
+    @State var loves = 33
     //    @State var lovesNeeded = 25 - loves
     @State var loved = true
     @State var attending = 12
@@ -69,13 +69,21 @@ struct TrashMobFullscreenView: View {
                                 RoundedRectangle(cornerRadius: 20)
                                     .frame(alignment: .center)
                                     .foregroundColor(.pink)
-                                Text(countDownString(from: referenceDate))
-                                    .onAppear(perform: {
-                                        _ = self.timer
-                                    })
-                                    .font(.system(.body))
-                                    .foregroundColor(.white)
-                                    .padding(10)
+                                
+                                if trashMobStatus == "targeted" {
+                                    Text(countDownString(from: referenceDate))
+                                            .onAppear(perform: {
+                                                _ = self.timer
+                                            })
+                                            .font(.system(.body))
+                                            .foregroundColor(.white)
+                                        .padding(10)
+                                } else {
+                                    Text("Wed Jun 1 @ 3pm")
+                                        .foregroundColor(.white)
+                                        .padding(10)
+                                }
+                                
                             }
                             .fixedSize()
                             .padding(.leading)
@@ -119,6 +127,7 @@ struct TrashMobFullscreenView: View {
                                     .font(.system(size: 37, weight: .medium, design: .rounded))
                                     .opacity(0.8)
                                     .shadow(color: .white, radius: 7)
+                                    .offset(y: -3)
                                 
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -171,7 +180,7 @@ struct TrashMobFullscreenView: View {
                                 .padding(.trailing)
                                 .font(.system(size: 37))
                                 .foregroundColor(.white)
-                                .offset(y: -5)
+                                .offset(y: -8)
                             
                             ZStack {
                                 RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -179,6 +188,15 @@ struct TrashMobFullscreenView: View {
                                     .offset(x: -9, y: 31)
                                     .foregroundColor(.white)
                                     .opacity(0.85)
+                                if loves < 25 {
+                                    Text("11 needed!")
+                                        .offset(x: -9, y: 31)
+                                        .foregroundColor(.blue)
+                                } else {
+                                    Text("Woohoo!")
+                                        .offset(x: -9, y: 31)
+                                        .foregroundColor(.blue)
+                                }
 //                                Text("\(lovesNeeded)")
                             }
                             
