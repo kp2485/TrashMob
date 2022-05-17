@@ -119,6 +119,24 @@ struct TrashMobFullscreenView: View {
                                     .font(.system(size: 37, weight: .medium, design: .rounded))
                                     .opacity(0.8)
                                     .shadow(color: .white, radius: 7)
+                                
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                        .frame(width: 100, height: 30, alignment: .bottomTrailing)
+                                        .offset(x: -9, y: 33)
+                                        .foregroundColor(.green)
+                                        .opacity(0.85)
+                                    if attended == false {
+                                        Text("Help out!")
+                                            .offset(x: -9, y: 33)
+                                            .foregroundColor(.white)
+                                    } else {
+                                        Text("Attending!")
+                                            .offset(x: -9, y: 33)
+                                            .foregroundColor(.white)
+                                    }
+    //                                Text("\(lovesNeeded)")
+                                }
                             }
                             .padding(.bottom)
                             .onTapGesture {
@@ -158,7 +176,7 @@ struct TrashMobFullscreenView: View {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 10, style: .continuous)
                                     .frame(width: 100, height: 30, alignment: .bottomTrailing)
-                                    .offset(x: -10, y: 30)
+                                    .offset(x: -9, y: 31)
                                     .foregroundColor(.white)
                                     .opacity(0.85)
 //                                Text("\(lovesNeeded)")
