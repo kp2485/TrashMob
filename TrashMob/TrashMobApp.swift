@@ -24,13 +24,13 @@ struct TrashMobApp: App {
     var body: some Scene {
         WindowGroup {
 //            TabsView()
-//            TrashMobFullscreenView(referenceDate: Calendar.current.date(byAdding: .day, value: 7, to: Date())!)
+            TrashMobFullscreenView(referenceDate: Calendar.current.date(byAdding: .day, value: 7, to: Date())!)
 //            TakePictureView()
 //            CameraPreview(session: session)
 //            MainView()
 //            CloudKitPushNotifications()
 //            CloudKitCRUDView()
-            LoginView()
+//            LoginView()
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

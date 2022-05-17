@@ -11,8 +11,22 @@ struct TrashMobFullscreenView: View {
     
     @State private var animateGradient = false
     
-    var trashMobStatus = "targeted"
-    @State var loves = 100
+    enum TrashMobState {
+        case loading
+        case targeted
+        case scheduling
+        case scheduled
+        case active
+        case mobbed
+        case archived
+    }
+    
+    @State var trashMobStatus = "scheduled"
+    @State var loves = 25
+    @State var loved = true
+    @State var attending = 12
+    @State var attended = false
+    let distanceAway = "3.7 miles"
     
     
     @State var nowDate: Date = Date()
@@ -55,9 +69,9 @@ struct TrashMobFullscreenView: View {
                                     .frame(alignment: .center)
                                     .foregroundColor(.pink)
                                 Text(countDownString(from: referenceDate))
-                                            .onAppear(perform: {
-                                                _ = self.timer
-                                            })
+                                    .onAppear(perform: {
+                                        _ = self.timer
+                                    })
                                     .font(.system(.body))
                                     .foregroundColor(.white)
                                     .padding(10)
@@ -67,29 +81,71 @@ struct TrashMobFullscreenView: View {
                             
                             Spacer()
                         }
-                        
                     }
                     
                     Spacer()
                     
                     VStack {
                         Spacer()
+                        
+                        if trashMobStatus == "scheduled" {
+                            ZStack {
+                                Circle()
+                                    .frame(width: 100, height: 100)
+                                    .foregroundColor(.green)
+                                    .padding(.trailing)
+                                    .opacity(0.8)
+                                    .shadow(radius: 20)
+                                    
+                                LinearGradient(colors: [.yellow, .pink], startPoint: animateGradient ? .topLeading : .topTrailing, endPoint: animateGradient ? .bottomLeading : .topTrailing)
+                                    .hueRotation(.degrees(0))
+                                    .onAppear {
+                                        withAnimation(.linear(duration: 5.0).repeatForever(autoreverses: true)) {
+                                            animateGradient.toggle()
+                                        }
+                                    }
+                                    .mask {
+                                        Image(systemName: "sparkles")
+                                            .font(.system(size: 80))
+                                            .padding(.trailing)
+                                    }
+                                    .frame(width: 115, height: 100)
+                                    .opacity(0.8)
+                                
+                                Text("\(attending)")
+                                    .padding(.trailing)
+                                    .font(.system(size: 37))
+                                    .foregroundColor(.white)
+                                    
+                            }
+                            .padding(.bottom)
+                            .onTapGesture {
+                                switch attended {
+                                case true:
+                                    attending -= 1
+                                    attended = false
+                                default:
+                                    attending += 1
+                                    attended = true
+                                }
+                            }
+                        }
+                        
                         ZStack {
-                            LinearGradient(colors: [.pink, .red], startPoint: animateGradient ? .bottomLeading : .topLeading, endPoint: animateGradient ? .topTrailing : .bottomTrailing)
+                            LinearGradient(colors: [.pink, .red, .yellow], startPoint: animateGradient ? .bottomLeading : .topTrailing, endPoint: animateGradient ? .topLeading : .topTrailing)
                                 .hueRotation(.degrees(0))
                                 .onAppear {
-                                    withAnimation(.linear(duration: 3.0).repeatForever(autoreverses: true)) {
+                                    withAnimation(.linear(duration: 5.0).repeatForever(autoreverses: true)) {
                                         animateGradient.toggle()
                                     }
                                 }
                                 .mask {
-                                    
-                                        Image(systemName: "heart.fill")
-                                            .font(.system(size: 100))
-                                    
-                                    .padding(.trailing)
+                                    Image(systemName: "heart.fill")
+                                        .font(.system(size: 100))
+                                        .padding(.trailing)
                                 }
-                            .frame(width: 110, height: 110)
+                                .frame(width: 115, height: 100)
+                                .shadow(radius: 20)
                             
                             Text("\(loves)")
                                 .padding(.trailing)
@@ -98,7 +154,14 @@ struct TrashMobFullscreenView: View {
                                 .offset(y: -5)
                         }
                         .onTapGesture {
-                            loves += 1
+                            switch loved {
+                            case true:
+                                loves -= 1
+                                loved = false
+                            default:
+                                loves += 1
+                                loved = true
+                            }
                         }
                     }
                 }
@@ -131,7 +194,7 @@ extension String {
     func capitalizingFirstLetter() -> String {
         return prefix(1).capitalized + dropFirst()
     }
-
+    
     mutating func capitalizeFirstLetter() {
         self = self.capitalizingFirstLetter()
     }
@@ -149,6 +212,6 @@ struct TrashMobFullscreenView_Previews: PreviewProvider {
 struct TrashMobFullscreenView_Previews2: PreviewProvider {
     
     static var previews: some View {
-        TrashMobFullscreenView(referenceDate: Date())
+        TrashMobFullscreenView(referenceDate: Calendar.current.date(byAdding: .hour, value: 8, to: Date())!)
     }
 }
