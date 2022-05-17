@@ -22,7 +22,8 @@ struct TrashMobFullscreenView: View {
     }
     
     @State var trashMobStatus = "scheduled"
-    @State var loves = 25
+    @State var loves = 14
+    //    @State var lovesNeeded = 25 - loves
     @State var loved = true
     @State var attending = 12
     @State var attended = false
@@ -91,13 +92,13 @@ struct TrashMobFullscreenView: View {
                         if trashMobStatus == "scheduled" {
                             ZStack {
                                 Circle()
-                                    .frame(width: 100, height: 100)
-                                    .foregroundColor(.green)
+                                    .frame(width: 95, height: 95)
+                                    .foregroundColor(.white)
                                     .padding(.trailing)
                                     .opacity(0.8)
                                     .shadow(radius: 20)
-                                    
-                                LinearGradient(colors: [.yellow, .pink], startPoint: animateGradient ? .topLeading : .topTrailing, endPoint: animateGradient ? .bottomLeading : .topTrailing)
+                                
+                                LinearGradient(colors: [.gray, .white], startPoint: animateGradient ? .topLeading : .topTrailing, endPoint: animateGradient ? .bottomLeading : .topTrailing)
                                     .hueRotation(.degrees(0))
                                     .onAppear {
                                         withAnimation(.linear(duration: 5.0).repeatForever(autoreverses: true)) {
@@ -106,17 +107,18 @@ struct TrashMobFullscreenView: View {
                                     }
                                     .mask {
                                         Image(systemName: "sparkles")
-                                            .font(.system(size: 80))
+                                            .font(.system(size: 70))
                                             .padding(.trailing)
                                     }
                                     .frame(width: 115, height: 100)
-                                    .opacity(0.8)
+                                    .opacity(0.66)
                                 
                                 Text("\(attending)")
                                     .padding(.trailing)
-                                    .font(.system(size: 37))
-                                    .foregroundColor(.white)
-                                    
+                                    .foregroundColor(.black)
+                                    .font(.system(size: 37, weight: .medium, design: .rounded))
+                                    .opacity(0.8)
+                                    .shadow(color: .white, radius: 7)
                             }
                             .padding(.bottom)
                             .onTapGesture {
@@ -152,6 +154,16 @@ struct TrashMobFullscreenView: View {
                                 .font(.system(size: 37))
                                 .foregroundColor(.white)
                                 .offset(y: -5)
+                            
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                    .frame(width: 100, height: 30, alignment: .bottomTrailing)
+                                    .offset(x: -10, y: 30)
+                                    .foregroundColor(.white)
+                                    .opacity(0.85)
+//                                Text("\(lovesNeeded)")
+                            }
+                            
                         }
                         .onTapGesture {
                             switch loved {
