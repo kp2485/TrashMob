@@ -249,7 +249,7 @@ struct TrashMobFullscreenView: View {
                 // Bottom
                 HStack {
                     
-                    MapView(trashMobs: [trashMob])
+                    MapView(trashMobs: [trashMob.self])
                         .frame(width: 150, height: 150)
                         .mask(RoundedRectangle(cornerRadius: 30))
                         .shadow(color: .black, radius: 3, x: 3, y: 3)
