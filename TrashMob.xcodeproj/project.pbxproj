@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D651D35E28355D7600703206 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D651D35D28355D7600703206 /* AvatarView.swift */; };
+		D65937B1283D5A0900E50F45 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937B0283D5A0900E50F45 /* SplashView.swift */; };
+		D65937B3283D5A9800E50F45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937B2283D5A9800E50F45 /* ContentView.swift */; };
+		D65937B5283D5B0800E50F45 /* MySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937B4283D5B0800E50F45 /* MySettings.swift */; };
+		D65937B7283D5B5E00E50F45 /* TargetATrashMob.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937B6283D5B5E00E50F45 /* TargetATrashMob.swift */; };
+		D65937B9283D5BBC00E50F45 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937B8283D5BBC00E50F45 /* MapView.swift */; };
+		D65937BB283D5BE300E50F45 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937BA283D5BE300E50F45 /* MapViewModel.swift */; };
+		D65937BD283D5C1A00E50F45 /* TrashMobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937BC283D5C1A00E50F45 /* TrashMobModel.swift */; };
+		D65937BF283D5C4200E50F45 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937BE283D5C4200E50F45 /* UserModel.swift */; };
 		D696D87628293793008B71ED /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D87528293793008B71ED /* CameraManager.swift */; };
 		D696D8782829404B008B71ED /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8772829404B008B71ED /* FrameManager.swift */; };
 		D696D87A28294166008B71ED /* TakePictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D87928294166008B71ED /* TakePictureViewModel.swift */; };
@@ -22,7 +31,7 @@
 		D696D8C728326951008B71ED /* TrashMobFullscreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */; };
 		D696D8C928328742008B71ED /* TrashMobBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C828328742008B71ED /* TrashMobBackgroundImage.swift */; };
 		D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F980F12815D4820073088D /* TrashMobApp.swift */; };
-		D6F980F42815D4820073088D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F980F32815D4820073088D /* ContentView.swift */; };
+		D6F980F42815D4820073088D /* DefaultContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F980F32815D4820073088D /* DefaultContentView.swift */; };
 		D6F980F62815D4830073088D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F980F52815D4830073088D /* Assets.xcassets */; };
 		D6F980F92815D4830073088D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F980F82815D4830073088D /* Preview Assets.xcassets */; };
 		D6F980FB2815D4830073088D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F980FA2815D4830073088D /* Persistence.swift */; };
@@ -44,6 +53,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D651D35D28355D7600703206 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		D65937B0283D5A0900E50F45 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		D65937B2283D5A9800E50F45 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D65937B4283D5B0800E50F45 /* MySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySettings.swift; sourceTree = "<group>"; };
+		D65937B6283D5B5E00E50F45 /* TargetATrashMob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetATrashMob.swift; sourceTree = "<group>"; };
+		D65937B8283D5BBC00E50F45 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		D65937BA283D5BE300E50F45 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		D65937BC283D5C1A00E50F45 /* TrashMobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobModel.swift; sourceTree = "<group>"; };
+		D65937BE283D5C4200E50F45 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D696D87528293793008B71ED /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		D696D8772829404B008B71ED /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
 		D696D87928294166008B71ED /* TakePictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureViewModel.swift; sourceTree = "<group>"; };
@@ -60,7 +78,7 @@
 		D696D8C828328742008B71ED /* TrashMobBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobBackgroundImage.swift; sourceTree = "<group>"; };
 		D6F980EE2815D4820073088D /* TrashMob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrashMob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F980F12815D4820073088D /* TrashMobApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobApp.swift; sourceTree = "<group>"; };
-		D6F980F32815D4820073088D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D6F980F32815D4820073088D /* DefaultContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultContentView.swift; sourceTree = "<group>"; };
 		D6F980F52815D4830073088D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6F980F82815D4830073088D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D6F980FA2815D4830073088D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -95,6 +113,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D65937AF283D59E300E50F45 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D65937B0283D5A0900E50F45 /* SplashView.swift */,
+				D65937B2283D5A9800E50F45 /* ContentView.swift */,
+				D65937B4283D5B0800E50F45 /* MySettings.swift */,
+				D65937B6283D5B5E00E50F45 /* TargetATrashMob.swift */,
+				D65937B8283D5BBC00E50F45 /* MapView.swift */,
+				D65937BA283D5BE300E50F45 /* MapViewModel.swift */,
+				D65937BC283D5C1A00E50F45 /* TrashMobModel.swift */,
+				D65937BE283D5C4200E50F45 /* UserModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		D696D8B3282DA179008B71ED /* Camera */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,19 +177,20 @@
 		D6F980F02815D4820073088D /* TrashMob */ = {
 			isa = PBXGroup;
 			children = (
-				D6F980F12815D4820073088D /* TrashMobApp.swift */,
+				D65937AF283D59E300E50F45 /* Main */,
 				D6F9817B2822C9360073088D /* Info.plist */,
-				D696D8C2282EC4E0008B71ED /* TabView.swift */,
+				D6F98106281727180073088D /* TrashMob.entitlements */,
+				D6F980F12815D4820073088D /* TrashMobApp.swift */,
 				D696D8B3282DA179008B71ED /* Camera */,
 				D6F981042815D7670073088D /* Core */,
-				D6F98106281727180073088D /* TrashMob.entitlements */,
 				D6F9810E281B1BD40073088D /* TakePicture */,
 				D6F98137282014E40073088D /* CKLoginCRUD */,
 				D6F980F52815D4830073088D /* Assets.xcassets */,
-				D6F980F32815D4820073088D /* ContentView.swift */,
 				D6F980F72815D4830073088D /* Preview Content */,
 				D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */,
 				D696D8C828328742008B71ED /* TrashMobBackgroundImage.swift */,
+				D651D35D28355D7600703206 /* AvatarView.swift */,
+				D696D8C2282EC4E0008B71ED /* TabView.swift */,
 			);
 			path = TrashMob;
 			sourceTree = "<group>";
@@ -172,6 +206,7 @@
 		D6F981042815D7670073088D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D6F980F32815D4820073088D /* DefaultContentView.swift */,
 				D6F9812E2820109A0073088D /* utils */,
 				D6F9812528200BAF0073088D /* model */,
 				D6F981052815D7790073088D /* data */,
@@ -341,15 +376,20 @@
 				D696D893282C23E7008B71ED /* CloudKitPushNotification.swift in Sources */,
 				D6F980FE2815D4830073088D /* TrashMob.xcdatamodeld in Sources */,
 				D6F9811E281B1F010073088D /* FrameView.swift in Sources */,
+				D651D35E28355D7600703206 /* AvatarView.swift in Sources */,
 				D696D8C928328742008B71ED /* TrashMobBackgroundImage.swift in Sources */,
-				D6F980F42815D4820073088D /* ContentView.swift in Sources */,
+				D6F980F42815D4820073088D /* DefaultContentView.swift in Sources */,
+				D65937B9283D5BBC00E50F45 /* MapView.swift in Sources */,
 				D696D8C528311874008B71ED /* CloudKitUtility.swift in Sources */,
 				D6F98170282166AE0073088D /* trashMob.swift in Sources */,
+				D65937BB283D5BE300E50F45 /* MapViewModel.swift in Sources */,
 				D696D8C728326951008B71ED /* TrashMobFullscreenView.swift in Sources */,
 				D696D8BC282DA27A008B71ED /* ImageResizer.swift in Sources */,
 				D696D8BE282DA2AE008B71ED /* PhotoCaptureProcessor.swift in Sources */,
 				D696D8C3282EC4E0008B71ED /* TabView.swift in Sources */,
 				D6F9812D282010700073088D /* User.swift in Sources */,
+				D65937BD283D5C1A00E50F45 /* TrashMobModel.swift in Sources */,
+				D65937BF283D5C4200E50F45 /* UserModel.swift in Sources */,
 				D6F98112281B1C700073088D /* CGImageExtension.swift in Sources */,
 				D6F98130282010C40073088D /* AddressFetcher.swift in Sources */,
 				D6F98116281B1D290073088D /* ControlView.swift in Sources */,
@@ -358,12 +398,16 @@
 				D696D8B8282DA1FC008B71ED /* CameraService+Extensions.swift in Sources */,
 				D6F9810B28172FFA0073088D /* LoginView.swift in Sources */,
 				D696D8782829404B008B71ED /* FrameManager.swift in Sources */,
+				D65937B1283D5A0900E50F45 /* SplashView.swift in Sources */,
+				D65937B3283D5A9800E50F45 /* ContentView.swift in Sources */,
 				D6F9811A281B1E100073088D /* ToggleButton.swift in Sources */,
 				D696D8C1282DA319008B71ED /* CameraPreview.swift in Sources */,
 				D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */,
 				D6F98110281B1C280073088D /* CameraError.swift in Sources */,
 				D6F98114281B1CC60073088D /* TakePictureView.swift in Sources */,
 				D696D8BA282DA253008B71ED /* CameraService.swift in Sources */,
+				D65937B5283D5B0800E50F45 /* MySettings.swift in Sources */,
+				D65937B7283D5B5E00E50F45 /* TargetATrashMob.swift in Sources */,
 				D696D87628293793008B71ED /* CameraManager.swift in Sources */,
 				D6F98118281B1D790073088D /* ErrorView.swift in Sources */,
 				D696D87A28294166008B71ED /* TakePictureViewModel.swift in Sources */,

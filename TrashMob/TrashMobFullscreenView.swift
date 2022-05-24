@@ -11,24 +11,19 @@ struct TrashMobFullscreenView: View {
     
     @State private var animateGradient = false
     
-    enum TrashMobState {
-        case loading
-        case targeted
-        case scheduling
-        case scheduled
-        case active
-        case mobbed
-        case archived
-    }
+    @State var trashMob: TrashMob
     
-    @State var trashMobStatus = "scheduled"
-    @State var loves = 33
-    //    @State var lovesNeeded = 25 - loves
-    @State var loved = true
-    @State var attending = 12
+    @State var user : User
+    
     @State var attended = false
-    let distanceAway = "3.7 miles"
+    @State var loved = true
     
+    //    init(trashMob: TrashMob, referenceDate: Date) {
+    //        self.trashMob = trashMob
+    //        self.referenceDate = referenceDate
+    //
+    //        _attending = State(initialValue: trashMob.attendees.count)
+    //    }
     
     @State var nowDate: Date = Date()
     let referenceDate: Date
@@ -41,72 +36,87 @@ struct TrashMobFullscreenView: View {
     var body: some View {
         
         ZStack {
-            TrashMobBackgroundImage()
+            TrashMobBackgroundImage(trashMob: trashMob)
                 .background()
             VStack {
+                // Top
                 
-                HStack {
+                
+                RoundedRectangle(cornerRadius: 15)
+                    .frame(width: UIScreen.screenWidth * 0.85, height: 80, alignment: .leading)
+                    .foregroundColor(.gray)
+                    .shadow(color: .black, radius: 3, x: 3, y: 3)
+                
+                ZStack {
+                    RoundedRectangle(cornerRadius: 20)
+                        .frame(alignment: .center)
+                        .foregroundColor(.white)
+                        .shadow(color: .black, radius: 3, x: 3, y: 3)
                     VStack {
-                        Spacer()
-                        HStack {
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 20)
-                                    .frame(alignment: .center)
-                                    .foregroundColor(.blue)
-                                Text("\(trashMobStatus.capitalizingFirstLetter())")
-                                    .font(.system(.title))
-                                    .foregroundColor(.white)
-                                    .padding(10)
-                            }
-                            .fixedSize()
-                            .padding(.leading)
-                            .offset(y: 15)
-                            Spacer()
-                        }
-                        
-                        HStack {
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 20)
-                                    .frame(alignment: .center)
-                                    .foregroundColor(.pink)
-                                
-                                if trashMobStatus == "targeted" {
-                                    Text(countDownString(from: referenceDate))
-                                            .onAppear(perform: {
-                                                _ = self.timer
-                                            })
-                                            .font(.system(.body))
-                                            .foregroundColor(.white)
-                                        .padding(10)
-                                } else {
-                                    Text("Wed Jun 1 @ 3pm")
-                                        .foregroundColor(.white)
-                                        .padding(10)
-                                }
-                                
-                            }
-                            .fixedSize()
-                            .padding(.leading)
-                            
-                            Spacer()
-                        }
+                        Text("\(trashMob.trashMobState.capitalizingFirstLetter()) by \(User.testData[0].name ?? "Anonymous")")
+                            .font(.system(.title3))
+                        Text("3.7 miles away")
+                            .font(.caption)
+                            .fontWeight(.light)
                     }
                     
-                    Spacer()
+                    .foregroundColor(.black)
+                    .padding(7)
+                }
+                .fixedSize()
+                .offset(y: 15)
+                
+                ZStack {
+                    RoundedRectangle(cornerRadius: 20)
+                        .frame(alignment: .center)
+                        .foregroundColor(.white)
+                        .shadow(color: .black, radius: 3, x: 3, y: 3)
                     
+                    // Countdown Bubble
+                    if trashMob.trashMobState == "targeted" {
+                        Text(countDownString(from: referenceDate))
+                            .onAppear(perform: {
+                                _ = self.timer
+                            })
+                            .font(.system(.body))
+                            .foregroundColor(.red)
+                            .padding(6)
+                    } else if trashMob.trashMobState == "scheduling" {
+                        
+                    } else if trashMob.trashMobState == "scheduled" {
+                        Text("Wed Jun 1 @ 3pm")
+                            .foregroundColor(.red)
+                            .padding(7)
+                    } else if trashMob.trashMobState == "active" {
+                        
+                    } else if trashMob.trashMobState == "mobbed" {
+                        
+                    } else {
+                        
+                    }
+                    
+                }
+                .fixedSize()
+                
+                
+
+                
+                // Middle
+                HStack {
+                    Spacer()
                     VStack {
                         Spacer()
                         
-                        if trashMobStatus == "scheduled" {
+                        if trashMob.trashMobState == "scheduled" {
                             ZStack {
                                 Circle()
-                                    .frame(width: 95, height: 95)
+                                    .frame(width: 65, height: 65)
                                     .foregroundColor(.white)
                                     .padding(.trailing)
                                     .opacity(0.8)
-                                    .shadow(radius: 20)
+                                    .shadow(radius: 3)
                                 
-                                LinearGradient(colors: [.gray, .white], startPoint: animateGradient ? .topLeading : .topTrailing, endPoint: animateGradient ? .bottomLeading : .topTrailing)
+                                LinearGradient(colors: [.white, .gray, .white], startPoint: animateGradient ? .topLeading : .topTrailing, endPoint: animateGradient ? .bottomLeading : .topTrailing)
                                     .hueRotation(.degrees(0))
                                     .onAppear {
                                         withAnimation(.linear(duration: 5.0).repeatForever(autoreverses: true)) {
@@ -115,50 +125,46 @@ struct TrashMobFullscreenView: View {
                                     }
                                     .mask {
                                         Image(systemName: "sparkles")
-                                            .font(.system(size: 70))
+                                            .font(.system(size: 50))
                                             .padding(.trailing)
                                     }
-                                    .frame(width: 115, height: 100)
-                                    .opacity(0.66)
+                                    .frame(width: 80, height: 65)
+                                    .opacity(1.0)
                                 
-                                Text("\(attending)")
+                                Text("\(trashMob.attending)")
                                     .padding(.trailing)
                                     .foregroundColor(.black)
-                                    .font(.system(size: 37, weight: .medium, design: .rounded))
+                                    .font(.system(size: 33, weight: .regular, design: .rounded))
                                     .opacity(0.8)
                                     .shadow(color: .white, radius: 7)
                                     .offset(y: -3)
                                 
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                        .frame(width: 100, height: 30, alignment: .bottomTrailing)
-                                        .offset(x: -9, y: 33)
+                                        .frame(width: 100, height: 25, alignment: .bottomTrailing)
+                                        .offset(x: -9, y: 24)
                                         .foregroundColor(.green)
                                         .opacity(0.85)
                                     if attended == false {
                                         Text("Help out!")
-                                            .offset(x: -9, y: 33)
+                                            .offset(x: -9, y: 24)
                                             .foregroundColor(.white)
                                     } else {
                                         Text("Attending!")
-                                            .offset(x: -9, y: 33)
+                                            .offset(x: -9, y: 24)
                                             .foregroundColor(.white)
                                     }
-    //                                Text("\(lovesNeeded)")
+                                    //                                Text("\(lovesNeeded)")
                                 }
+                                .fixedSize()
                             }
+                            
                             .padding(.bottom)
                             .onTapGesture {
-                                switch attended {
-                                case true:
-                                    attending -= 1
-                                    attended = false
-                                default:
-                                    attending += 1
-                                    attended = true
-                                }
+                                trashMob.attendees.insert(User.testData[0].id)
                             }
                         }
+                        
                         
                         ZStack {
                             LinearGradient(colors: [.pink, .red, .yellow], startPoint: animateGradient ? .bottomLeading : .topTrailing, endPoint: animateGradient ? .topLeading : .topTrailing)
@@ -170,48 +176,88 @@ struct TrashMobFullscreenView: View {
                                 }
                                 .mask {
                                     Image(systemName: "heart.fill")
-                                        .font(.system(size: 100))
+                                        .font(.system(size: 65))
                                         .padding(.trailing)
                                 }
-                                .frame(width: 115, height: 100)
-                                .shadow(radius: 20)
+                                .frame(width: 80, height: 65)
+                                .shadow(radius: 3)
                             
-                            Text("\(loves)")
+                            Text("\(trashMob.loves)")
                                 .padding(.trailing)
-                                .font(.system(size: 37))
+                                .font(.system(size: 30))
                                 .foregroundColor(.white)
-                                .offset(y: -8)
+                                .offset(y: -4)
                             
                             ZStack {
                                 RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                    .frame(width: 100, height: 30, alignment: .bottomTrailing)
-                                    .offset(x: -9, y: 31)
+                                    .frame(width: 85, height: 25, alignment: .bottomTrailing)
+                                    .offset(x: -9, y: 24)
                                     .foregroundColor(.white)
                                     .opacity(0.85)
-                                if loves < 25 {
+                                if trashMob.loves < 25 {
                                     Text("11 needed!")
-                                        .offset(x: -9, y: 31)
+                                        .offset(x: -9, y: 20)
                                         .foregroundColor(.blue)
                                 } else {
-                                    Text("Woohoo!")
-                                        .offset(x: -9, y: 31)
+                                    Text("Liked!")
+                                        .offset(x: -9, y: 24)
                                         .foregroundColor(.blue)
                                 }
-//                                Text("\(lovesNeeded)")
+                                //                                Text("\(lovesNeeded)")
                             }
+                            
                             
                         }
                         .onTapGesture {
-                            switch loved {
-                            case true:
-                                loves -= 1
-                                loved = false
-                            default:
-                                loves += 1
-                                loved = true
-                            }
+                            trashMob.lovers.insert(User.testData[0].id)
                         }
+                        
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 5)
+                                .foregroundColor(.white)
+                                .frame(width: 40, height: 30, alignment: .center)
+                                .offset(x: -8, y: -5)
+                            LinearGradient(colors: [.blue, .cyan], startPoint: animateGradient ? .bottomLeading : .topTrailing, endPoint: animateGradient ? .topLeading : .topTrailing)
+                                .hueRotation(.degrees(0))
+                                .onAppear {
+                                    withAnimation(.linear(duration: 5.0).repeatForever(autoreverses: true)) {
+                                        animateGradient.toggle()
+                                    }
+                                }
+                                .mask {
+                                    Image(systemName: "text.bubble.fill")
+                                        .font(.system(size: 60))
+                                        .padding(.trailing)
+                                }
+                                .frame(width: 80, height: 65)
+                                .shadow(radius: 01)
+                            Circle()
+                                .foregroundColor(.pink)
+                                
+                                .frame(width: 25, height: 25, alignment: .trailing)
+                                .padding()
+                                .offset(x: 19, y: -25)
+                            Text("\(TrashMob.testData[0].comments?.count ?? 0)")
+                                .foregroundColor(.white)
+                                .offset(x: 19, y: -25)
+                        }
+                        .padding(.top)
+                        Spacer()
                     }
+                    
+                }
+                // Bottom
+                HStack {
+                    
+                    MapView(trashMobs: [trashMob])
+                        .frame(width: 150, height: 150)
+                        .mask(RoundedRectangle(cornerRadius: 30))
+                        .shadow(color: .black, radius: 3, x: 3, y: 3)
+                        .padding()
+                        
+                    
+                    Spacer()
+                    
                 }
             }
             .frame(width: UIScreen.screenWidth)
@@ -253,13 +299,16 @@ struct TrashMobFullscreenView_Previews: PreviewProvider {
     
     
     static var previews: some View {
-        TrashMobFullscreenView(referenceDate: Calendar.current.date(byAdding: .day, value: 7, to: Date())!)
+        TrashMobFullscreenView(trashMob: TrashMob.testData[2], user: User.testData[0], referenceDate: Calendar.current.date(byAdding: .day, value: 7, to: Date())!)
     }
 }
 
 struct TrashMobFullscreenView_Previews2: PreviewProvider {
     
     static var previews: some View {
-        TrashMobFullscreenView(referenceDate: Calendar.current.date(byAdding: .hour, value: 8, to: Date())!)
+        TrashMobFullscreenView(trashMob: TrashMob.testData[0], user: User.testData[0], referenceDate: Calendar.current.date(byAdding: .hour, value: 8, to: Date())!)
+        
     }
 }
+
+

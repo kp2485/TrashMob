@@ -23,8 +23,9 @@ struct TrashMobApp: App {
 
     var body: some Scene {
         WindowGroup {
+            SplashView()
 //            TabsView()
-            TrashMobFullscreenView(referenceDate: Calendar.current.date(byAdding: .day, value: 7, to: Date())!)
+//            TrashMobFullscreenView(referenceDate: Calendar.current.date(byAdding: .day, value: 7, to: Date())!)
 //            TakePictureView()
 //            CameraPreview(session: session)
 //            MainView()

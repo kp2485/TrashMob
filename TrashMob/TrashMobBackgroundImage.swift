@@ -10,6 +10,8 @@ import SwiftUI
 struct TrashMobBackgroundImage: View {
     @State private var image: Image?
     
+    let trashMob: TrashMob
+    
     var body: some View {
         ZStack {
             image?
@@ -23,11 +25,15 @@ struct TrashMobBackgroundImage: View {
     
     func loadImage() {
         image = Image("trashyProperty")
+        
     }
 }
-    
-    struct TrashMobBackgroundImage_Previews: PreviewProvider {
-        static var previews: some View {
-            TrashMobBackgroundImage()
-        }
+
+
+
+struct TrashMobBackgroundImage_Previews: PreviewProvider {
+    static var previews: some View {
+        TrashMobBackgroundImage(trashMob: TrashMob.testData[0])
     }
+}
+

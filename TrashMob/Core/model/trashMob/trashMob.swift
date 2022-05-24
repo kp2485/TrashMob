@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 //
 //    struct MobModel: Hashable {
-//        let name: String
-//        let targetedDate: Date
+//        let targetingUser: String
+//        let targetDate: Date
 //        let possibleDates: [Date]?
 //        let scheduledDate: Date?
 //        let startedDate: Date?
@@ -31,7 +31,7 @@ import SwiftUI
 //        case targeted
 //        case scheduling
 //        case scheduled
-//        case inProgress
+//        case active
 //        case completed
 //        case archived
 //    }

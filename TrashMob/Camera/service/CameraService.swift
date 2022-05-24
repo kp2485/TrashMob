@@ -160,7 +160,7 @@ public class CameraService: NSObject, Identifiable, ObservableObject {
             setupResult = .notAuthorized
             
             DispatchQueue.main.async {
-                self.alertError = AlertError(title: "Camera Access", message: "Campus no tiene permiso para usar la cámara, por favor cambia la configruación de privacidad", primaryButtonTitle: "Configuración", secondaryButtonTitle: nil, primaryAction: {
+                self.alertError = AlertError(title: "Camera Access", message: "Please change your privacy configuration to allow this app to use your camera", primaryButtonTitle: "Configuation", secondaryButtonTitle: nil, primaryAction: {
                         UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!,
                                                   options: [:], completionHandler: nil)
                     

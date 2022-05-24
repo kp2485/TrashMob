@@ -23,6 +23,7 @@ enum TrashMobState {
     case scheduled
     case inProgress
     case completed
+    case archived
 }
 
 class CloudKitCRUDViewModel: ObservableObject {
@@ -210,7 +211,7 @@ struct CloudKitCRUDView_Previews: PreviewProvider {
 extension CloudKitCRUDView {
     
     private var header: some View {
-        Text ("🗑 ♻️ Trash Mob 💃🏽 🕺🏼")
+        Text("🗑 ♻️ Trash Mob 💃🏽 🕺🏼")
             .font(.headline)
     }
     

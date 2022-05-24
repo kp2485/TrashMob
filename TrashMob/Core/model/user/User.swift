@@ -7,12 +7,11 @@
 
 import Foundation
 
-struct User: Codable {
-    var name: String?
-    var password: String?
-    var id: Int?
-    var mobsTargeted: Int?
-    var mobsCompleted: Int?
-    var points: Int?
-    var profilePicture: URL?
-}
+//struct User: Codable {
+//    var name: String?
+//    var password: String?
+//    var id: Int?
+//    var mobsTargeted: Int?
+//    var mobsCompleted: Int?
+//    var profilePicture: URL?
+//}
