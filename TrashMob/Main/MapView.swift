@@ -14,35 +14,104 @@ struct MapView: View {
     
     var trashMobs: [TrashMob]
     
+    let flagImage = Image(systemName: "flag.fill")
+    
     var body: some View {
-        Map(coordinateRegion: $viewModel.region, showsUserLocation: true, annotationItems: trashMobs) { annotation in
-            MapAnnotation(coordinate: annotation.coordinate) {
+        Map(coordinateRegion: $viewModel.region, showsUserLocation: true, annotationItems: trashMobs) { trashMob in
+            MapAnnotation(coordinate: trashMob.coordinate) {
                 
-                // Insert conditional symbols based on trashMobState
-                
-//                                    Image(systemName: "location.magnifyingglass")
-//                                        .frame(width: 30, height: 30)
-//                                        .offset(x: 2, y: 2)
-//                                        .foregroundColor(.primary)
-//                Circle()
-//                    .strokeBorder(Color.blue, lineWidth: isAnimating ? 5:1)
-//                    .animation(.linear(duration: 1.5).repeatForever(), value: isAnimating)
-//                    .frame(width: 30, height: 30)
-//                    .onAppear {
-//                        isAnimating = true
-//                    }
-                
-                if annotation.trashMobState == "targeted" {
-                    Text("🎯").font(.title)
-                } else if annotation.trashMobState == "scheduling" {
-                    Text("📆").font(.title)
-                } else if annotation.trashMobState == "scheduled" {
-                    Text("📅").font(.title)
-                } else if annotation.trashMobState == "active" {
-                    Text("🚮").font(.title)
-                } else if annotation.trashMobState == "completed" {
-                    Text("✨").font(.title)
+                if trashMob.trashMobState == "targeted" {
+                    ZStack {
+                        VStack {
+                            Image(systemName: "circle.fill")
+                                .font(.title)
+                                .foregroundColor(.red)
+                            Image(systemName: "arrowtriangle.down.fill")
+                                .font(.caption)
+                                .foregroundColor(.red)
+                                .offset(x: 0, y: -5)
+                        }
+                        .shadow(color: .primary, radius: 1, x: 2, y: 2)
+                        Image(systemName: "target")
+                            .foregroundColor(.white)
+                            .offset(y: -6)
+                            .shadow(color: .black, radius: 1, x: 1, y: 1)
+                    }
+                    
+                } else if trashMob.trashMobState == "scheduling" {
+                    ZStack {
+                        VStack {
+                            Image(systemName: "circle.fill")
+                                .font(.title)
+                                .foregroundColor(.orange)
+                            Image(systemName: "arrowtriangle.down.fill")
+                                .font(.caption)
+                                .foregroundColor(.orange)
+                                .offset(x: 0, y: -5)
+                        }
+                        .shadow(color: .primary, radius: 1, x: 2, y: 2)
+                        Text("📆")
+                            .font(.caption)
+                            .offset(y: -7)
+                            .shadow(color: .black, radius: 1, x: 1, y: 1)
+                    }
+                } else if trashMob.trashMobState == "scheduled" {
+                    ZStack {
+                        VStack {
+                            Image(systemName: "circle.fill")
+                                .font(.title)
+                                .foregroundColor(.yellow)
+                            Image(systemName: "arrowtriangle.down.fill")
+                                .font(.caption)
+                                .foregroundColor(.yellow)
+                                .offset(x: 0, y: -5)
+                        }
+                        .shadow(color: .primary, radius: 1, x: 2, y: 2)
+                        Text("⏳")
+                            .offset(y: -7)
+                            .shadow(color: .black, radius: 1, x: 1, y: 1)
+                    }
+                } else if trashMob.trashMobState == "active" {
+                    ZStack {
+                        VStack {
+                            Image(systemName: "circle.fill")
+                                .font(.title)
+                                .foregroundColor(.green)
+                            Image(systemName: "arrowtriangle.down.fill")
+                                .font(.caption)
+                                .foregroundColor(.green)
+                                .offset(x: 0, y: -5)
+                        }
+                        .shadow(color: .primary, radius: 1, x: 2, y: 2)
+                        Image(systemName: "hands.sparkles.fill")
+//                            .font(.caption)
+                            .foregroundColor(.white)
+                            .offset(y: -7)
+                            .shadow(color: .black, radius: 1, x: 1, y: 1)
+                    }
+                } else if trashMob.trashMobState == "completed" {
+                    ZStack {
+                        VStack {
+                            Image(systemName: "circle.fill")
+                                .font(.title)
+                                .foregroundColor(.cyan)
+                            Image(systemName: "arrowtriangle.down.fill")
+                                .font(.caption)
+                                .foregroundColor(.cyan)
+                                .offset(x: 0, y: -5)
+                        }
+                        .shadow(color: .primary, radius: 1, x: 2, y: 2)
+                        Image(systemName: "sparkles")
+//                            .font(.caption)
+                            .foregroundColor(.white)
+                            .offset(y: -6)
+                            .shadow(color: .black, radius: 1, x: 1, y: 1)
+                    }
                 }
+                
+                
+                
+                
                 
                 
             }

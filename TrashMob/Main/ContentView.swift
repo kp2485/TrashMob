@@ -25,8 +25,8 @@ struct ContentView: View {
                         .frame(height: screenHeight * 0.005)
                     
                     MapView(trashMobs: trashMobs)
-                        .frame(height: screenWidth)
-                    
+                        
+//
 //                    Text("Nearby TrashMobs")
 //                        .font(.title)
 //                        .fontWeight(.medium)
@@ -93,6 +93,8 @@ struct ContentView: View {
                     .onAppear(perform: {
                         UITableView.appearance().contentInset.top = -15
                     })
+                    
+                    
                     
                     
                 }

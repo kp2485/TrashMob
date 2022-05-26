@@ -16,6 +16,7 @@
 		D65937BB283D5BE300E50F45 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937BA283D5BE300E50F45 /* MapViewModel.swift */; };
 		D65937BD283D5C1A00E50F45 /* TrashMobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937BC283D5C1A00E50F45 /* TrashMobModel.swift */; };
 		D65937BF283D5C4200E50F45 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937BE283D5C4200E50F45 /* UserModel.swift */; };
+		D65937C1283F780100E50F45 /* TrashMobAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937C0283F780100E50F45 /* TrashMobAnnotationView.swift */; };
 		D696D87628293793008B71ED /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D87528293793008B71ED /* CameraManager.swift */; };
 		D696D8782829404B008B71ED /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8772829404B008B71ED /* FrameManager.swift */; };
 		D696D87A28294166008B71ED /* TakePictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D87928294166008B71ED /* TakePictureViewModel.swift */; };
@@ -62,6 +63,7 @@
 		D65937BA283D5BE300E50F45 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		D65937BC283D5C1A00E50F45 /* TrashMobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobModel.swift; sourceTree = "<group>"; };
 		D65937BE283D5C4200E50F45 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		D65937C0283F780100E50F45 /* TrashMobAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobAnnotationView.swift; sourceTree = "<group>"; };
 		D696D87528293793008B71ED /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		D696D8772829404B008B71ED /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
 		D696D87928294166008B71ED /* TakePictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureViewModel.swift; sourceTree = "<group>"; };
@@ -124,6 +126,9 @@
 				D65937BA283D5BE300E50F45 /* MapViewModel.swift */,
 				D65937BC283D5C1A00E50F45 /* TrashMobModel.swift */,
 				D65937BE283D5C4200E50F45 /* UserModel.swift */,
+				D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */,
+				D696D8C828328742008B71ED /* TrashMobBackgroundImage.swift */,
+				D65937C0283F780100E50F45 /* TrashMobAnnotationView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -177,18 +182,16 @@
 		D6F980F02815D4820073088D /* TrashMob */ = {
 			isa = PBXGroup;
 			children = (
-				D65937AF283D59E300E50F45 /* Main */,
 				D6F9817B2822C9360073088D /* Info.plist */,
 				D6F98106281727180073088D /* TrashMob.entitlements */,
 				D6F980F12815D4820073088D /* TrashMobApp.swift */,
+				D65937AF283D59E300E50F45 /* Main */,
 				D696D8B3282DA179008B71ED /* Camera */,
 				D6F981042815D7670073088D /* Core */,
 				D6F9810E281B1BD40073088D /* TakePicture */,
 				D6F98137282014E40073088D /* CKLoginCRUD */,
 				D6F980F52815D4830073088D /* Assets.xcassets */,
 				D6F980F72815D4830073088D /* Preview Content */,
-				D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */,
-				D696D8C828328742008B71ED /* TrashMobBackgroundImage.swift */,
 				D651D35D28355D7600703206 /* AvatarView.swift */,
 				D696D8C2282EC4E0008B71ED /* TabView.swift */,
 			);
@@ -388,6 +391,7 @@
 				D696D8BE282DA2AE008B71ED /* PhotoCaptureProcessor.swift in Sources */,
 				D696D8C3282EC4E0008B71ED /* TabView.swift in Sources */,
 				D6F9812D282010700073088D /* User.swift in Sources */,
+				D65937C1283F780100E50F45 /* TrashMobAnnotationView.swift in Sources */,
 				D65937BD283D5C1A00E50F45 /* TrashMobModel.swift in Sources */,
 				D65937BF283D5C4200E50F45 /* UserModel.swift in Sources */,
 				D6F98112281B1C700073088D /* CGImageExtension.swift in Sources */,
