@@ -8,25 +8,28 @@
 import SwiftUI
 
 struct TrashMobBackgroundImage: View {
-    @State private var image: Image?
+//    @State private var url: URL
     
     let trashMob: TrashMob
     
     var body: some View {
         ZStack {
-            image?
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .edgesIgnoringSafeArea(.all)
+            AsyncImage(url: URL(string: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLebxkxbxEGaD877RrRm3ZVvl95UxsVdMJJQ&usqp=CAU")) { image in
+                image.image?
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .edgesIgnoringSafeArea(.all)
+            }
+               
             
         }
-        .onAppear(perform: loadImage)
+//        .onAppear(perform: loadImage)
     }
     
-    func loadImage() {
-        image = Image("trashyProperty")
-        
-    }
+//    func loadImage() {
+//        image = Image("trashyProperty")
+//        image = AsyncImage(url: trashMob.beforePicture)
+//    }
 }
 
 

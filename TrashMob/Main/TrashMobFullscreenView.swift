@@ -39,67 +39,151 @@ struct TrashMobFullscreenView: View {
             TrashMobBackgroundImage(trashMob: trashMob)
                 .background()
             VStack {
+                
                 // Top
                 
-                
-                RoundedRectangle(cornerRadius: 15)
-                    .frame(width: UIScreen.screenWidth * 0.85, height: 80, alignment: .leading)
+                RoundedRectangle(cornerRadius: 10)
+                    .frame(width: UIScreen.screenWidth * 0.85, height: 60, alignment: .leading)
                     .foregroundColor(.gray)
                     .shadow(color: .black, radius: 3, x: 3, y: 3)
                 
                 ZStack {
-                    RoundedRectangle(cornerRadius: 20)
+                    RoundedRectangle(cornerRadius: 10)
                         .frame(alignment: .center)
                         .foregroundColor(.white)
-                        .shadow(color: .black, radius: 3, x: 3, y: 3)
-                    VStack {
-                        Text("\(trashMob.trashMobState.capitalizingFirstLetter()) by \(User.testData[0].name ?? "Anonymous")")
-                            .font(.system(.title3))
-                        Text("3.7 miles away")
-                            .font(.caption)
-                            .fontWeight(.light)
+                        .shadow(color: .black, radius: 2, x: 3, y: 3)
+                    
+                    
+                    if trashMob.trashMobState == "targeted" {
+                        VStack {
+                            Text("\(trashMob.trashMobState.capitalizingFirstLetter()) by \(User.testData[0].name ?? "Anonymous")")
+                                .font(.system(.title3))
+                            Text("initiated on \(trashMob.targetDate.formatted(.dateTime.month().day()))")
+                                .font(.caption)
+                        }
+                        
+                    } else if trashMob.trashMobState == "scheduling" {
+                        VStack {
+                            Text("\(trashMob.trashMobState.capitalizingFirstLetter()) now!")
+                                .font(.system(.title3))
+                            Text("Pick a time here!")
+                                .foregroundColor(.blue)
+                                .font(.caption)
+                        }
+                    } else if trashMob.trashMobState == "scheduled" {
+                        VStack {
+                            Text("\(trashMob.trashMobState.capitalizingFirstLetter())")
+                                .font(.system(.title3))
+                            Text("\(trashMob.scheduledDate.formatted(.dateTime.month().day())) at \(trashMob.scheduledDate.formatted(.dateTime.hour()))")
+                                .font(.caption)
+                        }
+                    } else if trashMob.trashMobState == "active" {
+                        VStack {
+                            Text("Active!")
+                                .font(.system(.title3))
+                            Text("JOIN NOW!")
+                                .foregroundColor(.blue)
+                                .font(.caption)
+                        }
+                    } else if trashMob.trashMobState == "mobbed" {
+                        Text("🗑 ♻️ Mobbed 💃🏽 🕺🏼")
+                    } else {
+                        Text("Loading ...")
+                            .opacity(0.3)
                     }
                     
-                    .foregroundColor(.black)
-                    .padding(7)
+                    
+                    
+                    
+                    
                 }
+                .foregroundColor(.black)
+                .padding(7)
                 .fixedSize()
                 .offset(y: 15)
                 
+                // Countdown Bubble
+                
                 ZStack {
-                    RoundedRectangle(cornerRadius: 20)
+                    RoundedRectangle(cornerRadius: 10)
                         .frame(alignment: .center)
                         .foregroundColor(.white)
                         .shadow(color: .black, radius: 3, x: 3, y: 3)
                     
-                    // Countdown Bubble
-                    if trashMob.trashMobState == "targeted" {
-                        Text(countDownString(from: referenceDate))
-                            .onAppear(perform: {
-                                _ = self.timer
-                            })
-                            .font(.system(.body))
-                            .foregroundColor(.red)
-                            .padding(6)
-                    } else if trashMob.trashMobState == "scheduling" {
-                        
-                    } else if trashMob.trashMobState == "scheduled" {
-                        Text("Wed Jun 1 @ 3pm")
-                            .foregroundColor(.red)
-                            .padding(7)
-                    } else if trashMob.trashMobState == "active" {
-                        
-                    } else if trashMob.trashMobState == "mobbed" {
-                        
-                    } else {
-                        
-                    }
                     
+                    if trashMob.trashMobState == "targeted" {
+                        VStack {
+                            Text(countDownString(from: referenceDate))
+                                .onAppear(perform: {
+                                    _ = self.timer
+                                })
+                                .font(.system(.body))
+                                .foregroundColor(.red)
+                            
+                            Text("until TrashMob disappears!")
+                                .font(.caption2)
+                        }
+                        .padding(4)
+                    } else if trashMob.trashMobState == "scheduling" {
+                        VStack {
+                            Text("\(trashMob.voteCount)")
+                                .font(.system(.body))
+                                .foregroundColor(.red)
+                            
+                            Text("Tap here to vote")
+                                .foregroundColor(.blue)
+                                .font(.caption2)
+                        }
+                        .padding(4)
+                    } else if trashMob.trashMobState == "scheduled" {
+                        VStack {
+                            Text(countDownString(from: referenceDate))
+                                .onAppear(perform: {
+                                    _ = self.timer
+                                })
+                                .font(.system(.body))
+                                .foregroundColor(.red)
+                            
+                            Text("until TrashMob starts!")
+                                .font(.caption2)
+                        }
+                        .padding(4)
+                    } else if trashMob.trashMobState == "active" {
+                        VStack {
+                            Text(countDownString(from: referenceDate))
+                                .onAppear(perform: {
+                                    _ = self.timer
+                                })
+                                .font(.system(.body))
+                                .foregroundColor(.red)
+                            
+                            Text("until TrashMob disappears!")
+                                .font(.caption2)
+                        }
+                        .padding(4)
+                    } else if trashMob.trashMobState == "mobbed" {
+                        VStack {
+                            Text(countDownString(from: referenceDate))
+                                .onAppear(perform: {
+                                    _ = self.timer
+                                })
+                                .font(.system(.body))
+                                .foregroundColor(.red)
+                            
+                            Text("until TrashMob disappears!")
+                                .font(.caption2)
+                        }
+                        .padding(4)
+                    } else {
+                        Text("Loading ...")
+                            .opacity(0.3)
+                    }
+                        
                 }
                 .fixedSize()
                 
                 
-
+                
                 
                 // Middle
                 HStack {
@@ -194,9 +278,9 @@ struct TrashMobFullscreenView: View {
                                     .offset(x: -9, y: 24)
                                     .foregroundColor(.white)
                                     .opacity(0.85)
-                                if trashMob.loves < 25 {
-                                    Text("11 needed!")
-                                        .offset(x: -9, y: 20)
+                                if trashMob.loves < 5 {
+                                    Text("\(5 - trashMob.loves) needed!")
+                                        .offset(x: -9, y: 24)
                                         .foregroundColor(.blue)
                                 } else {
                                     Text("Liked!")
@@ -233,7 +317,7 @@ struct TrashMobFullscreenView: View {
                                 .shadow(radius: 01)
                             Circle()
                                 .foregroundColor(.pink)
-                                
+                            
                                 .frame(width: 25, height: 25, alignment: .trailing)
                                 .padding()
                                 .offset(x: 19, y: -25)
@@ -249,12 +333,35 @@ struct TrashMobFullscreenView: View {
                 // Bottom
                 HStack {
                     
-                    MapView(trashMobs: [trashMob.self])
-                        .frame(width: 150, height: 150)
-                        .mask(RoundedRectangle(cornerRadius: 30))
-                        .shadow(color: .black, radius: 3, x: 3, y: 3)
-                        .padding()
+                    ZStack {
+                        VStack {
+                            MapView(trashMobs: [trashMob.self])
+                                .frame(width: 150, height: 150)
+                                .mask(RoundedRectangle(cornerRadius: 20))
+                                .shadow(color: .black, radius: 2, x: 3, y: 3)
+                            Spacer()
+                        }
                         
+                        
+                        VStack {
+                            Spacer()
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 10).frame(height: 30)
+                                    .foregroundColor(.white)
+                                    .shadow(color: .black, radius: 3, x: 3, y: 3)
+                                Text("3.7 miles away")
+                                    .font(.caption)
+                                    .fontWeight(.bold)
+                                    .padding(4)
+                                    .opacity(0.6)
+                            }
+                            .fixedSize()
+                            
+                        }
+                        
+                    }
+                    .padding(.leading)
+                    .frame(width: 150, height: 160)
                     
                     Spacer()
                     
@@ -270,7 +377,7 @@ struct TrashMobFullscreenView: View {
             .dateComponents([.day, .hour, .minute, .second],
                             from: nowDate,
                             to: referenceDate)
-        return String(format: "%02dd:%02dh:%02dm:%02ds",
+        return String(format: "%02dd %02dh %02dm %02ds",
                       components.day ?? 00,
                       components.hour ?? 00,
                       components.minute ?? 00,

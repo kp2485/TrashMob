@@ -18,7 +18,6 @@ struct TrashMobApp: App {
     init() {
         let userIsSignedIn: Bool = ProcessInfo.processInfo.arguments.contains("-UITest_startSignedIn") ? true : false
         self.currentUserIsSignedIn = userIsSignedIn
-        
     }
 
     var body: some Scene {
@@ -27,7 +26,7 @@ struct TrashMobApp: App {
 //            TabsView()
 //            TrashMobFullscreenView(referenceDate: Calendar.current.date(byAdding: .day, value: 7, to: Date())!)
 //            TakePictureView()
-//            CameraPreview(session: session)
+//            CameraView()
 //            MainView()
 //            CloudKitPushNotifications()
 //            CloudKitCRUDView()

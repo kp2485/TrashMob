@@ -106,8 +106,8 @@ public class CameraService: NSObject, Identifiable, ObservableObject {
         
         // Disable the UI. Enable the UI later, if and only if the session starts running.
         DispatchQueue.main.async {
-            self.isCameraButtonDisabled = true
-            self.isCameraUnavailable = true
+            self.isCameraButtonDisabled = false
+            self.isCameraUnavailable = false
         }
     }
     

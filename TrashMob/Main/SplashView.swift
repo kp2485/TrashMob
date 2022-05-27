@@ -17,11 +17,11 @@ struct SplashView: View {
                 
             }
             else{
-                Image("logo")
-                    .resizable()
-                    .renderingMode(.original)
-                    .padding(.horizontal, 20.0)
-                    .scaledToFit()
+//                Image("logo")
+//                    .resizable()
+//                    .renderingMode(.original)
+//                    .padding(.horizontal, 20.0)
+//                    .scaledToFit()
                 
                 Text("TrashMob")
                     .font(.system(size: 70, weight: .bold, design: .rounded))

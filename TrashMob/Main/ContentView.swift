@@ -17,8 +17,9 @@ struct ContentView: View {
     @State private var isMySettingsShowing = false
     
     var body: some View {
+        NavigationView {
         VStack {
-            NavigationView {
+            
                 VStack {
                     
                     Spacer()
