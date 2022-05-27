@@ -38,7 +38,7 @@ struct ContentView: View {
                     
                     List {
                         ForEach(trashMobs) { trashMob in
-                            NavigationLink(destination: TrashMobFullscreenView(trashMob: trashMob, user: User.testData[0], referenceDate: Calendar.current.date(byAdding: .day, value: 7, to: Date())!)) {
+                            NavigationLink(destination: TrashMobFullscreenView(trashMob: trashMob, user: User.testData[0])) {
                                 HStack {
                                     VStack{
                                         if trashMob.trashMobState == "targeted" {

@@ -18,21 +18,6 @@ struct TrashMobFullscreenView: View {
     @State var attended = false
     @State var loved = true
     
-    //    init(trashMob: TrashMob, referenceDate: Date) {
-    //        self.trashMob = trashMob
-    //        self.referenceDate = referenceDate
-    //
-    //        _attending = State(initialValue: trashMob.attendees.count)
-    //    }
-    
-    @State var nowDate: Date = Date()
-    let referenceDate: Date
-    var timer: Timer {
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in
-            self.nowDate = Date()
-        }
-    }
-    
     var body: some View {
         
         ZStack {
@@ -47,140 +32,16 @@ struct TrashMobFullscreenView: View {
                     .foregroundColor(.gray)
                     .shadow(color: .black, radius: 3, x: 3, y: 3)
                 
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .frame(alignment: .center)
-                        .foregroundColor(.white)
-                        .shadow(color: .black, radius: 2, x: 3, y: 3)
-                    
-                    
-                    if trashMob.trashMobState == "targeted" {
-                        VStack {
-                            Text("\(trashMob.trashMobState.capitalizingFirstLetter()) by \(User.testData[0].name ?? "Anonymous")")
-                                .font(.system(.title3))
-                            Text("initiated on \(trashMob.targetDate.formatted(.dateTime.month().day()))")
-                                .font(.caption)
-                        }
-                        
-                    } else if trashMob.trashMobState == "scheduling" {
-                        VStack {
-                            Text("\(trashMob.trashMobState.capitalizingFirstLetter()) now!")
-                                .font(.system(.title3))
-                            Text("Pick a time here!")
-                                .foregroundColor(.blue)
-                                .font(.caption)
-                        }
-                    } else if trashMob.trashMobState == "scheduled" {
-                        VStack {
-                            Text("\(trashMob.trashMobState.capitalizingFirstLetter())")
-                                .font(.system(.title3))
-                            Text("\(trashMob.scheduledDate.formatted(.dateTime.month().day())) at \(trashMob.scheduledDate.formatted(.dateTime.hour()))")
-                                .font(.caption)
-                        }
-                    } else if trashMob.trashMobState == "active" {
-                        VStack {
-                            Text("Active!")
-                                .font(.system(.title3))
-                            Text("JOIN NOW!")
-                                .foregroundColor(.blue)
-                                .font(.caption)
-                        }
-                    } else if trashMob.trashMobState == "mobbed" {
-                        Text("🗑 ♻️ Mobbed 💃🏽 🕺🏼")
-                    } else {
-                        Text("Loading ...")
-                            .opacity(0.3)
-                    }
-                    
-                    
-                    
-                    
-                    
-                }
+                TrashMobStateBubble(trashMob: trashMob)
                 .foregroundColor(.black)
-                .padding(7)
                 .fixedSize()
-                .offset(y: 15)
+                
                 
                 // Countdown Bubble
                 
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .frame(alignment: .center)
-                        .foregroundColor(.white)
-                        .shadow(color: .black, radius: 3, x: 3, y: 3)
-                    
-                    
-                    if trashMob.trashMobState == "targeted" {
-                        VStack {
-                            Text(countDownString(from: referenceDate))
-                                .onAppear(perform: {
-                                    _ = self.timer
-                                })
-                                .font(.system(.body))
-                                .foregroundColor(.red)
-                            
-                            Text("until TrashMob disappears!")
-                                .font(.caption2)
-                        }
-                        .padding(4)
-                    } else if trashMob.trashMobState == "scheduling" {
-                        VStack {
-                            Text("\(trashMob.voteCount)")
-                                .font(.system(.body))
-                                .foregroundColor(.red)
-                            
-                            Text("Tap here to vote")
-                                .foregroundColor(.blue)
-                                .font(.caption2)
-                        }
-                        .padding(4)
-                    } else if trashMob.trashMobState == "scheduled" {
-                        VStack {
-                            Text(countDownString(from: referenceDate))
-                                .onAppear(perform: {
-                                    _ = self.timer
-                                })
-                                .font(.system(.body))
-                                .foregroundColor(.red)
-                            
-                            Text("until TrashMob starts!")
-                                .font(.caption2)
-                        }
-                        .padding(4)
-                    } else if trashMob.trashMobState == "active" {
-                        VStack {
-                            Text(countDownString(from: referenceDate))
-                                .onAppear(perform: {
-                                    _ = self.timer
-                                })
-                                .font(.system(.body))
-                                .foregroundColor(.red)
-                            
-                            Text("until TrashMob disappears!")
-                                .font(.caption2)
-                        }
-                        .padding(4)
-                    } else if trashMob.trashMobState == "mobbed" {
-                        VStack {
-                            Text(countDownString(from: referenceDate))
-                                .onAppear(perform: {
-                                    _ = self.timer
-                                })
-                                .font(.system(.body))
-                                .foregroundColor(.red)
-                            
-                            Text("until TrashMob disappears!")
-                                .font(.caption2)
-                        }
-                        .padding(4)
-                    } else {
-                        Text("Loading ...")
-                            .opacity(0.3)
-                    }
-                        
-                }
+                CountdownBubble(trashMob: trashMob)
                 .fixedSize()
+                .offset(y: -8)
                 
                 
                 
@@ -370,19 +231,6 @@ struct TrashMobFullscreenView: View {
             .frame(width: UIScreen.screenWidth)
         }
     }
-    
-    func countDownString(from date: Date) -> String {
-        let calendar = Calendar(identifier: .gregorian)
-        let components = calendar
-            .dateComponents([.day, .hour, .minute, .second],
-                            from: nowDate,
-                            to: referenceDate)
-        return String(format: "%02dd %02dh %02dm %02ds",
-                      components.day ?? 00,
-                      components.hour ?? 00,
-                      components.minute ?? 00,
-                      components.second ?? 00)
-    }
 }
 
 extension UIScreen {
@@ -406,14 +254,14 @@ struct TrashMobFullscreenView_Previews: PreviewProvider {
     
     
     static var previews: some View {
-        TrashMobFullscreenView(trashMob: TrashMob.testData[2], user: User.testData[0], referenceDate: Calendar.current.date(byAdding: .day, value: 7, to: Date())!)
+        TrashMobFullscreenView(trashMob: TrashMob.testData[2], user: User.testData[0])
     }
 }
 
 struct TrashMobFullscreenView_Previews2: PreviewProvider {
     
     static var previews: some View {
-        TrashMobFullscreenView(trashMob: TrashMob.testData[0], user: User.testData[0], referenceDate: Calendar.current.date(byAdding: .hour, value: 8, to: Date())!)
+        TrashMobFullscreenView(trashMob: TrashMob.testData[0], user: User.testData[0])
         
     }
 }

@@ -29,6 +29,8 @@
 		D696D8C528311874008B71ED /* CloudKitUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C428311874008B71ED /* CloudKitUtility.swift */; };
 		D696D8C728326951008B71ED /* TrashMobFullscreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */; };
 		D696D8C928328742008B71ED /* TrashMobBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C828328742008B71ED /* TrashMobBackgroundImage.swift */; };
+		D6F8DA6D28412ABD00DE19F9 /* TrashMobStateBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F8DA6C28412ABD00DE19F9 /* TrashMobStateBubble.swift */; };
+		D6F8DA6F28412CAF00DE19F9 /* CountdownBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F8DA6E28412CAF00DE19F9 /* CountdownBubble.swift */; };
 		D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F980F12815D4820073088D /* TrashMobApp.swift */; };
 		D6F980F42815D4820073088D /* DefaultContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F980F32815D4820073088D /* DefaultContentView.swift */; };
 		D6F980F62815D4830073088D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F980F52815D4830073088D /* Assets.xcassets */; };
@@ -67,6 +69,8 @@
 		D696D8C428311874008B71ED /* CloudKitUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitUtility.swift; sourceTree = "<group>"; };
 		D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobFullscreenView.swift; sourceTree = "<group>"; };
 		D696D8C828328742008B71ED /* TrashMobBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobBackgroundImage.swift; sourceTree = "<group>"; };
+		D6F8DA6C28412ABD00DE19F9 /* TrashMobStateBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobStateBubble.swift; sourceTree = "<group>"; };
+		D6F8DA6E28412CAF00DE19F9 /* CountdownBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownBubble.swift; sourceTree = "<group>"; };
 		D6F980EE2815D4820073088D /* TrashMob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrashMob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F980F12815D4820073088D /* TrashMobApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobApp.swift; sourceTree = "<group>"; };
 		D6F980F32815D4820073088D /* DefaultContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				D65937BE283D5C4200E50F45 /* UserModel.swift */,
 				D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */,
 				D696D8C828328742008B71ED /* TrashMobBackgroundImage.swift */,
+				D6F8DA6C28412ABD00DE19F9 /* TrashMobStateBubble.swift */,
+				D6F8DA6E28412CAF00DE19F9 /* CountdownBubble.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 				D696D8C928328742008B71ED /* TrashMobBackgroundImage.swift in Sources */,
 				D65937C3284011AC00E50F45 /* CameraViewModel.swift in Sources */,
 				D6F980F42815D4820073088D /* DefaultContentView.swift in Sources */,
+				D6F8DA6D28412ABD00DE19F9 /* TrashMobStateBubble.swift in Sources */,
 				D65937B9283D5BBC00E50F45 /* MapView.swift in Sources */,
 				D696D8C528311874008B71ED /* CloudKitUtility.swift in Sources */,
 				D6F98170282166AE0073088D /* trashMob.swift in Sources */,
@@ -365,6 +372,7 @@
 				D696D8B8282DA1FC008B71ED /* CameraService+Extensions.swift in Sources */,
 				D6F9810B28172FFA0073088D /* LoginView.swift in Sources */,
 				D65937B1283D5A0900E50F45 /* SplashView.swift in Sources */,
+				D6F8DA6F28412CAF00DE19F9 /* CountdownBubble.swift in Sources */,
 				D65937B3283D5A9800E50F45 /* ContentView.swift in Sources */,
 				D696D8C1282DA319008B71ED /* CameraPreview.swift in Sources */,
 				D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */,
