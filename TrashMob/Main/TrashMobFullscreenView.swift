@@ -144,7 +144,7 @@ struct TrashMobFullscreenView: View {
                                         .offset(x: -9, y: 24)
                                         .foregroundColor(.blue)
                                 } else {
-                                    Text("Liked!")
+                                    Text("Loved!")
                                         .offset(x: -9, y: 24)
                                         .foregroundColor(.blue)
                                 }
