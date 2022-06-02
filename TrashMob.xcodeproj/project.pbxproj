@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D0643AE28494CB600CF0C9A /* TrashMobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0643AD28494CB600CF0C9A /* TrashMobViewModel.swift */; };
 		D651D35E28355D7600703206 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D651D35D28355D7600703206 /* AvatarView.swift */; };
 		D65937B1283D5A0900E50F45 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937B0283D5A0900E50F45 /* SplashView.swift */; };
 		D65937B3283D5A9800E50F45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937B2283D5A9800E50F45 /* ContentView.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D0643AD28494CB600CF0C9A /* TrashMobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobViewModel.swift; sourceTree = "<group>"; };
 		D651D35D28355D7600703206 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		D65937B0283D5A0900E50F45 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		D65937B2283D5A9800E50F45 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				D65937B8283D5BBC00E50F45 /* MapView.swift */,
 				D65937BA283D5BE300E50F45 /* MapViewModel.swift */,
 				D65937BC283D5C1A00E50F45 /* TrashMobModel.swift */,
+				5D0643AD28494CB600CF0C9A /* TrashMobViewModel.swift */,
 				D65937BE283D5C4200E50F45 /* UserModel.swift */,
 				D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */,
 				D696D8C828328742008B71ED /* TrashMobBackgroundImage.swift */,
@@ -370,6 +373,7 @@
 				D6F98132282011BE0073088D /* LocationManager.swift in Sources */,
 				D6F9810D28185BD00073088D /* CloudKitCRUDView.swift in Sources */,
 				D696D8B8282DA1FC008B71ED /* CameraService+Extensions.swift in Sources */,
+				5D0643AE28494CB600CF0C9A /* TrashMobViewModel.swift in Sources */,
 				D6F9810B28172FFA0073088D /* LoginView.swift in Sources */,
 				D65937B1283D5A0900E50F45 /* SplashView.swift in Sources */,
 				D6F8DA6F28412CAF00DE19F9 /* CountdownBubble.swift in Sources */,

@@ -7,8 +7,9 @@
 
 import Foundation
 import CoreLocation
+import CloudKit
 
-struct TrashMob: Identifiable, Codable, Hashable {
+struct TrashMob: Identifiable, Hashable {
     
     var id: UUID = UUID()
     var targetingUser: String

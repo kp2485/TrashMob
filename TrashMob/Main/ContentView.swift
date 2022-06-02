@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var vm: TrashMobViewModel
     
     let screenWidth  = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
     
-    @State private var trashMobs = TrashMob.testData
     @State private var isPlanAWalkShowing = false
     @State private var isMySettingsShowing = false
     
@@ -25,7 +25,7 @@ struct ContentView: View {
                     Spacer()
                         .frame(height: screenHeight * 0.005)
                     
-                    MapView(trashMobs: trashMobs)
+                    MapView(trashMobs: vm.trashMobs)
                         
 //
 //                    Text("Nearby TrashMobs")
@@ -37,7 +37,7 @@ struct ContentView: View {
 //                        .minimumScaleFactor(0.5)
                     
                     List {
-                        ForEach(trashMobs) { trashMob in
+                        ForEach(vm.trashMobs) { trashMob in
                             NavigationLink(destination: TrashMobFullscreenView(trashMob: trashMob, user: User.testData[0])) {
                                 HStack {
                                     VStack{
@@ -140,7 +140,7 @@ struct ContentView: View {
         }
         .edgesIgnoringSafeArea(.all)
         .sheet(isPresented: $isPlanAWalkShowing) {
-            TargetATrashMob(trashMobs: $trashMobs)
+            TargetATrashMob(trashMobs: $vm.trashMobs)
         }
         .sheet(isPresented: $isMySettingsShowing) {
             MySettings()

@@ -10,12 +10,15 @@ import AVFoundation
 
 @main
 struct TrashMobApp: App {
+    @StateObject var vm: TrashMobViewModel
     
     
 //    let persistenceController = PersistenceController.shared
     let currentUserIsSignedIn: Bool
     
     init() {
+        _vm = StateObject(wrappedValue: TrashMobViewModel())
+        
         let userIsSignedIn: Bool = ProcessInfo.processInfo.arguments.contains("-UITest_startSignedIn") ? true : false
         self.currentUserIsSignedIn = userIsSignedIn
     }
@@ -33,6 +36,7 @@ struct TrashMobApp: App {
 //            LoginView()
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(vm)
         }
     }
 }
