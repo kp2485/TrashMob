@@ -83,7 +83,7 @@ struct TargetATrashMob: View {
                         Button {
                             
                             let mapRegion = mapView.viewModel.region
-                            let newTrashMob = TrashMob(targetingUser: targetingUser, beforePicture: beforePicture ?? URL(string: "https://knowpathology.com.au/wp-content/uploads/2018/07/happy-test-screen.jpg")!, targetDate: targetDate, trashMobState: trashMobState, latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude, lovers: [User.testData[0].id], attendees: [User.testData[0].id])
+                            let newTrashMob = TrashMob(targetingUser: targetingUser, beforePicture: beforePicture ?? URL(string: "https://knowpathology.com.au/wp-content/uploads/2018/07/happy-test-screen.jpg")!, targetDate: targetDate, latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude, lovers: [User.testData[0].id], attendees: [User.testData[0].id])
                             trashMobs.append(newTrashMob)
                             presentationMode.wrappedValue.dismiss()
                                 } label: {

@@ -15,6 +15,7 @@ struct TrashMobFullscreenView: View {
     
     @State var user : User
     
+    //TODO: remove and resolve
     @State var attended = false
     @State var loved = true
     
