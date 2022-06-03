@@ -10,7 +10,7 @@ import AVFoundation
 
 @main
 struct TrashMobApp: App {
-    @StateObject var vm: TrashMobViewModel
+    @StateObject var vm = TrashMobViewModel()
     
     
 //    let persistenceController = PersistenceController.shared
@@ -25,18 +25,18 @@ struct TrashMobApp: App {
 
     var body: some Scene {
         WindowGroup {
-//            SplashView()
+            SplashView()
 //            TabsView()
 //            TrashMobFullscreenView(referenceDate: Calendar.current.date(byAdding: .day, value: 7, to: Date())!)
 //            TakePictureView()
 //            CameraView()
 //            MainView()
 //            CloudKitPushNotifications()
-            CloudKitCRUDView()
+//            CloudKitCRUDView()
 //            LoginView()
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-//                .environmentObject(vm)
+                .environmentObject(vm)
         }
     }
 }

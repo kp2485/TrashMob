@@ -140,7 +140,7 @@ struct ContentView: View {
         }
         .edgesIgnoringSafeArea(.all)
         .sheet(isPresented: $isPlanAWalkShowing) {
-            TargetATrashMob(trashMobs: $vm.trashMobs)
+            TargetATrashMob()
         }
         .sheet(isPresented: $isMySettingsShowing) {
             MySettings()
