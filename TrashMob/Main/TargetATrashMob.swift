@@ -9,27 +9,23 @@ import SwiftUI
 import MapKit
 
 struct TargetATrashMob: View {
+    @EnvironmentObject var vm: TrashMobViewModel
+    @StateObject var mapvm = MapViewModel()
     
     let screenWidth  = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
     
     @Environment(\.presentationMode) var presentationMode
-    
-    @Binding var trashMobs: [TrashMob]
+
     @State var targetingUser = ""
     @State var beforePicture = URL(string: "https://knowpathology.com.au/wp-content/uploads/2018/07/Happy-Test-Screen-01.png")
     @State var targetDate: Date = Date()
     @State var trashMobState: String = "loading"
     @State var loves: Int = 1
     @State var attendees: [String] = []
-    
-    var mapView: MapView
+
     var mapRegion = MKCoordinateRegion()
-    
-    init(trashMobs: Binding<[TrashMob]>) {
-        _trashMobs = trashMobs
-        mapView = MapView(trashMobs: trashMobs.wrappedValue)
-    }
+
 //    var centerCoordinate: CLLocationCoordinate2D { get set }
     
     var body: some View {
@@ -42,7 +38,7 @@ struct TargetATrashMob: View {
                         .frame(height: screenHeight * 0.005)
                     
                     ZStack {
-                        mapView
+                        MapView(trashMobs: vm.trashMobs)
                             .frame(height: screenWidth)
                         Image(systemName: "plus")
                             .font(.title.weight(.bold))
@@ -82,9 +78,11 @@ struct TargetATrashMob: View {
                         Spacer()
                         Button {
                             
-                            let mapRegion = mapView.viewModel.region
-                            let newTrashMob = TrashMob(targetingUser: targetingUser, beforePicture: beforePicture ?? URL(string: "https://knowpathology.com.au/wp-content/uploads/2018/07/happy-test-screen.jpg")!, targetDate: targetDate, coordinate: CLLocation(latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude), lovers: [User.testData[0].id], attendees: [User.testData[0].id])
-                            trashMobs.append(newTrashMob)
+                            let mapRegion = mapvm.region
+//                            let newTrashMob = TrashMob(targetingUser: targetingUser, beforePicture: beforePicture ?? URL(string: "https://knowpathology.com.au/wp-content/uploads/2018/07/happy-test-screen.jpg")!, targetDate: targetDate, latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude, lovers: [User.testData[0].id], attendees: [User.testData[0].id])
+                            
+                            vm.addButtonPressed(targetingUser: targetingUser, beforePictureURL: beforePicture?.description ?? "https://knowpathology.com.au/wp-content/uploads/2018/07/happy-test-screen.jpg", coordinate2D: CLLocationCoordinate2D(latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude))
+                            
                             presentationMode.wrappedValue.dismiss()
                                 } label: {
                                     Text("Confirm Trash Mob").fontWeight(.black)
@@ -133,6 +131,6 @@ struct TargetATrashMob: View {
 
 struct TargetATrashMob_Previews: PreviewProvider {
     static var previews: some View {
-        TargetATrashMob(trashMobs: .constant(TrashMob.testData))
+        TargetATrashMob()
     }
 }

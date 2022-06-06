@@ -44,7 +44,7 @@ class TrashMobViewModel: ObservableObject {
         do {
             try data.write(to: url)
             let asset = CKAsset(fileURL: url)
-
+            //TODO: add real picture url
             //        if let url = URL(string: beforePictureURL) {
             //            newMob["beforePicture"] = CKAsset(fileURL: url)
             //        }

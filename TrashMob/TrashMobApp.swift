@@ -10,7 +10,7 @@ import AVFoundation
 
 @main
 struct TrashMobApp: App {
-    @StateObject var vm: TrashMobViewModel
+    @StateObject var vm = TrashMobViewModel()
     
     
 //    let persistenceController = PersistenceController.shared
