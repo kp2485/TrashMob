@@ -29,6 +29,7 @@ struct TrashMob: Identifiable, Hashable {
     var loves: Int {
         lovers.count
     }
+    
     var schedulingState: Bool {
         if loves > 4 && schedulingDate != nil && scheduledDate == nil {
             return true
