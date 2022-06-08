@@ -62,7 +62,7 @@ struct TrashMobList: View {
                                 .font(.body)
                                 .fontWeight(.light)
                                 .lineLimit(1)
-                        }
+                        } else { Text("Enable 📍")}
                         
 
                     }

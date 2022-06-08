@@ -19,7 +19,7 @@ struct TrashMob: Identifiable, Hashable {
     var schedulingDate: Date?
     var possibleDates: [Date]?
     var scheduledDate: Date?
-    var isActive: Bool?
+    var isActive: Bool? // = false
     var reported: Bool?
     var startedDate: Date?
     var completedDate: Date?
@@ -28,13 +28,6 @@ struct TrashMob: Identifiable, Hashable {
     var lovers: Set<UUID> = Set<UUID>()
     var loves: Int {
         lovers.count
-    }
-    var schedulingState: Bool {
-        if loves > 4 && schedulingDate != nil && scheduledDate == nil {
-            return true
-        } else {
-            return false
-        }
     }
     var attendees: Set<UUID> = Set<UUID>()
     var comments: [UUID:String]?
@@ -59,13 +52,13 @@ struct TrashMob: Identifiable, Hashable {
         attendees.count
     }
     var trashMobState: String {
-        if schedulingState == true {
+        if loves > 4 && schedulingDate != nil && scheduledDate == nil {
             return "scheduling"
         } else if schedulingDate?.addingTimeInterval(86400) ?? Date.now.addingTimeInterval(-10) > Date.now {
             return "scheduled"
-        } else if scheduledDate ?? Date.now.addingTimeInterval(-10) > Date.now && isActive == true {
+        } else if  isActive == true {
             return "active"
-        } else if isActive == true && afterPicture != nil {
+        } else if isActive == false && afterPicture != nil {
             return "completed"
         } else if completedDate?.addingTimeInterval(604800*2) ?? Date.now.addingTimeInterval(-10) > Date.now {
             return "archived"

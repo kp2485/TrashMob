@@ -16,8 +16,6 @@ struct TrashMobFullscreenView: View {
     @State var user : User
     
     //TODO: remove and resolve
-    @State var attended = false
-    @State var loved = true
     
     var body: some View {
         
@@ -91,12 +89,12 @@ struct TrashMobFullscreenView: View {
                                         .offset(x: -9, y: 24)
                                         .foregroundColor(.green)
                                         .opacity(0.85)
-                                    if attended == false {
-                                        Text("Help out!")
+                                    if trashMob.attendees.contains(User.testData[0].id) {
+                                        Text("Attending!")
                                             .offset(x: -9, y: 24)
                                             .foregroundColor(.white)
                                     } else {
-                                        Text("Attending!")
+                                        Text("Help out!")
                                             .offset(x: -9, y: 24)
                                             .foregroundColor(.white)
                                     }
@@ -149,13 +147,20 @@ struct TrashMobFullscreenView: View {
                                         .offset(x: -9, y: 24)
                                         .foregroundColor(.blue)
                                 }
-                                //                                Text("\(lovesNeeded)")
                             }
                             
                             
                         }
                         .onTapGesture {
-                            trashMob.lovers.insert(User.testData[0].id)
+                            
+                            switch trashMob.lovers.contains(User.testData[0].id) {
+                            
+                            case true:
+                                trashMob.lovers.remove(User.testData[0].id)
+                            default:
+                                trashMob.lovers.insert(User.testData[0].id)
+                            }
+                            
                         }
                         
                         ZStack {
