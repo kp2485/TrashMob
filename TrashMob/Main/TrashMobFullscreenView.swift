@@ -12,6 +12,7 @@ struct TrashMobFullscreenView: View {
     @State private var animateGradient = false
     
     @State var trashMob: TrashMob
+    @EnvironmentObject var viewModel: MapViewModel
     
     @State var user : User
     
@@ -216,11 +217,16 @@ struct TrashMobFullscreenView: View {
                                 RoundedRectangle(cornerRadius: 10).frame(height: 30)
                                     .foregroundColor(.white)
                                     .shadow(color: .black, radius: 3, x: 3, y: 3)
-                                Text("3.7 miles away")
-                                    .font(.caption)
-                                    .fontWeight(.bold)
-                                    .padding(4)
-                                    .opacity(0.6)
+                                if let location = viewModel.locationManager?.location {
+                                    Text(trashMob.distance(to: location))
+                                        .font(.caption)
+                                        .fontWeight(.bold)
+                                        .padding(4)
+                                        .opacity(0.6)
+                                } else {
+                                    Text("Enable 📍")
+                                }
+                                    
                             }
                             .fixedSize()
                             

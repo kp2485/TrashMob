@@ -15,7 +15,7 @@ struct TrashMobList: View {
 
     var body: some View {
         List {
-            VStack {
+            
             ForEach(vm.trashMobs) { trashMob in
                 
                 NavigationLink(destination: TrashMobFullscreenView(trashMob: trashMob, user: User.testData[0])) {
@@ -62,12 +62,12 @@ struct TrashMobList: View {
                                 .font(.body)
                                 .fontWeight(.light)
                                 .lineLimit(1)
-                        } else { Text("Enable 📍")}
+                        }
                         
 
                     }
                 }
-                .listStyle(.inset)
+                
             }
             
             
@@ -80,7 +80,6 @@ struct TrashMobList: View {
         .onAppear(perform: {
             UITableView.appearance().contentInset.top = -15
         })
-    }
     }
 }
 
