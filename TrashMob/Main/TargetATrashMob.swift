@@ -38,7 +38,7 @@ struct TargetATrashMob: View {
                         .frame(height: screenHeight * 0.005)
                     
                     ZStack {
-                        MapView(trashMobs: vm.trashMobs)
+                        MapView()
                             .frame(height: screenWidth)
                         Image(systemName: "plus")
                             .font(.title.weight(.bold))

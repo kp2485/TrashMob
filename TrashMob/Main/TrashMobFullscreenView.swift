@@ -197,7 +197,7 @@ struct TrashMobFullscreenView: View {
                     
                     ZStack {
                         VStack {
-                            MapView(trashMobs: [trashMob.self])
+                            MapView()
                                 .frame(width: 150, height: 150)
                                 .mask(RoundedRectangle(cornerRadius: 20))
                                 .shadow(color: .black, radius: 2, x: 3, y: 3)

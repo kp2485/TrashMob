@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 import CloudKit
-
+import MapKit
 struct TrashMob: Identifiable, Hashable {
     
     var id: UUID = UUID()
@@ -79,6 +79,13 @@ struct TrashMob: Identifiable, Hashable {
     
     func pickDate() {
         
+    }
+    
+    func distance(to userLocation: CLLocation) -> String {
+        let distance = userLocation.distance(from: coordinate)
+        let mdf = MKDistanceFormatter()
+        mdf.units = .imperial
+        return mdf.string(for: distance) ?? ""
     }
     
     static let testData = [

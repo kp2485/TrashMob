@@ -9,16 +9,15 @@ import MapKit
 import SwiftUI
 
 struct MapView: View {
-    @StateObject var viewModel = MapViewModel()
+    @EnvironmentObject var viewModel: MapViewModel
+    @EnvironmentObject var vm: TrashMobViewModel
     @State var isAnimating: Bool = false
-    
-    var trashMobs: [TrashMob]
     
     let flagImage = Image(systemName: "flag.fill")
     
     var body: some View {
         
-        Map(coordinateRegion: $viewModel.region, showsUserLocation: true, annotationItems: trashMobs) { trashMob in
+        Map(coordinateRegion: $viewModel.region, showsUserLocation: true, annotationItems: vm.trashMobs) { trashMob in
             MapAnnotation(coordinate: trashMob.coordinate2D) {
                 NavigationLink {
                                         TrashMobFullscreenView(trashMob: trashMob, user: User.testData[0])
@@ -48,7 +47,7 @@ struct MapView: View {
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView(trashMobs: TrashMob.testData)
+        MapView()
     }
 }
 
