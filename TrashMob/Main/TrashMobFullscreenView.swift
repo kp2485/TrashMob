@@ -28,10 +28,10 @@ struct TrashMobFullscreenView: View {
                 
                 // Top
                 
-                RoundedRectangle(cornerRadius: 10)
-                    .frame(width: UIScreen.screenWidth * 0.85, height: 60, alignment: .leading)
-                    .foregroundColor(.gray)
-                    .shadow(color: .black, radius: 3, x: 3, y: 3)
+//                RoundedRectangle(cornerRadius: 10)
+//                    .frame(width: UIScreen.screenWidth * 0.85, height: 60, alignment: .leading)
+//                    .foregroundColor(.gray)
+//                    .shadow(color: .black, radius: 3, x: 3, y: 3)
                 
                 TrashMobStateBubble(trashMob: trashMob)
                 .foregroundColor(.black)
