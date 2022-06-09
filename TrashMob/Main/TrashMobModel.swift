@@ -23,6 +23,9 @@ struct TrashMob: Identifiable, Hashable {
     var reported: Bool?
     var startedDate: Date?
     var completedDate: Date?
+    var duration: TimeInterval {
+        3600.0
+    }
     var archivedDate: Date?
     let coordinate: CLLocation
     var lovers: Set<UUID> = Set<UUID>()

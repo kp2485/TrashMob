@@ -10,12 +10,11 @@ import Foundation
 struct User: Identifiable, Codable {
     var id = UUID()
     var name: String?
-    var password: String?
     var premiumStatus: Bool
-    var mobsTargeted: Set<UUID>
-    var mobsCommitted: Set<UUID>
-    var mobsCompleted: Set<UUID>
-    var totalMobTime: Int?
+    var mobsTargeted: Set<UUID> = []
+    var mobsCommitted: Set<UUID> = []
+    var mobsCompleted: Set<UUID> = []
+    var totalMobTime: TimeInterval?
     var profilePicture: URL?
     var notificationsLoved: Bool = false
     var notificationsLocal: Bool = false
@@ -33,10 +32,10 @@ struct User: Identifiable, Codable {
 //    var attendanceRate: Double = Double(mobsCommittedCount / mobsCompletedCount)
     
     static let testData = [
-        User(name: "Kyle", password: "kyle", premiumStatus: false, mobsTargeted: [], mobsCommitted: [], mobsCompleted: [], profilePicture: nil),
-        User(name: "Dale", password: "dale", premiumStatus: true, mobsTargeted: [], mobsCommitted: [], mobsCompleted: [], profilePicture: nil),
-        User(name: "Jaelen", password: "dale", premiumStatus: true, mobsTargeted: [], mobsCommitted: [], mobsCompleted: [], profilePicture: nil),
-        User(name: "Angel", password: "dale", premiumStatus: false, mobsTargeted: [], mobsCommitted: [], mobsCompleted: [], profilePicture: nil),
-        User(name: "Ashlei", password: "dale", premiumStatus: true, mobsTargeted: [], mobsCommitted: [], mobsCompleted: [], profilePicture: nil)
+        User(name: "Kyle", premiumStatus: false, mobsTargeted: [], mobsCommitted: [], mobsCompleted: [], profilePicture: nil),
+        User(name: "Dale", premiumStatus: true, mobsTargeted: [], mobsCommitted: [], mobsCompleted: [], profilePicture: nil),
+        User(name: "Jaelen", premiumStatus: true, mobsTargeted: [], mobsCommitted: [], mobsCompleted: [], profilePicture: nil),
+        User(name: "Angel", premiumStatus: false, mobsTargeted: [], mobsCommitted: [], mobsCompleted: [], profilePicture: nil),
+        User(name: "Ashlei", premiumStatus: true, mobsTargeted: [], mobsCommitted: [], mobsCompleted: [], profilePicture: nil)
     ]
 }

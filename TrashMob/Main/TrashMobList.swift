@@ -36,16 +36,12 @@ struct TrashMobList: View {
                         }
                         VStack {
                             HStack {
-                                
-                                
                                 Text(trashMob.trashMobState.capitalizingFirstLetter())
                                     .font(.title2)
                                     .layoutPriority(1)
                                     .lineLimit(2)
                                 
                                 Spacer()
-                                
-                                
                             }
                             .minimumScaleFactor(0.5)
                             

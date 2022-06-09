@@ -13,6 +13,8 @@ class TrashMobViewModel: ObservableObject {
     @Published var trashMobs: [TrashMob] = []
     
     
+    
+    
     init() {
         //TODO: fetch nearby trashMobs from cloudkit
 //        fetchMobs()
