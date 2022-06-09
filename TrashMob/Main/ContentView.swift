@@ -55,12 +55,12 @@ struct ContentView: View {
                                     .font(.title3)
                             }
                         }
-                        .background()
+//                        .background()
                     }
                 }
             }
         }
-        .edgesIgnoringSafeArea(.all)
+        .edgesIgnoringSafeArea(.horizontal)
         .sheet(isPresented: $isTargetATrashMobShowing) {
             CameraView()
         }

@@ -29,7 +29,7 @@ struct MapView: View {
                 }
             }
         }
-        .ignoresSafeArea()
+//        .ignoresSafeArea()
         // dot color
         .accentColor(Color(.systemPink))
         .onAppear {

@@ -37,9 +37,9 @@ struct TrashMobList: View {
             //                            Spacer()
             //                        }
         }
-        .onAppear(perform: {
-            UITableView.appearance().contentInset.top = -15
-        })
+//        .onAppear(perform: {
+//            UITableView.appearance().contentInset.top = -15
+//        })
         .sheet(isPresented: $isShowingDetails) {
             TrashMobFullscreenView(user: User.testData[0])
         }
