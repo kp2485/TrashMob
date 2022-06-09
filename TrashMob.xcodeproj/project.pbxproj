@@ -31,6 +31,7 @@
 		D696D8C728326951008B71ED /* TrashMobFullscreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */; };
 		D696D8C928328742008B71ED /* TrashMobBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C828328742008B71ED /* TrashMobBackgroundImage.swift */; };
 		D6A6A128284FD0600012FA55 /* TrashMobList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6A127284FD0600012FA55 /* TrashMobList.swift */; };
+		D6A6A12A285262AF0012FA55 /* AttendeesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6A129285262AF0012FA55 /* AttendeesButton.swift */; };
 		D6E9577A284E90E700D19873 /* TrashMobMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E95779284E90E700D19873 /* TrashMobMapAnnotation.swift */; };
 		D6F8DA6D28412ABD00DE19F9 /* TrashMobStateBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F8DA6C28412ABD00DE19F9 /* TrashMobStateBubble.swift */; };
 		D6F8DA6F28412CAF00DE19F9 /* CountdownBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F8DA6E28412CAF00DE19F9 /* CountdownBubble.swift */; };
@@ -74,6 +75,7 @@
 		D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobFullscreenView.swift; sourceTree = "<group>"; };
 		D696D8C828328742008B71ED /* TrashMobBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobBackgroundImage.swift; sourceTree = "<group>"; };
 		D6A6A127284FD0600012FA55 /* TrashMobList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobList.swift; sourceTree = "<group>"; };
+		D6A6A129285262AF0012FA55 /* AttendeesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeesButton.swift; sourceTree = "<group>"; };
 		D6E95779284E90E700D19873 /* TrashMobMapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobMapAnnotation.swift; sourceTree = "<group>"; };
 		D6F8DA6C28412ABD00DE19F9 /* TrashMobStateBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobStateBubble.swift; sourceTree = "<group>"; };
 		D6F8DA6E28412CAF00DE19F9 /* CountdownBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownBubble.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				5D0643AD28494CB600CF0C9A /* TrashMobViewModel.swift */,
 				D65937BE283D5C4200E50F45 /* UserModel.swift */,
 				D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */,
+				D6A6A129285262AF0012FA55 /* AttendeesButton.swift */,
 				D696D8C828328742008B71ED /* TrashMobBackgroundImage.swift */,
 				D6F8DA6C28412ABD00DE19F9 /* TrashMobStateBubble.swift */,
 				D6F8DA6E28412CAF00DE19F9 /* CountdownBubble.swift */,
@@ -367,6 +370,7 @@
 				D696D8C528311874008B71ED /* CloudKitUtility.swift in Sources */,
 				D6F98170282166AE0073088D /* trashMob.swift in Sources */,
 				D65937BB283D5BE300E50F45 /* MapViewModel.swift in Sources */,
+				D6A6A12A285262AF0012FA55 /* AttendeesButton.swift in Sources */,
 				D696D8C728326951008B71ED /* TrashMobFullscreenView.swift in Sources */,
 				D696D8BC282DA27A008B71ED /* ImageResizer.swift in Sources */,
 				D6E9577A284E90E700D19873 /* TrashMobMapAnnotation.swift in Sources */,
