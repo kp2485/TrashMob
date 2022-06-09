@@ -11,7 +11,7 @@ import AVFoundation
 final class CameraViewModel: ObservableObject {
     private let service = CameraService()
     
-    @Published var photo: Photo!
+    @Published var photo: Photo?
     
     @Published var showAlertError = false
     

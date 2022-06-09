@@ -11,6 +11,7 @@ import MapKit
 struct TargetATrashMob: View {
     @EnvironmentObject var vm: TrashMobViewModel
     @StateObject var mapvm = MapViewModel()
+    @ObservedObject var cameraVM: CameraViewModel
     
     let screenWidth  = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
@@ -44,6 +45,7 @@ struct TargetATrashMob: View {
                             .font(.title.weight(.bold))
                             .foregroundColor(Color(.systemPink))
                             .opacity(0.6)
+                        Image(uiImage: UIImage(data: cameraVM.photo?.originalData ?? Data()) ?? UIImage())
                     }
                     
                     Text("Place + on meetup location")
@@ -81,7 +83,8 @@ struct TargetATrashMob: View {
                             let mapRegion = mapvm.region
 //                            let newTrashMob = TrashMob(targetingUser: targetingUser, beforePicture: beforePicture ?? URL(string: "https://knowpathology.com.au/wp-content/uploads/2018/07/happy-test-screen.jpg")!, targetDate: targetDate, latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude, lovers: [User.testData[0].id], attendees: [User.testData[0].id])
                             
-                            vm.addButtonPressed(targetingUser: targetingUser, beforePictureURL: beforePicture?.description ?? "https://knowpathology.com.au/wp-content/uploads/2018/07/happy-test-screen.jpg", coordinate2D: CLLocationCoordinate2D(latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude))
+                            
+                            vm.addButtonPressed(targetingUser: targetingUser, beforePicture: cameraVM.photo ?? Photo(originalData: .init()), coordinate2D: CLLocationCoordinate2D(latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude))
                             
                             presentationMode.wrappedValue.dismiss()
                                 } label: {
@@ -129,8 +132,8 @@ struct TargetATrashMob: View {
     }
 }
 
-struct TargetATrashMob_Previews: PreviewProvider {
-    static var previews: some View {
-        TargetATrashMob()
-    }
-}
+//struct TargetATrashMob_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TargetATrashMob()
+//    }
+//}

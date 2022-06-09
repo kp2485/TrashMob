@@ -32,11 +32,11 @@ class TrashMobViewModel: ObservableObject {
         trashMobs = TrashMob.testData
     }
     
-    func addButtonPressed(targetingUser: String, beforePictureURL: String, coordinate2D: CLLocationCoordinate2D) {
-        addMob(targetingUser: targetingUser, beforePictureURL: beforePictureURL, coordinate2D: coordinate2D)
+    func addButtonPressed(targetingUser: String, beforePicture: Photo, coordinate2D: CLLocationCoordinate2D) {
+        addMob(targetingUser: targetingUser, beforePicture: beforePicture, coordinate2D: coordinate2D)
     }
     
-    private func addMob(targetingUser: String, beforePictureURL: String, coordinate2D: CLLocationCoordinate2D) {
+    private func addMob(targetingUser: String, beforePicture: Photo, coordinate2D: CLLocationCoordinate2D) {
         //TODO: Make new addMob function, that adds the correct type of data
         //        let newMob = CKRecord(recordType: "Mobs")
         //        newMob["name"] = name
@@ -50,7 +50,7 @@ class TrashMobViewModel: ObservableObject {
         
         // switch to image from TakeAPictureView
         guard
-            let image = UIImage(named: "me"),
+            let image = UIImage(data: beforePicture.originalData),
             let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first?.appendingPathComponent("me.jpg"),
             let data = image.jpegData(compressionQuality: 1.0) else { return }
         

@@ -41,7 +41,7 @@ struct CameraView: View {
     var capturedPhotoThumbnail: some View {
         Group {
             if model.photo != nil {
-                Image(uiImage: model.photo.image!)
+                Image(uiImage: model.photo?.image! ?? UIImage())
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 60, height: 60)
@@ -74,7 +74,7 @@ struct CameraView: View {
             GeometryReader { reader in
                 ZStack {
                     NavigationLink(isActive: $hasPhoto) {
-                        TargetATrashMob()
+                        TargetATrashMob(cameraVM: model)
                     } label: {
                         EmptyView()
                     }
