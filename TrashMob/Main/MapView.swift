@@ -13,27 +13,20 @@ struct MapView: View {
     @EnvironmentObject var vm: TrashMobViewModel
     @State var isAnimating: Bool = false
     
+    @State private var isShowingDetails = false
+    
     let flagImage = Image(systemName: "flag.fill")
     
     var body: some View {
         
         Map(coordinateRegion: $viewModel.region, showsUserLocation: true, annotationItems: vm.trashMobs) { trashMob in
             MapAnnotation(coordinate: trashMob.coordinate2D) {
-                NavigationLink {
-                                        TrashMobFullscreenView(trashMob: trashMob, user: User.testData[0])
-                                    } label:
-                {
+                Button {
+                    vm.selectedTrashMob = trashMob
+                    isShowingDetails.toggle()
+                } label: {
                     TrashMobMapAnnotation(trashMobState: trashMob.trashMobState)
                 }
-
-////                    }
-////                }
-////
-////                }
-//
-//
-//                    }
-                
             }
         }
         .ignoresSafeArea()
@@ -41,6 +34,9 @@ struct MapView: View {
         .accentColor(Color(.systemPink))
         .onAppear {
             viewModel.checkIfLocationServicesIsEnabled()
+        }
+        .sheet(isPresented: $isShowingDetails) {
+            TrashMobFullscreenView(user: User.testData[0])
         }
     }
 }
