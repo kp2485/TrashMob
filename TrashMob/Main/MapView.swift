@@ -9,7 +9,7 @@ import MapKit
 import SwiftUI
 
 struct MapView: View {
-    @EnvironmentObject var viewModel: MapViewModel
+    @ObservedObject var viewModel: MapViewModel
     @EnvironmentObject var vm: TrashMobViewModel
     @State var isAnimating: Bool = false
     
@@ -43,7 +43,7 @@ struct MapView: View {
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView()
+        MapView(viewModel: MapViewModel())
     }
 }
 

@@ -21,7 +21,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 VStack {
-                    MapView()
+                    MapView(viewModel: viewModel)
                     TrashMobList()
                         .listStyle(.inset)
                 }

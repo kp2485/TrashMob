@@ -139,8 +139,10 @@ struct CameraView: View {
                         }
                         .padding(.horizontal, 20)
                     }
+                    .padding(.vertical)
                 }
             }
+            .navigationBarHidden(true)
         }
     }
 }
