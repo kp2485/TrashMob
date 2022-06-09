@@ -57,7 +57,8 @@ struct TrashMobFullscreenView: View {
                                 ZStack {
                                     Circle()
                                         .frame(width: 65, height: 65)
-                                        .foregroundColor(.white)
+                                        .foregroundColor(.primary)
+                                        .colorInvert()
                                         .padding(.trailing)
                                         .opacity(0.8)
                                         .shadow(radius: 3)
@@ -79,7 +80,7 @@ struct TrashMobFullscreenView: View {
                                     
                                     Text("\(vm.selectedTrashMob!.attending)")
                                         .padding(.trailing)
-                                        .foregroundColor(.black)
+                                        .foregroundColor(.primary)
                                         .font(.system(size: 33, weight: .regular, design: .rounded))
                                         .opacity(0.8)
                                         .shadow(color: .white, radius: 7)
@@ -216,14 +217,15 @@ struct TrashMobFullscreenView: View {
                                 Spacer()
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 10).frame(height: 30)
-                                        .foregroundColor(.white)
+                                        .foregroundColor(.primary)
+                                        .colorInvert()
                                         .shadow(color: .black, radius: 3, x: 3, y: 3)
                                     if let location = viewModel.locationManager?.location {
                                         Text(vm.selectedTrashMob!.distance(to: location))
                                             .font(.caption)
                                             .fontWeight(.bold)
                                             .padding(4)
-                                            .opacity(0.6)
+                                            .opacity(0.7)
                                     } else {
                                         Text("Enable 📍")
                                     }

@@ -36,7 +36,8 @@ struct CountdownBubble: View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
                 .frame(alignment: .center)
-                .foregroundColor(.white)
+                .foregroundColor(.primary)
+                .colorInvert()
                 .shadow(color: .black, radius: 3, x: 3, y: 3)
             
             
@@ -51,6 +52,7 @@ struct CountdownBubble: View {
                     
                     Text("until TrashMob disappears!")
                         .font(.caption2)
+                        .foregroundColor(.primary)
                 }
                 .padding(4)
             } else if trashMob.trashMobState == "scheduling" {
@@ -75,6 +77,7 @@ struct CountdownBubble: View {
                     
                     Text("until TrashMob starts!")
                         .font(.caption2)
+                        .foregroundColor(.primary)
                 }
                 .padding(4)
             } else if trashMob.trashMobState == "active" {
@@ -88,6 +91,7 @@ struct CountdownBubble: View {
                     
                     Text("until TrashMob disappears!")
                         .font(.caption2)
+                        .foregroundColor(.primary)
                 }
                 .padding(4)
             } else if trashMob.trashMobState == "mobbed" {
@@ -101,10 +105,12 @@ struct CountdownBubble: View {
                     
                     Text("until TrashMob disappears!")
                         .font(.caption2)
+                        .foregroundColor(.primary)
                 }
                 .padding(4)
             } else {
                 Text("Loading ...")
+                    .foregroundColor(.primary)
                     .opacity(0.3)
             }
                 

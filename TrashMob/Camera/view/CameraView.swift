@@ -22,6 +22,9 @@ struct CameraView: View {
     
     @State private var hasPhoto: Bool = false
     
+    @Environment(\.presentationMode) var presentationMode
+    @State private var needsDismissing: Bool = false
+    
     var captureButton: some View {
         Button(action: {
             model.capturePhoto()
@@ -74,7 +77,7 @@ struct CameraView: View {
             GeometryReader { reader in
                 ZStack {
                     NavigationLink(isActive: $hasPhoto) {
-                        TargetATrashMob(cameraVM: model)
+                        TargetATrashMob(cameraVM: model, needsDismissing: $needsDismissing)
                     } label: {
                         EmptyView()
                     }
@@ -143,6 +146,11 @@ struct CameraView: View {
                 }
             }
             .navigationBarHidden(true)
+        }
+        .onChange(of: needsDismissing) { newValue in
+            if newValue == true {
+                presentationMode.wrappedValue.dismiss()
+            }
         }
     }
 }

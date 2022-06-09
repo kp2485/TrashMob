@@ -16,14 +16,14 @@ struct TargetATrashMob: View {
     let screenWidth  = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
     
-    @Environment(\.presentationMode) var presentationMode
-    
     @State var targetingUser = ""
     @State var beforePicture = URL(string: "https://knowpathology.com.au/wp-content/uploads/2018/07/Happy-Test-Screen-01.png")
     @State var targetDate: Date = Date()
     @State var trashMobState: String = "loading"
     @State var loves: Int = 1
     @State var attendees: [String] = []
+    
+    @Binding var needsDismissing: Bool
     
     var mapRegion = MKCoordinateRegion()
     
@@ -76,7 +76,7 @@ struct TargetATrashMob: View {
                         
                         vm.addButtonPressed(targetingUser: targetingUser, beforePicture: cameraVM.photo ?? Photo(originalData: .init()), coordinate2D: CLLocationCoordinate2D(latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude))
                         
-                        presentationMode.wrappedValue.dismiss()
+                        needsDismissing.toggle()
                     } label: {
                         Text("Confirm Trash Mob").fontWeight(.black)
                     }

@@ -59,9 +59,22 @@ struct MySettings: View {
                 
                 
             }
-//            .hiddenNavigationBarStyle()
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    HStack {
+                        
+                        Text ("My Settings")
+                            .font(.largeTitle)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.5)
+                            .frame(maxHeight: .infinity)
+                        
+                    }
+//                        .background()
+                }
+            }
         }
-        .navigationTitle("My Settings")
         
         
     }

@@ -15,7 +15,8 @@ struct TrashMobStateBubble: View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
                 .frame(alignment: .center)
-                .foregroundColor(.white)
+                .foregroundColor(.primary)
+                .colorInvert()
                 .shadow(color: .black, radius: 2, x: 3, y: 3)
             
             
@@ -26,6 +27,7 @@ struct TrashMobStateBubble: View {
                     Text("initiated on \(trashMob.targetDate.formatted(.dateTime.month().day()))")
                         .font(.caption)
                 }
+                .foregroundColor(.primary)
                 .padding(4)
             } else if trashMob.trashMobState == "scheduling" {
                 VStack {
@@ -35,6 +37,8 @@ struct TrashMobStateBubble: View {
                         .foregroundColor(.blue)
                         .font(.caption)
                 }
+                .foregroundColor(.primary)
+
             } else if trashMob.trashMobState == "scheduled" {
                 VStack {
                     Text("\(trashMob.trashMobState.capitalizingFirstLetter())")
@@ -42,6 +46,8 @@ struct TrashMobStateBubble: View {
                     Text("\(trashMob.scheduledDate!.formatted(.dateTime.month().day())) at \(trashMob.scheduledDate!.formatted(.dateTime.hour()))")
                         .font(.caption)
                 }
+                .foregroundColor(.primary)
+
             } else if trashMob.trashMobState == "active" {
                 VStack {
                     Text("Active!")
@@ -50,12 +56,18 @@ struct TrashMobStateBubble: View {
                         .foregroundColor(.blue)
                         .font(.caption)
                 }
+                .foregroundColor(.primary)
+
             } else if trashMob.trashMobState == "mobbed" {
                 Text("🗑 ♻️ Mobbed 💃🏽 🕺🏼")
-                
+                    .foregroundColor(.primary)
+
             } else {
                 Text("Loading ...")
+                    .foregroundColor(.primary)
+
                     .opacity(0.3)
+
             }
             
             
