@@ -12,6 +12,7 @@ struct User: Identifiable, Codable {
     var name: String?
     var premiumStatus: Bool
     var mobsTargeted: Set<UUID> = []
+    var mobsLoved: Set<UUID> = []
     var mobsCommitted: Set<UUID> = []
     var mobsCompleted: Set<UUID> = []
     var totalMobTime: TimeInterval?
@@ -22,6 +23,9 @@ struct User: Identifiable, Codable {
     var notificationsLiked: Bool = false
     var mobsTargetedCount: Int {
         mobsTargeted.count
+    }
+    var mobsLovedCount: Int {
+        mobsLoved.count
     }
     var mobsCommittedCount: Int {
         mobsCommitted.count

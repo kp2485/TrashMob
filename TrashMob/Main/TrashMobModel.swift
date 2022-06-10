@@ -9,6 +9,7 @@ import Foundation
 import CoreLocation
 import CloudKit
 import MapKit
+
 struct TrashMob: Identifiable, Hashable {
     
     var id: UUID = UUID()

@@ -11,12 +11,12 @@ struct TrashMobFullscreenView: View {
     
     @State private var animateGradient = false
     
+    @State private var confirmationShown = false
+    
     @EnvironmentObject var vm: TrashMobViewModel
     @EnvironmentObject var viewModel: MapViewModel
     
     @State var user : User
-    
-    //TODO: remove and resolve
     
     var body: some View {
         
@@ -49,6 +49,16 @@ struct TrashMobFullscreenView: View {
                     
                     // Middle
                     HStack {
+                        
+                        VStack {
+                            Spacer()
+                            Button(action: {}, label: {
+                                Text("⚠️").font(.title3)
+                            })
+                            Text("Report")
+                                .font(.caption)
+                        }
+                        .padding()
                         Spacer()
                         VStack {
                             Spacer()

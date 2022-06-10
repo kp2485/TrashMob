@@ -21,11 +21,15 @@ struct TrashMobStateBubble: View {
             
             
             if trashMob.trashMobState == "targeted" {
-                VStack {
-                    Text("\(trashMob.trashMobState.capitalizingFirstLetter()) by \(User.testData[0].name ?? "Anonymous")")
-                        .font(.system(.title3))
-                    Text("initiated on \(trashMob.targetDate.formatted(.dateTime.month().day()))")
-                        .font(.caption)
+                HStack {
+                    // TODO: User Profile Pic
+                    VStack {
+                        Text("\(trashMob.trashMobState.capitalizingFirstLetter()) by \(User.testData[0].name ?? "Anonymous")")
+                            .font(.system(.title3))
+                        Text("initiated on \(trashMob.targetDate.formatted(.dateTime.month().day()))")
+                            .font(.caption)
+                    }
+                    
                 }
                 .foregroundColor(.primary)
                 .padding(4)
@@ -38,7 +42,7 @@ struct TrashMobStateBubble: View {
                         .font(.caption)
                 }
                 .foregroundColor(.primary)
-
+                
             } else if trashMob.trashMobState == "scheduled" {
                 VStack {
                     Text("\(trashMob.trashMobState.capitalizingFirstLetter())")
@@ -47,7 +51,7 @@ struct TrashMobStateBubble: View {
                         .font(.caption)
                 }
                 .foregroundColor(.primary)
-
+                
             } else if trashMob.trashMobState == "active" {
                 VStack {
                     Text("Active!")
@@ -57,17 +61,17 @@ struct TrashMobStateBubble: View {
                         .font(.caption)
                 }
                 .foregroundColor(.primary)
-
+                
             } else if trashMob.trashMobState == "mobbed" {
                 Text("🗑 ♻️ Mobbed 💃🏽 🕺🏼")
                     .foregroundColor(.primary)
-
+                
             } else {
                 Text("Loading ...")
                     .foregroundColor(.primary)
-
+                
                     .opacity(0.3)
-
+                
             }
             
             
