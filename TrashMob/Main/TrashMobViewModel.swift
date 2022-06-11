@@ -99,22 +99,49 @@ class TrashMobViewModel: ObservableObject {
                 switch returnedResult {
                 case .success(let record):
                     print("nothing")
-                    //TODO: Store a new TrashMob
-                    //                    guard let name = record["name"] as? String else { return }
-                    //                    let imageAsset = record["image"] as? CKAsset
-                    //                    let imageURL = imageAsset?.fileURL
-                    //                    returnedMobs.append(MobModel(name: name, loves: self.loves, beforePicURL: imageURL, record: record))
+                    
+                    guard let targetingUser = record["targetingUser"] as? String else { return }
+                    let imageAsset = record["beforePicture"] as? CKAsset
+                    let imageURL = imageAsset?.fileURL
+                    let imageAsset2 = record["afterPicture"] as? CKAsset
+                    let imageURL2 = imageAsset2?.fileURL
+                    guard let targetDate = record["targetDate"] as? Date else { return }
+                    guard let schedulingDate = record["schedulingDate"] as? Date else { return }
+                    guard let coordinate = record["coordinate"] as? CLLocation else { return }
+                    
+                    returnedMobs.append(TrashMob(
+                        targetingUser: targetingUser,
+                        beforePicture: imageURL,
+                        afterPicture: imageURL2,
+                        targetDate: targetDate,
+                        schedulingDate: schedulingDate,
+                        coordinate: coordinate,
+                        record: record
+                        ))
                 case .failure(let error):
                     print("Error recordMatchedBlock: \(error)")
                 }
             }
         } else {
             queryOperation.recordFetchedBlock = { (returnedRecord) in
-                guard let name = returnedRecord["name"] as? String else { return }
-                let imageAsset = returnedRecord["image"] as? CKAsset
+                guard let targetingUser = returnedRecord["targetingUser"] as? String else { return }
+                let imageAsset = returnedRecord["beforePicture"] as? CKAsset
                 let imageURL = imageAsset?.fileURL
+                let imageAsset2 = returnedRecord["afterPicture"] as? CKAsset
+                let imageURL2 = imageAsset2?.fileURL
+                guard let targetDate = returnedRecord["targetDate"] as? Date else { return }
+                guard let schedulingDate = returnedRecord["schedulingDate"] as? Date else { return }
+                guard let coordinate = returnedRecord["coordinate"] as? CLLocation else { return }
                 //TODO: Store a new TrashMob for older iOS
-                //                returnedMobs.append(MobModel(name: name, loves: self.loves, beforePicURL: imageURL, record: returnedRecord))
+                                returnedMobs.append(TrashMob(
+                                    targetingUser: targetingUser,
+                                    beforePicture: imageURL,
+                                    afterPicture: imageURL2,
+                                    targetDate: targetDate,
+                                    schedulingDate: schedulingDate,
+                                    coordinate: coordinate,
+                                    record: returnedRecord
+                                    ))
             }
         }
         

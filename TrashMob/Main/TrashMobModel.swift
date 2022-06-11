@@ -72,6 +72,7 @@ struct TrashMob: Identifiable, Hashable {
             return "targeted"
         }
     }
+    var record: CKRecord?
     
     func pickDate() {
         
