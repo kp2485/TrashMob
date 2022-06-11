@@ -107,6 +107,10 @@ class TrashMobViewModel: ObservableObject {
                     let imageURL2 = imageAsset2?.fileURL
                     guard let targetDate = record["targetDate"] as? Date else { return }
                     guard let schedulingDate = record["schedulingDate"] as? Date else { return }
+                    guard let possibleDates = record["possibleDates"] as? [Date] else { return }
+                    guard let scheduledDate = record["scheduledDate"] as? Date else { return }
+                    guard let startedDate = record["startedDate"] as? Date else { return }
+                    guard let completedDate = record["completedDate"] as? Date else { return }
                     guard let coordinate = record["coordinate"] as? CLLocation else { return }
                     
                     returnedMobs.append(TrashMob(
@@ -115,6 +119,10 @@ class TrashMobViewModel: ObservableObject {
                         afterPicture: imageURL2,
                         targetDate: targetDate,
                         schedulingDate: schedulingDate,
+                        possibleDates: possibleDates,
+                        scheduledDate: scheduledDate,
+                        startedDate: startedDate,
+                        completedDate: completedDate,
                         coordinate: coordinate,
                         record: record
                         ))
@@ -131,6 +139,10 @@ class TrashMobViewModel: ObservableObject {
                 let imageURL2 = imageAsset2?.fileURL
                 guard let targetDate = returnedRecord["targetDate"] as? Date else { return }
                 guard let schedulingDate = returnedRecord["schedulingDate"] as? Date else { return }
+                guard let possibleDates = returnedRecord["possibleDates"] as? [Date] else { return }
+                guard let scheduledDate = returnedRecord["scheduledDate"] as? Date else { return }
+                guard let startedDate = returnedRecord["startedDate"] as? Date else { return }
+                guard let completedDate = returnedRecord["completedDate"] as? Date else { return }
                 guard let coordinate = returnedRecord["coordinate"] as? CLLocation else { return }
                 //TODO: Store a new TrashMob for older iOS
                                 returnedMobs.append(TrashMob(
@@ -139,6 +151,10 @@ class TrashMobViewModel: ObservableObject {
                                     afterPicture: imageURL2,
                                     targetDate: targetDate,
                                     schedulingDate: schedulingDate,
+                                    possibleDates: possibleDates,
+                                    scheduledDate: scheduledDate,
+                                    startedDate: startedDate,
+                                    completedDate: completedDate,
                                     coordinate: coordinate,
                                     record: returnedRecord
                                     ))

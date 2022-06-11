@@ -71,7 +71,7 @@ struct TargetATrashMob: View {
                     Button {
                         
                         let mapRegion = mapvm.region
-                        //                            let newTrashMob = TrashMob(targetingUser: targetingUser, beforePicture: beforePicture ?? URL(string: "https://knowpathology.com.au/wp-content/uploads/2018/07/happy-test-screen.jpg")!, targetDate: targetDate, latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude, lovers: [User.testData[0].id], attendees: [User.testData[0].id])
+//                        let newTrashMob = TrashMob(targetingUser: targetingUser, beforePicture: beforePicture ?? URL(string: "https://knowpathology.com.au/wp-content/uploads/2018/07/happy-test-screen.jpg")!, targetDate: targetDate,  lovers: [User.testData[0].id], coordinate: coordinate)
                         
                         
                         vm.addButtonPressed(targetingUser: targetingUser, beforePicture: cameraVM.photo ?? Photo(originalData: .init()), coordinate2D: CLLocationCoordinate2D(latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude))
