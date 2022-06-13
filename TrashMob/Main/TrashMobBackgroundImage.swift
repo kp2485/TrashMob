@@ -12,7 +12,12 @@ struct TrashMobBackgroundImage: View {
     var trashMob: TrashMob
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        // TODO: Conditional statement for before/after display
+        // TODO: Use image from TM URL
+        Image("trashyProperty")
+         .resizable()
+         .aspectRatio(contentMode: .fill)
+         .edgesIgnoringSafeArea(.all)
     }
 }
 
