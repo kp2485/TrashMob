@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AttendeesButton: View {
     
-    @Binding var trashMob: TrashMob
+    var trashMob: TrashMob
     
     @State private var animateGradient = false
     
@@ -18,7 +18,8 @@ struct AttendeesButton: View {
             ZStack {
                 Circle()
                     .frame(width: 65, height: 65)
-                    .foregroundColor(.white)
+                    .foregroundColor(.primary)
+                    .colorInvert()
                     .padding(.trailing)
                     .opacity(0.8)
                     .shadow(radius: 3)
@@ -40,7 +41,7 @@ struct AttendeesButton: View {
                 
                 Text("\(trashMob.attending)")
                     .padding(.trailing)
-                    .foregroundColor(.black)
+                    .foregroundColor(.primary)
                     .font(.system(size: 33, weight: .regular, design: .rounded))
                     .opacity(0.8)
                     .shadow(color: .white, radius: 7)
@@ -52,6 +53,7 @@ struct AttendeesButton: View {
                         .offset(x: -9, y: 24)
                         .foregroundColor(.green)
                         .opacity(0.85)
+                    // TODO: Change to current user
                     if trashMob.attendees.contains(User.testData[0].id) {
                         Text("Attending!")
                             .offset(x: -9, y: 24)
@@ -61,27 +63,17 @@ struct AttendeesButton: View {
                             .offset(x: -9, y: 24)
                             .foregroundColor(.white)
                     }
-                    //                                Text("\(lovesNeeded)")
                 }
                 .fixedSize()
             }
             
             .padding(.bottom)
-            .onTapGesture {
-                switch trashMob.attendees.contains(User.testData[0].id) {
-                
-                case true:
-                    trashMob.attendees.remove(User.testData[0].id)
-                default:
-                    trashMob.attendees.insert(User.testData[0].id)
-                }
-            }
         }
     }
 }
 
 struct AttendeesButton_Previews: PreviewProvider {
     static var previews: some View {
-        AttendeesButton(trashMob: .constant(TrashMob.testData[2]))
+        AttendeesButton(trashMob: TrashMob.testData[2])
     }
 }

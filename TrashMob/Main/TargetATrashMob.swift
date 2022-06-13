@@ -18,10 +18,6 @@ struct TargetATrashMob: View {
     
     @State var targetingUser = ""
     @State var beforePicture = URL(string: "https://knowpathology.com.au/wp-content/uploads/2018/07/Happy-Test-Screen-01.png")
-    @State var targetDate: Date = Date()
-    @State var trashMobState: String = "loading"
-    @State var loves: Int = 1
-    @State var attendees: [String] = []
     
     @Binding var needsDismissing: Bool
     
@@ -59,26 +55,17 @@ struct TargetATrashMob: View {
                 Spacer()
                 
                 HStack {
-                    //                        Spacer()
-                    //                        Button {
-                    //                            presentationMode.wrappedValue.dismiss()
-                    //                        } label: {
-                    //                            Image(systemName: "return")
-                    //                        }
-                    //                        .font(.title.weight(.bold))
-                    //                        .foregroundColor(Color(.systemPink))
+
                     Spacer()
                     Button {
                         
                         let mapRegion = mapvm.region
-//                        let newTrashMob = TrashMob(targetingUser: targetingUser, beforePicture: beforePicture ?? URL(string: "https://knowpathology.com.au/wp-content/uploads/2018/07/happy-test-screen.jpg")!, targetDate: targetDate,  lovers: [User.testData[0].id], coordinate: coordinate)
-                        
                         
                         vm.addButtonPressed(targetingUser: targetingUser, beforePicture: cameraVM.photo ?? Photo(originalData: .init()), coordinate2D: CLLocationCoordinate2D(latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude))
                         
                         needsDismissing.toggle()
                     } label: {
-                        Text("Confirm Trash Mob").fontWeight(.black)
+                        Text("Target this location!").fontWeight(.black)
                     }
                     .padding()
                     .background(.blue.opacity(0.90))
@@ -106,18 +93,7 @@ struct TargetATrashMob: View {
                         .background()
                     
                 }
-                //                    ToolbarItem(placement: .navigationBarLeading) {
-                //                        NavigationLink(destination: MySettings()) {
-                //                            Text ("My Settings")
-                //                        }
-                //                    }
-                //                    ToolbarItem(placement: .navigationBarTrailing) {
-                //                        NavigationLink(destination: MySettings()) {
-                //                            Text ("Target a TrashMob")
-                //                        }
-                //                    }
             }
-            
         }
     }
 }

@@ -29,9 +29,12 @@
 		D696D8C3282EC4E0008B71ED /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C2282EC4E0008B71ED /* TabView.swift */; };
 		D696D8C528311874008B71ED /* CloudKitUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C428311874008B71ED /* CloudKitUtility.swift */; };
 		D696D8C728326951008B71ED /* TrashMobFullscreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */; };
-		D696D8C928328742008B71ED /* TrashMobBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C828328742008B71ED /* TrashMobBackgroundImage.swift */; };
 		D6A6A128284FD0600012FA55 /* TrashMobList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6A127284FD0600012FA55 /* TrashMobList.swift */; };
 		D6A6A12A285262AF0012FA55 /* AttendeesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6A129285262AF0012FA55 /* AttendeesButton.swift */; };
+		D6A6A12C285751310012FA55 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6A12B285751310012FA55 /* CommentView.swift */; };
+		D6A6A12E28578B5C0012FA55 /* LovesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6A12D28578B5C0012FA55 /* LovesButton.swift */; };
+		D6A6A130285793000012FA55 /* CommentsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6A12F285793000012FA55 /* CommentsButton.swift */; };
+		D6A6A132285793600012FA55 /* TrashMobBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6A131285793600012FA55 /* TrashMobBackgroundImage.swift */; };
 		D6E9577A284E90E700D19873 /* TrashMobMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E95779284E90E700D19873 /* TrashMobMapAnnotation.swift */; };
 		D6F8DA6D28412ABD00DE19F9 /* TrashMobStateBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F8DA6C28412ABD00DE19F9 /* TrashMobStateBubble.swift */; };
 		D6F8DA6F28412CAF00DE19F9 /* CountdownBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F8DA6E28412CAF00DE19F9 /* CountdownBubble.swift */; };
@@ -73,9 +76,12 @@
 		D696D8C2282EC4E0008B71ED /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		D696D8C428311874008B71ED /* CloudKitUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitUtility.swift; sourceTree = "<group>"; };
 		D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobFullscreenView.swift; sourceTree = "<group>"; };
-		D696D8C828328742008B71ED /* TrashMobBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobBackgroundImage.swift; sourceTree = "<group>"; };
 		D6A6A127284FD0600012FA55 /* TrashMobList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobList.swift; sourceTree = "<group>"; };
 		D6A6A129285262AF0012FA55 /* AttendeesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeesButton.swift; sourceTree = "<group>"; };
+		D6A6A12B285751310012FA55 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		D6A6A12D28578B5C0012FA55 /* LovesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovesButton.swift; sourceTree = "<group>"; };
+		D6A6A12F285793000012FA55 /* CommentsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsButton.swift; sourceTree = "<group>"; };
+		D6A6A131285793600012FA55 /* TrashMobBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobBackgroundImage.swift; sourceTree = "<group>"; };
 		D6E95779284E90E700D19873 /* TrashMobMapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobMapAnnotation.swift; sourceTree = "<group>"; };
 		D6F8DA6C28412ABD00DE19F9 /* TrashMobStateBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobStateBubble.swift; sourceTree = "<group>"; };
 		D6F8DA6E28412CAF00DE19F9 /* CountdownBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownBubble.swift; sourceTree = "<group>"; };
@@ -124,10 +130,13 @@
 				5D0643AD28494CB600CF0C9A /* TrashMobViewModel.swift */,
 				D65937BE283D5C4200E50F45 /* UserModel.swift */,
 				D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */,
-				D6A6A129285262AF0012FA55 /* AttendeesButton.swift */,
-				D696D8C828328742008B71ED /* TrashMobBackgroundImage.swift */,
+				D6A6A131285793600012FA55 /* TrashMobBackgroundImage.swift */,
 				D6F8DA6C28412ABD00DE19F9 /* TrashMobStateBubble.swift */,
 				D6F8DA6E28412CAF00DE19F9 /* CountdownBubble.swift */,
+				D6A6A129285262AF0012FA55 /* AttendeesButton.swift */,
+				D6A6A12D28578B5C0012FA55 /* LovesButton.swift */,
+				D6A6A12F285793000012FA55 /* CommentsButton.swift */,
+				D6A6A12B285751310012FA55 /* CommentView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -361,14 +370,15 @@
 				D696D8B6282DA1A2008B71ED /* CameraService+Enums.swift in Sources */,
 				D696D893282C23E7008B71ED /* CloudKitPushNotification.swift in Sources */,
 				D6F980FE2815D4830073088D /* TrashMob.xcdatamodeld in Sources */,
+				D6A6A130285793000012FA55 /* CommentsButton.swift in Sources */,
 				D651D35E28355D7600703206 /* AvatarView.swift in Sources */,
-				D696D8C928328742008B71ED /* TrashMobBackgroundImage.swift in Sources */,
 				D65937C3284011AC00E50F45 /* CameraViewModel.swift in Sources */,
 				D6F980F42815D4820073088D /* DefaultContentView.swift in Sources */,
 				D6F8DA6D28412ABD00DE19F9 /* TrashMobStateBubble.swift in Sources */,
 				D65937B9283D5BBC00E50F45 /* MapView.swift in Sources */,
 				D696D8C528311874008B71ED /* CloudKitUtility.swift in Sources */,
 				D6F98170282166AE0073088D /* trashMob.swift in Sources */,
+				D6A6A132285793600012FA55 /* TrashMobBackgroundImage.swift in Sources */,
 				D65937BB283D5BE300E50F45 /* MapViewModel.swift in Sources */,
 				D6A6A12A285262AF0012FA55 /* AttendeesButton.swift in Sources */,
 				D696D8C728326951008B71ED /* TrashMobFullscreenView.swift in Sources */,
@@ -384,11 +394,13 @@
 				D6F98130282010C40073088D /* AddressFetcher.swift in Sources */,
 				D6F98132282011BE0073088D /* LocationManager.swift in Sources */,
 				D6F9810D28185BD00073088D /* CloudKitCRUDView.swift in Sources */,
+				D6A6A12C285751310012FA55 /* CommentView.swift in Sources */,
 				D696D8B8282DA1FC008B71ED /* CameraService+Extensions.swift in Sources */,
 				5D0643AE28494CB600CF0C9A /* TrashMobViewModel.swift in Sources */,
 				D6F9810B28172FFA0073088D /* LoginView.swift in Sources */,
 				D65937B1283D5A0900E50F45 /* SplashView.swift in Sources */,
 				D6F8DA6F28412CAF00DE19F9 /* CountdownBubble.swift in Sources */,
+				D6A6A12E28578B5C0012FA55 /* LovesButton.swift in Sources */,
 				D65937B3283D5A9800E50F45 /* ContentView.swift in Sources */,
 				D696D8C1282DA319008B71ED /* CameraPreview.swift in Sources */,
 				D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */,

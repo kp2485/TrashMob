@@ -47,8 +47,7 @@ class TrashMobViewModel: ObservableObject {
         newMob["targetDate"] = Date.now
         newMob["coordinate"] = CLLocation(latitude: coordinate2D.latitude, longitude: coordinate2D.longitude)
         
-        
-        // switch to image from TakeAPictureView
+        // image from TakeAPictureView
         guard
             let image = UIImage(data: beforePicture.originalData),
             let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first?.appendingPathComponent("me.jpg"),
@@ -192,16 +191,16 @@ class TrashMobViewModel: ObservableObject {
     //        saveMob(record: record)
     //    }
     
-    func deleteMob(indexSet: IndexSet) {
-        guard let index =  indexSet.first else { return }
-        let mob = trashMobs[index]
-        //        let record = mob.record
-        let record = CKRecord(recordType: "Mobs")
-        
-        CKContainer.default().publicCloudDatabase.delete(withRecordID: record.recordID) { [weak self] returnedRecordID, returnedError in
-            DispatchQueue.main.async {
-                self?.trashMobs.remove(at: index)
-            }
-        }
-    }
+//    func deleteMob(indexSet: IndexSet) {
+//        guard let index =  indexSet.first else { return }
+//        let mob = trashMobs[index]
+////        let record = selectedTrashMob?.record
+//        let record = CKRecord(recordType: "Mobs")
+//
+//        CKContainer.default().publicCloudDatabase.delete(withRecordID: record.recordID) { [weak self] returnedRecordID, returnedError in
+//            DispatchQueue.main.async {
+//                self?.trashMobs.remove(at: index)
+//            }
+//        }
+//    }
 }
