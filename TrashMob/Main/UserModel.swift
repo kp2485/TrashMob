@@ -10,7 +10,7 @@ import Foundation
 struct User: Identifiable, Codable {
     var id = UUID()
     var name: String?
-    var premiumStatus: Bool
+    var premiumStatus: Bool = true
     var mobsTargeted: Set<UUID> = []
     var mobsLoved: Set<UUID> = []
     var mobsCommitted: Set<UUID> = []
