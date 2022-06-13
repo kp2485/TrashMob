@@ -1,21 +1,21 @@
 //
-//  MapViewModel.swift
+//  TrashMobMapViewModel.swift
 //  TrashMob
 //
-//  Created by Kyle Peterson on 5/24/22.
+//  Created by Kyle Peterson on 6/13/22.
 //
 
 import MapKit
 
-final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
+final class TrashMobMapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     private enum MapDetails {
-        static let startingLocation = CLLocationCoordinate2D (latitude: 42.3314, longitude: -83.0458)
+        static let startingLocation = CLLocationCoordinate2D(latitude: 42.3314, longitude: -83.0458)
         static let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
         static let zoomedSpan = MKCoordinateSpan(latitudeDelta: 0.003, longitudeDelta: 0.003)
     }
     
-    @Published var region = MKCoordinateRegion(center: MapDetails.startingLocation, span: MapDetails.defaultSpan)
+    @Published var region = MKCoordinateRegion(center: MapDetails.startingLocation, span: MapDetails.zoomedSpan)
     
     var locationManager: CLLocationManager?
     
@@ -45,7 +45,7 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
         case .denied:
             print("You have denied this app location permission. Go into settings to change the permission.")
         case .authorizedAlways, .authorizedWhenInUse:
-            // update region, force unwrapped optional
+            // TODO: change center to TM coord
             region = MKCoordinateRegion(center: locationManager.location!.coordinate,
                                         span: MapDetails.defaultSpan)
         @unknown default:
@@ -58,4 +58,3 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
     }
         
 }
-

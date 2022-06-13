@@ -14,7 +14,7 @@ struct TrashMobFullscreenView: View {
     @State private var confirmationShown = false
     
     @EnvironmentObject var vm: TrashMobViewModel
-    @EnvironmentObject var viewModel: MapViewModel
+    @EnvironmentObject var TMviewModel: TrashMobMapViewModel
     
     @State var user : User
     
@@ -72,8 +72,8 @@ struct TrashMobFullscreenView: View {
                         }
                         .padding()
                         
-                        
                         Spacer()
+                        
                         VStack {
                             Spacer()
                             
@@ -81,52 +81,27 @@ struct TrashMobFullscreenView: View {
                                 AttendeesButton(trashMob: vm.selectedTrashMob!)
                                 // TODO: CK Update the TM, use current user
                                 .onTapGesture {
+                                    switch vm.selectedTrashMob!.lovers.contains(User.testData[0].id) {
+                                    case true:
+                                    vm.selectedTrashMob!.lovers.remove(User.testData[0].id)
+                                    default:
                                     vm.selectedTrashMob!.attendees.insert(User.testData[0].id)
+                                    }
                                 }
                             }
                             
                             
                             LovesButton(trashMob: vm.selectedTrashMob!)
                             .onTapGesture {
-                                switch vm.selectedTrashMob!.lovers.contains(User.testData[0].id) {
-                                case true:
-                                    vm.selectedTrashMob!.lovers.remove(User.testData[0].id)
-                                default:
+//                                switch vm.selectedTrashMob!.lovers.contains(User.testData[0].id) {
+//                                case true:
+//                                    vm.selectedTrashMob!.lovers.remove(User.testData[0].id)
+//                                default:
                                     vm.selectedTrashMob!.lovers.insert(User.testData[0].id)
-                                }
-                                
+//                                }
                             }
                             
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 5)
-                                    .foregroundColor(.white)
-                                    .frame(width: 40, height: 30, alignment: .center)
-                                    .offset(x: -8, y: -5)
-                                LinearGradient(colors: [.blue, .cyan], startPoint: animateGradient ? .bottomLeading : .topTrailing, endPoint: animateGradient ? .topLeading : .topTrailing)
-                                    .hueRotation(.degrees(0))
-                                    .onAppear {
-                                        withAnimation(.linear(duration: 5.0).repeatForever(autoreverses: true)) {
-                                            animateGradient.toggle()
-                                        }
-                                    }
-                                    .mask {
-                                        Image(systemName: "text.bubble.fill")
-                                            .font(.system(size: 60))
-                                            .padding(.trailing)
-                                    }
-                                    .frame(width: 80, height: 65)
-                                    .shadow(radius: 01)
-                                Circle()
-                                    .foregroundColor(.pink)
-                                
-                                    .frame(width: 25, height: 25, alignment: .trailing)
-                                    .padding()
-                                    .offset(x: 19, y: -25)
-                                Text("\(vm.selectedTrashMob!.comments?.count ?? 0)")
-                                    .foregroundColor(.white)
-                                    .offset(x: 19, y: -25)
-                            }
-                            .padding(.top)
+                            CommentsButton(trashMob: vm.selectedTrashMob!)
                             .onTapGesture {
                                 commentsShown = true
                             }
@@ -143,7 +118,7 @@ struct TrashMobFullscreenView: View {
                         ZStack {
                             VStack {
                                 // TODO: Change to MapView centered on TM (with animation noting selected TM) with no links on pins
-                                MapView(viewModel: viewModel)
+                                TrashMobMapView(TMviewModel: TMviewModel)
                                     .frame(width: 150, height: 150)
                                     .mask(RoundedRectangle(cornerRadius: 20))
                                     .shadow(color: .black, radius: 2, x: 3, y: 3)
@@ -158,7 +133,7 @@ struct TrashMobFullscreenView: View {
                                         .foregroundColor(.primary)
                                         .colorInvert()
                                         .shadow(color: .black, radius: 3, x: 3, y: 3)
-                                    if let location = viewModel.locationManager?.location {
+                                    if let location = TMviewModel.locationManager?.location {
                                         Text(vm.selectedTrashMob!.distance(to: location))
                                             .font(.caption)
                                             .fontWeight(.bold)

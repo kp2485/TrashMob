@@ -35,6 +35,8 @@
 		D6A6A12E28578B5C0012FA55 /* LovesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6A12D28578B5C0012FA55 /* LovesButton.swift */; };
 		D6A6A130285793000012FA55 /* CommentsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6A12F285793000012FA55 /* CommentsButton.swift */; };
 		D6A6A132285793600012FA55 /* TrashMobBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6A131285793600012FA55 /* TrashMobBackgroundImage.swift */; };
+		D6A6A1362857976C0012FA55 /* TrashMobMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6A1352857976C0012FA55 /* TrashMobMapViewModel.swift */; };
+		D6A6A13828579C5A0012FA55 /* TrashMobMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6A13728579C5A0012FA55 /* TrashMobMapView.swift */; };
 		D6E9577A284E90E700D19873 /* TrashMobMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E95779284E90E700D19873 /* TrashMobMapAnnotation.swift */; };
 		D6F8DA6D28412ABD00DE19F9 /* TrashMobStateBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F8DA6C28412ABD00DE19F9 /* TrashMobStateBubble.swift */; };
 		D6F8DA6F28412CAF00DE19F9 /* CountdownBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F8DA6E28412CAF00DE19F9 /* CountdownBubble.swift */; };
@@ -82,6 +84,8 @@
 		D6A6A12D28578B5C0012FA55 /* LovesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovesButton.swift; sourceTree = "<group>"; };
 		D6A6A12F285793000012FA55 /* CommentsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsButton.swift; sourceTree = "<group>"; };
 		D6A6A131285793600012FA55 /* TrashMobBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobBackgroundImage.swift; sourceTree = "<group>"; };
+		D6A6A1352857976C0012FA55 /* TrashMobMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobMapViewModel.swift; sourceTree = "<group>"; };
+		D6A6A13728579C5A0012FA55 /* TrashMobMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobMapView.swift; sourceTree = "<group>"; };
 		D6E95779284E90E700D19873 /* TrashMobMapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobMapAnnotation.swift; sourceTree = "<group>"; };
 		D6F8DA6C28412ABD00DE19F9 /* TrashMobStateBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobStateBubble.swift; sourceTree = "<group>"; };
 		D6F8DA6E28412CAF00DE19F9 /* CountdownBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownBubble.swift; sourceTree = "<group>"; };
@@ -124,8 +128,10 @@
 				D65937B4283D5B0800E50F45 /* MySettings.swift */,
 				D65937B6283D5B5E00E50F45 /* TargetATrashMob.swift */,
 				D65937B8283D5BBC00E50F45 /* MapView.swift */,
+				D6A6A13728579C5A0012FA55 /* TrashMobMapView.swift */,
 				D6E95779284E90E700D19873 /* TrashMobMapAnnotation.swift */,
 				D65937BA283D5BE300E50F45 /* MapViewModel.swift */,
+				D6A6A1352857976C0012FA55 /* TrashMobMapViewModel.swift */,
 				D65937BC283D5C1A00E50F45 /* TrashMobModel.swift */,
 				5D0643AD28494CB600CF0C9A /* TrashMobViewModel.swift */,
 				D65937BE283D5C4200E50F45 /* UserModel.swift */,
@@ -383,6 +389,7 @@
 				D6A6A12A285262AF0012FA55 /* AttendeesButton.swift in Sources */,
 				D696D8C728326951008B71ED /* TrashMobFullscreenView.swift in Sources */,
 				D696D8BC282DA27A008B71ED /* ImageResizer.swift in Sources */,
+				D6A6A1362857976C0012FA55 /* TrashMobMapViewModel.swift in Sources */,
 				D6E9577A284E90E700D19873 /* TrashMobMapAnnotation.swift in Sources */,
 				D65937C52840124300E50F45 /* CameraView.swift in Sources */,
 				D696D8BE282DA2AE008B71ED /* PhotoCaptureProcessor.swift in Sources */,
@@ -393,6 +400,7 @@
 				D6A6A128284FD0600012FA55 /* TrashMobList.swift in Sources */,
 				D6F98130282010C40073088D /* AddressFetcher.swift in Sources */,
 				D6F98132282011BE0073088D /* LocationManager.swift in Sources */,
+				D6A6A13828579C5A0012FA55 /* TrashMobMapView.swift in Sources */,
 				D6F9810D28185BD00073088D /* CloudKitCRUDView.swift in Sources */,
 				D6A6A12C285751310012FA55 /* CommentView.swift in Sources */,
 				D696D8B8282DA1FC008B71ED /* CameraService+Extensions.swift in Sources */,

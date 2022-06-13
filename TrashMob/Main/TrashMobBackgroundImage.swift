@@ -13,7 +13,7 @@ struct TrashMobBackgroundImage: View {
     
     var body: some View {
         // TODO: Conditional statement for before/after display
-        // TODO: Use image from TM URL
+        // TODO: Use image from TM URL, delete Image()
         Image("trashyProperty")
          .resizable()
          .aspectRatio(contentMode: .fill)
