@@ -23,10 +23,10 @@ struct TrashMobFullscreenView: View {
         ZStack {
             if vm.selectedTrashMob != nil {
                 if vm.selectedTrashMob!.trashMobState == "completed" || vm.selectedTrashMob!.trashMobState == "archived" {
-                    TrashMobBackgroundImage(beforePicture: vm.selectedTrashMob!.beforePicture, afterPicture: vm.selectedTrashMob!.afterPicture)
+                    TrashMobBackgroundImage(trashMob: vm.selectedTrashMob!)
                         .background()
                 } else {
-                    TrashMobBackgroundImage(beforePicture: vm.selectedTrashMob!.beforePicture)
+                    TrashMobBackgroundImage(trashMob: vm.selectedTrashMob!)
                         .background()
                 }
                 
@@ -56,12 +56,20 @@ struct TrashMobFullscreenView: View {
                     
                     // Middle
                     HStack {
-                        
                         VStack {
                             Spacer()
-                            Text("⚠️").font(.title3)
-                            Text("Report")
-                                .font(.caption)
+                            
+                            ZStack {
+                                Circle()
+                                    .frame(width: 55)
+                                    .foregroundColor(.white)
+                                VStack{
+                                    Text("⚠️").font(.title3)
+                                    Text("Report")
+                                        .font(.caption)
+                                        .offset(y: -4)
+                                }
+                            }
                         }
                         .onTapGesture {
                             confirmationShown = true
@@ -86,34 +94,34 @@ struct TrashMobFullscreenView: View {
                             if vm.selectedTrashMob!.trashMobState == "scheduled" {
                                 AttendeesButton(trashMob: vm.selectedTrashMob!)
                                 // TODO: CK Update the TM, use current user
-                                .onTapGesture {
-                                    switch vm.selectedTrashMob!.lovers.contains(User.testData[0].id) {
-                                    case true:
-                                    vm.selectedTrashMob!.lovers.remove(User.testData[0].id)
-                                    default:
-                                    vm.selectedTrashMob!.attendees.insert(User.testData[0].id)
+                                    .onTapGesture {
+                                        switch vm.selectedTrashMob!.lovers.contains(User.testData[0].id) {
+                                        case true:
+                                            vm.selectedTrashMob!.lovers.remove(User.testData[0].id)
+                                        default:
+                                            vm.selectedTrashMob!.attendees.insert(User.testData[0].id)
+                                        }
                                     }
-                                }
                             }
                             
                             
                             LovesButton(trashMob: vm.selectedTrashMob!)
-                            .onTapGesture {
-                                switch vm.selectedTrashMob!.lovers.contains(User.testData[0].id) {
-                                case true:
-                                    vm.selectedTrashMob!.lovers.remove(User.testData[0].id)
-                                default:
-                                    vm.selectedTrashMob!.lovers.insert(User.testData[0].id)
+                                .onTapGesture {
+                                    switch vm.selectedTrashMob!.lovers.contains(User.testData[0].id) {
+                                    case true:
+                                        vm.selectedTrashMob!.lovers.remove(User.testData[0].id)
+                                    default:
+                                        vm.selectedTrashMob!.lovers.insert(User.testData[0].id)
+                                    }
                                 }
-                            }
                             
                             CommentsButton(trashMob: vm.selectedTrashMob!)
-                            .onTapGesture {
-                                commentsShown = true
-                            }
-                            .popover(isPresented: $commentsShown) {
-                                CommentView()
-                            }
+                                .onTapGesture {
+                                    commentsShown = true
+                                }
+                                .popover(isPresented: $commentsShown) {
+                                    CommentView()
+                                }
                             Spacer()
                         }
                         

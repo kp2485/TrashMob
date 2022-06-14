@@ -9,21 +9,22 @@ import SwiftUI
 
 struct TrashMobBackgroundImage: View {
     
-    var beforePicture: URL?
-    var afterPicture: URL?
+    var trashMob: TrashMob
     
     var body: some View {
         // TODO: Conditional statement for before/after display
         // TODO: Use image from TM URL, delete Image()
-        Image("trashyProperty")
+        
+        Image("\(trashMob.trashMobState)")
+        
          .resizable()
          .aspectRatio(contentMode: .fill)
          .edgesIgnoringSafeArea(.all)
     }
 }
 
-struct TrashMobBackgroundImage_Previews: PreviewProvider {
-    static var previews: some View {
-        TrashMobBackgroundImage()
-    }
-}
+//struct TrashMobBackgroundImage_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TrashMobBackgroundImage(trashMob: trashMob)
+//    }
+//}
