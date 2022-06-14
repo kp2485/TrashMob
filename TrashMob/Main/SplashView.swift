@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SplashView: View {
-    @State var isActive:Bool = false
+    @State private var isActive:Bool = false
     var body: some View {
         VStack {
             if self.isActive {
@@ -17,11 +17,11 @@ struct SplashView: View {
                 
             }
             else{
-//                Image("logo")
-//                    .resizable()
-//                    .renderingMode(.original)
+                Image("logo")
+                    .resizable()
+                    .renderingMode(.original)
 //                    .padding(.horizontal, 20.0)
-//                    .scaledToFit()
+                    .scaledToFit()
                 
                 Text("TrashMob")
                     .font(.system(size: 70, weight: .bold, design: .rounded))
