@@ -500,8 +500,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrashMob/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses your camera to take take before and after pictures of trash pickups";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location to find and create TrashMobs near you";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses your camera to take before and after pictures of TrashMobs";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location to find TrashMobs near you";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
@@ -512,7 +512,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.academy.TrashMob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -534,8 +534,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrashMob/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses your camera to take take before and after pictures of trash pickups";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location to find and create TrashMobs near you";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses your camera to take before and after pictures of TrashMobs";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location to find TrashMobs near you";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
@@ -546,7 +546,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.academy.TrashMob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

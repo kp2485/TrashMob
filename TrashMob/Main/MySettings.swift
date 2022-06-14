@@ -30,10 +30,16 @@ struct MySettings: View {
                         } label: {
                             Text("Take Profile Picture")
                         }
-                            
+                        
                     }
                     
-                    Text("Joined TrashMob: \(Date())")
+                    Text("Joined TrashMob: \(Date().addingTimeInterval(-2000000).formatted(.dateTime.month().day().year()))")
+                    Text("Targets: 8")
+                    Text("Loves: 220")
+                    Text("Commits: 25")
+                    Text("Clean-ups: 22")
+                    Text("Reliability: 88%")
+                    Text("Time spent: 12 hours, 33 minutes")
                 }
                 
                 Section(header: Text("Notification Settings")) {
@@ -71,7 +77,7 @@ struct MySettings: View {
                             .frame(maxHeight: .infinity)
                         
                     }
-//                        .background()
+                    //                        .background()
                 }
             }
         }
