@@ -50,10 +50,6 @@
 		D6F98109281728890073088D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F98108281728890073088D /* CloudKit.framework */; };
 		D6F9810B28172FFA0073088D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9810A28172FFA0073088D /* LoginView.swift */; };
 		D6F9810D28185BD00073088D /* CloudKitCRUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9810C28185BD00073088D /* CloudKitCRUDView.swift */; };
-		D6F9812D282010700073088D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9812C282010700073088D /* User.swift */; };
-		D6F98130282010C40073088D /* AddressFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9812F282010C40073088D /* AddressFetcher.swift */; };
-		D6F98132282011BE0073088D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F98131282011BE0073088D /* LocationManager.swift */; };
-		D6F98170282166AE0073088D /* trashMob.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9816F282166AE0073088D /* trashMob.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,10 +98,6 @@
 		D6F98108281728890073088D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D6F9810A28172FFA0073088D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D6F9810C28185BD00073088D /* CloudKitCRUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitCRUDView.swift; sourceTree = "<group>"; };
-		D6F9812C282010700073088D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		D6F9812F282010C40073088D /* AddressFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressFetcher.swift; sourceTree = "<group>"; };
-		D6F98131282011BE0073088D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		D6F9816F282166AE0073088D /* trashMob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trashMob.swift; sourceTree = "<group>"; };
 		D6F9817B2822C9360073088D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -228,8 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				D6F980F32815D4820073088D /* DefaultContentView.swift */,
-				D6F9812E2820109A0073088D /* utils */,
-				D6F9812528200BAF0073088D /* model */,
 				D6F981052815D7790073088D /* data */,
 			);
 			path = Core;
@@ -258,40 +248,6 @@
 				D6F980FA2815D4830073088D /* Persistence.swift */,
 			);
 			path = coreData;
-			sourceTree = "<group>";
-		};
-		D6F9812528200BAF0073088D /* model */ = {
-			isa = PBXGroup;
-			children = (
-				D6F98135282012880073088D /* trashMob */,
-				D6F9812B282010650073088D /* user */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		D6F9812B282010650073088D /* user */ = {
-			isa = PBXGroup;
-			children = (
-				D6F9812C282010700073088D /* User.swift */,
-			);
-			path = user;
-			sourceTree = "<group>";
-		};
-		D6F9812E2820109A0073088D /* utils */ = {
-			isa = PBXGroup;
-			children = (
-				D6F9812F282010C40073088D /* AddressFetcher.swift */,
-				D6F98131282011BE0073088D /* LocationManager.swift */,
-			);
-			path = utils;
-			sourceTree = "<group>";
-		};
-		D6F98135282012880073088D /* trashMob */ = {
-			isa = PBXGroup;
-			children = (
-				D6F9816F282166AE0073088D /* trashMob.swift */,
-			);
-			path = trashMob;
 			sourceTree = "<group>";
 		};
 		D6F98137282014E40073088D /* CKLoginCRUD */ = {
@@ -386,7 +342,6 @@
 				D6F8DA6D28412ABD00DE19F9 /* TrashMobStateBubble.swift in Sources */,
 				D65937B9283D5BBC00E50F45 /* MapView.swift in Sources */,
 				D696D8C528311874008B71ED /* CloudKitUtility.swift in Sources */,
-				D6F98170282166AE0073088D /* trashMob.swift in Sources */,
 				D6A6A132285793600012FA55 /* TrashMobBackgroundImage.swift in Sources */,
 				D65937BB283D5BE300E50F45 /* MapViewModel.swift in Sources */,
 				D6A6A13A2857FF240012FA55 /* DatePickerView.swift in Sources */,
@@ -398,12 +353,9 @@
 				D65937C52840124300E50F45 /* CameraView.swift in Sources */,
 				D696D8BE282DA2AE008B71ED /* PhotoCaptureProcessor.swift in Sources */,
 				D696D8C3282EC4E0008B71ED /* TabView.swift in Sources */,
-				D6F9812D282010700073088D /* User.swift in Sources */,
 				D65937BD283D5C1A00E50F45 /* TrashMobModel.swift in Sources */,
 				D65937BF283D5C4200E50F45 /* UserModel.swift in Sources */,
 				D6A6A128284FD0600012FA55 /* TrashMobList.swift in Sources */,
-				D6F98130282010C40073088D /* AddressFetcher.swift in Sources */,
-				D6F98132282011BE0073088D /* LocationManager.swift in Sources */,
 				D6A6A13828579C5A0012FA55 /* TrashMobMapView.swift in Sources */,
 				D6F9810D28185BD00073088D /* CloudKitCRUDView.swift in Sources */,
 				D6A6A12C285751310012FA55 /* CommentView.swift in Sources */,
