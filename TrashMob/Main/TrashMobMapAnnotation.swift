@@ -16,33 +16,33 @@ struct TrashMobMapAnnotation: View {
                 ZStack {
                     VStack {
                         Image(systemName: "circle.fill")
-                            .font(.title)
+                            .font(.system(size: 30))
                             .foregroundColor(.red)
                         Image(systemName: "arrowtriangle.down.fill")
-                            .font(.caption)
+                            .font(.system(size: 15))
                             .foregroundColor(.red)
                             .offset(x: 0, y: -6)
                     }
                     .shadow(color: .primary, radius: 1, x: 2, y: 2)
-                    Image(systemName: "target")
-                        .foregroundColor(.white)
-                        .offset(y: -7)
+                    Text("🎯")
+                        .font(.system(size: 20))
+                        .offset(y: -9)
                         .shadow(color: .black, radius: 1, x: 1, y: 1)
                 }
             }                 else if trashMobState == "scheduling" {
                 ZStack {
                     VStack {
                         Image(systemName: "circle.fill")
-                            .font(.title)
-                            .foregroundColor(.orange)
+                            .font(.system(size: 30))
+                            .foregroundColor(.yellow)
                         Image(systemName: "arrowtriangle.down.fill")
-                            .font(.caption)
-                            .foregroundColor(.orange)
+                            .font(.system(size: 15))
+                            .foregroundColor(.yellow)
                             .offset(x: 0, y: -6)
                     }
                     .shadow(color: .primary, radius: 1, x: 2, y: 2)
                     Text("📆")
-                        .font(.caption)
+                        .font(.system(size: 16))
                         .offset(y: -7)
                         .shadow(color: .black, radius: 1, x: 1, y: 1)
                 }
@@ -50,16 +50,16 @@ struct TrashMobMapAnnotation: View {
                 ZStack {
                     VStack {
                         Image(systemName: "circle.fill")
-                            .font(.title)
-                            .foregroundColor(.yellow)
+                            .font(.system(size: 30))
+                            .foregroundColor(.green)
                         Image(systemName: "arrowtriangle.down.fill")
-                            .font(.caption)
-                            .foregroundColor(.yellow)
+                            .font(.system(size: 15))
+                            .foregroundColor(.green)
                             .offset(x: 0, y: -6)
                     }
                     .shadow(color: .primary, radius: 1, x: 2, y: 2)
-                    Text("⏳")
-                        .font(.caption)
+                    Text("✋")
+                        .font(.system(size: 20))
                         .offset(y: -7)
                         .shadow(color: .black, radius: 1, x: 1, y: 1)
                 }
@@ -67,37 +67,38 @@ struct TrashMobMapAnnotation: View {
                 ZStack {
                     VStack {
                         Image(systemName: "circle.fill")
-                            .font(.title)
-                            .foregroundColor(.green)
+                            .font(.system(size: 30))
+                            .foregroundColor(.purple)
                         Image(systemName: "arrowtriangle.down.fill")
-                            .font(.caption)
-                            .foregroundColor(.green)
+                            .font(.system(size: 15))
+                            .foregroundColor(.purple)
                             .offset(x: 0, y: -6)
                     }
                     .shadow(color: .primary, radius: 1, x: 2, y: 2)
-                    Image(systemName: "hands.sparkles.fill")
-                    //                            .font(.caption)
+                    Text("🚮")
+                        .font(.system(size: 16))
                         .foregroundColor(.white)
                         .offset(y: -7)
                         .shadow(color: .black, radius: 1, x: 1, y: 1)
+                    
                 }
             } else if trashMobState == "completed" {
                 ZStack {
                     VStack {
                         Image(systemName: "circle.fill")
-                            .font(.title)
-                            .foregroundColor(.cyan)
+                            .font(.system(size: 30))
+                            .foregroundColor(.blue)
                         Image(systemName: "arrowtriangle.down.fill")
-                            .font(.caption)
-                            .foregroundColor(.cyan)
+                            .font(.system(size: 15))
+                            .foregroundColor(.blue)
                             .offset(x: 0, y: -6)
                     }
                     .shadow(color: .primary, radius: 1, x: 2, y: 2)
-                    Image(systemName: "sparkles")
-                    //                            .font(.caption)
+                    Text("✨")
+                        .font(.system(size: 20))
                         .foregroundColor(.white)
                         .offset(y: -6)
-                        .shadow(color: .black, radius: 1, x: 1, y: 1)
+                        .shadow(color: .black, radius: 1, x: 3, y: 1)
                     
                 }
             }

@@ -51,15 +51,40 @@ extension TrashMobList {
         HStack {
             VStack{
                 if trashMob.trashMobState == "targeted" {
-                    Text("🎯").font(.title)
+                    ZStack {
+                        Circle()
+                            .frame(width: 45)
+                            .foregroundColor(.red)
+                        Text("🎯").font(.title)
+                    }
                 } else if trashMob.trashMobState == "scheduling" {
-                    Text("📆").font(.title)
+                    ZStack {
+                        Circle()
+                            .frame(width: 45)
+                            .foregroundColor(.yellow)
+                        Text("📆").font(.title)
+                    }
                 } else if trashMob.trashMobState == "scheduled" {
-                    Text("📅").font(.title)
+                    ZStack {
+                        Circle()
+                            .frame(width: 45)
+                            .foregroundColor(.green)
+                        Text("✋").font(.title)
+                    }
                 } else if trashMob.trashMobState == "active" {
-                    Text("🚮").font(.title)
+                    ZStack {
+                        Circle()
+                            .frame(width: 45)
+                            .foregroundColor(.purple)
+                        Text("🚮").font(.title)
+                    }
                 } else if trashMob.trashMobState == "completed" {
-                    Text("✨").font(.title)
+                    ZStack {
+                        Circle()
+                            .frame(width: 45)
+                            .foregroundColor(.blue)
+                        Text("✨").font(.title)
+                    }
                 }
                 
             }

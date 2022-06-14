@@ -22,8 +22,14 @@ struct TrashMobFullscreenView: View {
         
         ZStack {
             if vm.selectedTrashMob != nil {
-                TrashMobBackgroundImage(trashMob: vm.selectedTrashMob!)
-                    .background()
+                if vm.selectedTrashMob!.trashMobState == "completed" || vm.selectedTrashMob!.trashMobState == "archived" {
+                    TrashMobBackgroundImage(beforePicture: vm.selectedTrashMob!.beforePicture, afterPicture: vm.selectedTrashMob!.afterPicture)
+                        .background()
+                } else {
+                    TrashMobBackgroundImage(beforePicture: vm.selectedTrashMob!.beforePicture)
+                        .background()
+                }
+                
                 VStack {
                     
                     // Top
@@ -34,7 +40,7 @@ struct TrashMobFullscreenView: View {
                     //                    .foregroundColor(.gray)
                     //                    .shadow(color: .black, radius: 3, x: 3, y: 3)
                     
-                    TrashMobStateBubble(trashMob: vm.selectedTrashMob!)
+                    TrashMobStateBubble()
                         .foregroundColor(.black)
                         .fixedSize()
                     
@@ -93,12 +99,12 @@ struct TrashMobFullscreenView: View {
                             
                             LovesButton(trashMob: vm.selectedTrashMob!)
                             .onTapGesture {
-//                                switch vm.selectedTrashMob!.lovers.contains(User.testData[0].id) {
-//                                case true:
-//                                    vm.selectedTrashMob!.lovers.remove(User.testData[0].id)
-//                                default:
+                                switch vm.selectedTrashMob!.lovers.contains(User.testData[0].id) {
+                                case true:
+                                    vm.selectedTrashMob!.lovers.remove(User.testData[0].id)
+                                default:
                                     vm.selectedTrashMob!.lovers.insert(User.testData[0].id)
-//                                }
+                                }
                             }
                             
                             CommentsButton(trashMob: vm.selectedTrashMob!)
@@ -153,7 +159,6 @@ struct TrashMobFullscreenView: View {
                         .frame(width: 150, height: 160)
                         
                         Spacer()
-                        
                     }
                 }
                 .frame(width: UIScreen.screenWidth)

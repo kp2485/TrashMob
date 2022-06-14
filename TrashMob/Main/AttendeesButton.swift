@@ -32,8 +32,8 @@ struct AttendeesButton: View {
                         }
                     }
                     .mask {
-                        Image(systemName: "sparkles")
-                            .font(.system(size: 50))
+                        Image(systemName: "hands.sparkles.fill")
+                            .font(.system(size: 45))
                             .padding(.trailing)
                     }
                     .frame(width: 80, height: 65)

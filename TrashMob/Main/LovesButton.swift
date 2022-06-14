@@ -28,7 +28,7 @@ struct LovesButton: View {
                         .padding(.trailing)
                 }
                 .frame(width: 80, height: 65)
-                .shadow(radius: 3)
+                .shadow(color: .white, radius: 3)
             
             Text("\(trashMob.loves)")
                 .padding(.trailing)
@@ -36,23 +36,23 @@ struct LovesButton: View {
                 .foregroundColor(.white)
                 .offset(y: -4)
             
-            ZStack {
-                RoundedRectangle(cornerRadius: 10, style: .continuous)
-                    .frame(width: 85, height: 25, alignment: .bottomTrailing)
-                    .offset(x: -9, y: 24)
-                    .foregroundColor(.white)
-                    .opacity(0.85)
-                if trashMob.loves < 5 {
-                    Text("\(5 - trashMob.loves) more!")
+            if trashMob.loves < 5 {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .frame(width: 85, height: 25, alignment: .bottomTrailing)
+                        .offset(x: -9, y: 24)
+                        .foregroundColor(.white)
+                        .opacity(0.85)
+                    
+                    Text("\(5 - trashMob.loves) needed!")
                         .offset(x: -9, y: 24)
                         .foregroundColor(.blue)
-                } else {
-                    Text("Loved!")
-                        .offset(x: -9, y: 24)
-                        .foregroundColor(.blue)
+                    
+                    
                 }
+                .fixedSize()
             }
-            
+                
             
         }
     }

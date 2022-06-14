@@ -9,7 +9,8 @@ import SwiftUI
 
 struct TrashMobBackgroundImage: View {
     
-    var trashMob: TrashMob
+    var beforePicture: URL?
+    var afterPicture: URL?
     
     var body: some View {
         // TODO: Conditional statement for before/after display
@@ -23,6 +24,6 @@ struct TrashMobBackgroundImage: View {
 
 struct TrashMobBackgroundImage_Previews: PreviewProvider {
     static var previews: some View {
-        TrashMobBackgroundImage(trashMob: TrashMob.testData[0])
+        TrashMobBackgroundImage()
     }
 }

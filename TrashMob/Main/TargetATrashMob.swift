@@ -41,7 +41,7 @@ struct TargetATrashMob: View {
                         .font(.title.weight(.bold))
                         .foregroundColor(Color(.systemPink))
                         .opacity(0.6)
-                    Image(uiImage: UIImage(data: cameraVM.photo?.originalData ?? Data()) ?? UIImage())
+
                 }
                 
                 Text("Place + on meetup location")
@@ -51,7 +51,10 @@ struct TargetATrashMob: View {
                     .padding(.vertical, 1)
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
-
+                Spacer()
+                Image(uiImage: UIImage(data: cameraVM.photo?.originalData ?? Data()) ?? UIImage())
+                    .resizable()
+                    .scaledToFit()
                 Spacer()
                 
                 HStack {

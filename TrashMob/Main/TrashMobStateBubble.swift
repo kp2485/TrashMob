@@ -9,7 +9,9 @@ import SwiftUI
 
 struct TrashMobStateBubble: View {
     
-    var trashMob: TrashMob
+    @EnvironmentObject var vm: TrashMobViewModel
+    
+    @State private var datePickerShown = false
     
     var body: some View {
         ZStack {
@@ -20,39 +22,45 @@ struct TrashMobStateBubble: View {
                 .shadow(color: .black, radius: 2, x: 3, y: 3)
             
             
-            if trashMob.trashMobState == "targeted" {
+            if vm.selectedTrashMob!.trashMobState == "targeted" {
                 HStack {
                     // TODO: User Profile Pic
                     VStack {
-                        Text("\(trashMob.trashMobState.capitalizingFirstLetter()) by \(User.testData[0].name ?? "Anonymous")")
+                        Text("\(vm.selectedTrashMob!.trashMobState.capitalizingFirstLetter()) by \(User.testData[0].name ?? "Anonymous")")
                             .font(.system(.title3))
-                        Text("initiated on \(trashMob.targetDate.formatted(.dateTime.month().day()))")
+                        Text("initiated on \(vm.selectedTrashMob!.targetDate.formatted(.dateTime.month().day()))")
                             .font(.caption)
                     }
                     
                 }
                 .foregroundColor(.primary)
                 .padding(4)
-            } else if trashMob.trashMobState == "scheduling" {
+            } else if vm.selectedTrashMob!.trashMobState == "scheduling" {
                 VStack {
-                    Text("\(trashMob.trashMobState.capitalizingFirstLetter()) now!")
+                    Text("\(vm.selectedTrashMob!.trashMobState.capitalizingFirstLetter()) now!")
                         .font(.system(.title3))
                     Text("Pick a time here!")
                         .foregroundColor(.blue)
                         .font(.caption)
+                        .onTapGesture {
+                            datePickerShown = true
+                        }
+                        .popover(isPresented: $datePickerShown) {
+                            DatePickerView()
+                        }
                 }
                 .foregroundColor(.primary)
                 
-            } else if trashMob.trashMobState == "scheduled" {
+            } else if vm.selectedTrashMob!.trashMobState == "scheduled" {
                 VStack {
-                    Text("\(trashMob.trashMobState.capitalizingFirstLetter())")
+                    Text("\(vm.selectedTrashMob!.trashMobState.capitalizingFirstLetter())")
                         .font(.system(.title3))
-                    Text("\(trashMob.scheduledDate!.formatted(.dateTime.month().day())) at \(trashMob.scheduledDate!.formatted(.dateTime.hour()))")
+                    Text("\(vm.selectedTrashMob!.scheduledDate!.formatted(.dateTime.month().day())) at \(vm.selectedTrashMob!.scheduledDate!.formatted(.dateTime.hour()))")
                         .font(.caption)
                 }
                 .foregroundColor(.primary)
                 
-            } else if trashMob.trashMobState == "active" {
+            } else if vm.selectedTrashMob!.trashMobState == "active" {
                 VStack {
                     Text("Active!")
                         .font(.system(.title3))
@@ -62,7 +70,7 @@ struct TrashMobStateBubble: View {
                 }
                 .foregroundColor(.primary)
                 
-            } else if trashMob.trashMobState == "mobbed" {
+            } else if vm.selectedTrashMob!.trashMobState == "completed" {
                 Text("🗑 ♻️ Mobbed 💃🏽 🕺🏼")
                     .foregroundColor(.primary)
                 
@@ -84,6 +92,6 @@ struct TrashMobStateBubble: View {
 
 struct TrashMobStateBubble_Previews: PreviewProvider {
     static var previews: some View {
-        TrashMobStateBubble(trashMob: TrashMob.testData[0])
+        TrashMobStateBubble()
     }
 }
