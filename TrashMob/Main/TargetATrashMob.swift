@@ -10,7 +10,7 @@ import MapKit
 
 struct TargetATrashMob: View {
     @EnvironmentObject var vm: TrashMobViewModel
-    @StateObject var mapvm = MapViewModel()
+    @StateObject var mapvm = TrashMobMapViewModel()
     @ObservedObject var cameraVM: CameraViewModel
     
     let screenWidth  = UIScreen.main.bounds.size.width
@@ -35,7 +35,7 @@ struct TargetATrashMob: View {
                     .frame(height: screenHeight * 0.005)
                 
                 ZStack {
-                    MapView(viewModel: mapvm)
+                    TrashMobMapView(TMviewModel: mapvm)
                         .frame(height: screenWidth)
                     Image(systemName: "plus")
                         .font(.title.weight(.bold))

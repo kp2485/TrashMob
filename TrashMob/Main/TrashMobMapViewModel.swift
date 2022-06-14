@@ -50,7 +50,7 @@ final class TrashMobMapViewModel: NSObject, ObservableObject, CLLocationManagerD
         case .authorizedAlways, .authorizedWhenInUse:
             // TODO: change center to TM coord
             region = MKCoordinateRegion(center: locationManager.location!.coordinate,
-                                        span: MapDetails.defaultSpan)
+                                        span: MapDetails.zoomedSpan)
         @unknown default:
             break
         }
