@@ -67,11 +67,12 @@ struct TrashMobStateBubble: View {
                 
             } else if vm.selectedTrashMob!.trashMobState == "active" {
                 VStack {
-                    Text("Active!")
+                    Text("Active")
                         .font(.system(.title3))
-                    Text("JOIN NOW!")
+                    Text("TAP TO JOIN!")
                         .foregroundColor(.blue)
                         .font(.caption)
+                        .bold()
                 }
                 .foregroundColor(.primary)
                 .padding(4)
