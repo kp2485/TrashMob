@@ -35,6 +35,7 @@ struct TrashMobStateBubble: View {
                 }
                 .foregroundColor(.primary)
                 .padding(4)
+                .opacity(0.9)
             } else if vm.selectedTrashMob!.trashMobState == "scheduling" {
                 VStack {
                     Text("\(vm.selectedTrashMob!.trashMobState.capitalizingFirstLetter()) now!")
@@ -50,6 +51,8 @@ struct TrashMobStateBubble: View {
                         }
                 }
                 .foregroundColor(.primary)
+                .padding(4)
+                .opacity(0.9)
                 
             } else if vm.selectedTrashMob!.trashMobState == "scheduled" {
                 VStack {
@@ -59,6 +62,8 @@ struct TrashMobStateBubble: View {
                         .font(.caption)
                 }
                 .foregroundColor(.primary)
+                .padding(4)
+                .opacity(0.9)
                 
             } else if vm.selectedTrashMob!.trashMobState == "active" {
                 VStack {
@@ -69,22 +74,23 @@ struct TrashMobStateBubble: View {
                         .font(.caption)
                 }
                 .foregroundColor(.primary)
+                .padding(4)
+                .opacity(0.9)
                 
             } else if vm.selectedTrashMob!.trashMobState == "completed" {
-                Text("🗑 ♻️ Mobbed 💃🏽 🕺🏼")
+                Text("🗑 ♻️ Completed 💃🏽 🕺🏼")
+                    .font(.title3)
                     .foregroundColor(.primary)
+                    .padding(4)
+                    .opacity(0.9)
                 
             } else {
                 Text("Loading ...")
                     .foregroundColor(.primary)
-                
+                    .padding(4)
                     .opacity(0.3)
                 
             }
-            
-            
-            
-            
             
         }
     }

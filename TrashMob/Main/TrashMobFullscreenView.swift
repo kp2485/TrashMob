@@ -140,7 +140,7 @@ struct TrashMobFullscreenView: View {
                                         .colorInvert()
                                         .shadow(color: .black, radius: 3, x: 3, y: 3)
                                     if let location = TMviewModel.locationManager?.location {
-                                        Text(vm.selectedTrashMob!.distance(to: location))
+                                        Text("\(vm.selectedTrashMob!.distance(to: location)) away")
                                             .font(.caption)
                                             .fontWeight(.bold)
                                             .padding(4)

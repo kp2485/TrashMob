@@ -26,7 +26,6 @@
 		D696D8BC282DA27A008B71ED /* ImageResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8BB282DA27A008B71ED /* ImageResizer.swift */; };
 		D696D8BE282DA2AE008B71ED /* PhotoCaptureProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8BD282DA2AE008B71ED /* PhotoCaptureProcessor.swift */; };
 		D696D8C1282DA319008B71ED /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C0282DA319008B71ED /* CameraPreview.swift */; };
-		D696D8C3282EC4E0008B71ED /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C2282EC4E0008B71ED /* TabView.swift */; };
 		D696D8C528311874008B71ED /* CloudKitUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C428311874008B71ED /* CloudKitUtility.swift */; };
 		D696D8C728326951008B71ED /* TrashMobFullscreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */; };
 		D6A6A128284FD0600012FA55 /* TrashMobList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6A127284FD0600012FA55 /* TrashMobList.swift */; };
@@ -72,7 +71,6 @@
 		D696D8BB282DA27A008B71ED /* ImageResizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResizer.swift; sourceTree = "<group>"; };
 		D696D8BD282DA2AE008B71ED /* PhotoCaptureProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureProcessor.swift; sourceTree = "<group>"; };
 		D696D8C0282DA319008B71ED /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
-		D696D8C2282EC4E0008B71ED /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		D696D8C428311874008B71ED /* CloudKitUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitUtility.swift; sourceTree = "<group>"; };
 		D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobFullscreenView.swift; sourceTree = "<group>"; };
 		D6A6A127284FD0600012FA55 /* TrashMobList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobList.swift; sourceTree = "<group>"; };
@@ -203,7 +201,6 @@
 				D6F980F52815D4830073088D /* Assets.xcassets */,
 				D6F980F72815D4830073088D /* Preview Content */,
 				D651D35D28355D7600703206 /* AvatarView.swift */,
-				D696D8C2282EC4E0008B71ED /* TabView.swift */,
 			);
 			path = TrashMob;
 			sourceTree = "<group>";
@@ -352,7 +349,6 @@
 				D6E9577A284E90E700D19873 /* TrashMobMapAnnotation.swift in Sources */,
 				D65937C52840124300E50F45 /* CameraView.swift in Sources */,
 				D696D8BE282DA2AE008B71ED /* PhotoCaptureProcessor.swift in Sources */,
-				D696D8C3282EC4E0008B71ED /* TabView.swift in Sources */,
 				D65937BD283D5C1A00E50F45 /* TrashMobModel.swift in Sources */,
 				D65937BF283D5C4200E50F45 /* UserModel.swift in Sources */,
 				D6A6A128284FD0600012FA55 /* TrashMobList.swift in Sources */,

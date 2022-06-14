@@ -15,6 +15,9 @@ final class TrashMobMapViewModel: NSObject, ObservableObject, CLLocationManagerD
         static let zoomedSpan = MKCoordinateSpan(latitudeDelta: 0.003, longitudeDelta: 0.003)
     }
     
+// TODO: Initialize selectedTrashMob and make its location the regions defined below
+//    var selectedTrashMob: TrashMob
+    
     @Published var region = MKCoordinateRegion(center: MapDetails.startingLocation, span: MapDetails.zoomedSpan)
     
     var locationManager: CLLocationManager?
