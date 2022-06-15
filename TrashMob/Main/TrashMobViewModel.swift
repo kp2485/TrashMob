@@ -38,10 +38,7 @@ class TrashMobViewModel: ObservableObject {
     
     private func addMob(targetingUser: String, beforePicture: Photo, coordinate2D: CLLocationCoordinate2D) {
         //TODO: Make new addMob function, that adds the correct type of data
-        //        let newMob = CKRecord(recordType: "Mobs")
-        //        newMob["name"] = name
-        //        newMob["loves"] = loves
-        //        newMob["trashMobState"] = trashMobState
+
         let newMob = CKRecord(recordType: "Mobs")
         newMob["targetingUser"] = targetingUser
         newMob["targetDate"] = Date.now

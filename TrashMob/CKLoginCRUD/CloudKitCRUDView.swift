@@ -8,31 +8,12 @@
 import SwiftUI
 import CloudKit
 
-struct MobModel: Hashable {
-    let name: String
-    var loves: Int
-//    var trashMobState: String
-    let beforePicURL: URL?
-    let record: CKRecord
-}
-
-enum TrashMobState {
-    case loading
-    case targeted
-    case scheduling
-    case scheduled
-    case inProgress
-    case completed
-    case archived
-}
-
 class CloudKitCRUDViewModel: ObservableObject {
     
     @Published var text: String = ""
     @Published var loves: Int = 1
-    @Published var trashMobState = "targeted"
     
-    @Published var mobs: [MobModel] = []
+    @Published var mobs: [TrashMob] = []
     
     
     init() {
@@ -88,6 +69,8 @@ class CloudKitCRUDViewModel: ObservableObject {
         //        let predicate = NSPredicate(format: "name = %@", argumentArray: ["elementToBeFiltered"])
         let query = CKQuery(recordType: "Mobs", predicate: predicate)
         query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+// TODO: add user location and sort by it
+//        query.sortDescriptors = [CKLocationSortDescriptor(key: "location", relativeLocation: location)]
         let queryOperation = CKQueryOperation(query: query)
         queryOperation.resultsLimit = 20
         

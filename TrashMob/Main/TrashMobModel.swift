@@ -62,7 +62,7 @@ struct TrashMob: Identifiable, Hashable {
         } else if trashMobState == "active" {
             return scheduledDate ?? Date()
         } else {
-            return Date(timeIntervalSince1970: 1)
+            return Date.now
         }
     }
     var trashMobState: String {
@@ -102,7 +102,9 @@ struct TrashMob: Identifiable, Hashable {
     func pickDate() {
         
     }
-    
+    var distance: Double {
+        
+    }
     func distance(to userLocation: CLLocation) -> String {
         let distance = userLocation.distance(from: coordinate)
         let mdf = MKDistanceFormatter()

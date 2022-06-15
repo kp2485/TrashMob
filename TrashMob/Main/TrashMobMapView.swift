@@ -15,8 +15,6 @@ struct TrashMobMapView: View {
     
     @State private var isShowingDetails = false
     
-    let flagImage = Image(systemName: "flag.fill")
-    
     var body: some View {
         
         Map(coordinateRegion: $TMviewModel.region, showsUserLocation: true, annotationItems: vm.trashMobs) { trashMob in

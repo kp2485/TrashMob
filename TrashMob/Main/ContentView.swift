@@ -23,7 +23,7 @@ struct ContentView: View {
                 VStack {
                     MapView(viewModel: viewModel)
                     TrashMobList()
-                        .listStyle(.inset)
+                        .listStyle(.inset).sorted(by: vm.selectedTrashMob.)
                 }
                 .navigationBarTitleDisplayMode(.inline)
                 .opacity(0.90)

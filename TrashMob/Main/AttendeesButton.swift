@@ -23,7 +23,6 @@ struct AttendeesButton: View {
                     .padding(.trailing)
                     .opacity(0.8)
                     .shadow(radius: 3)
-                
                 LinearGradient(colors: [.white, .gray, .white], startPoint: animateGradient ? .topLeading : .topTrailing, endPoint: animateGradient ? .bottomLeading : .topTrailing)
                     .hueRotation(.degrees(0))
                     .onAppear {
@@ -66,7 +65,6 @@ struct AttendeesButton: View {
                 }
                 .fixedSize()
             }
-            
             .padding(.bottom)
         }
     }
