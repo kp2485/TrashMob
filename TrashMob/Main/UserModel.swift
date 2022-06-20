@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct User: Identifiable, Codable {
+struct User: Identifiable, Hashable {
     var id = UUID()
-    var name: String?
+    var userName: String?
+    var joinDate: Date = Date()
     var premiumStatus: Bool = true
     var mobsTargeted: Set<UUID> = []
     var mobsLoved: Set<UUID> = []
@@ -33,13 +34,15 @@ struct User: Identifiable, Codable {
     var mobsCompletedCount: Int {
         mobsCompleted.count
     }
-//    var attendanceRate: Double = Double(mobsCommittedCount / mobsCompletedCount)
+    var reliability: Double? {
+        Double(mobsCommittedCount) / Double(mobsCompletedCount)
+    }
     
     static let testData = [
-        User(name: "Kyle", premiumStatus: false, mobsTargeted: [], mobsCommitted: [], mobsCompleted: [], profilePicture: nil),
-        User(name: "Dale", premiumStatus: true, mobsTargeted: [], mobsCommitted: [], mobsCompleted: [], profilePicture: nil),
-        User(name: "Jaelen", premiumStatus: true, mobsTargeted: [], mobsCommitted: [], mobsCompleted: [], profilePicture: nil),
-        User(name: "Angel", premiumStatus: false, mobsTargeted: [], mobsCommitted: [], mobsCompleted: [], profilePicture: nil),
-        User(name: "Ashlei", premiumStatus: true, mobsTargeted: [], mobsCommitted: [], mobsCompleted: [], profilePicture: nil)
+        User(userName: "Kyle", premiumStatus: false),
+        User(userName: "Dale", premiumStatus: true),
+        User(userName: "Jaelen", premiumStatus: true),
+        User(userName: "Angel", premiumStatus: false),
+        User(userName: "Ashlei", premiumStatus: true)
     ]
 }

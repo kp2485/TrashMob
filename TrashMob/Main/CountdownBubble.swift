@@ -113,10 +113,10 @@ struct CountdownBubble: View {
                 .padding(5)
             } else if trashMob.trashMobState == "completed" {
                 VStack {
-                    Text("Show your thanks to \(User.testData[4].name ?? "the volunteers!")")
+                    Text("Show your thanks to \(User.testData[4].userName ?? "the volunteers!")")
                         .font(.system(.body))
                         .foregroundColor(.red)
-                    if User.testData[4].name != nil || User.testData[4].name != "" {
+                    if User.testData[4].userName != nil || User.testData[4].userName != "" {
                         Text("and all the volunteers!")
                     }
                 }

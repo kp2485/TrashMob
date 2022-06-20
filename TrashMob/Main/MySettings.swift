@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MySettings: View {
-    @State var user = User.self
+    @EnvironmentObject var userViewModel: UserViewModel
     @State var notificationsLoved = false
     @State var notificationsLocal = false
     @State var notificationsDistance: Double = 10.0
@@ -21,24 +21,22 @@ struct MySettings: View {
             Form{
                 
                 Section(header: Text("My Profile")) {
-                    HStack {
-                        
-                        Button {
-                            
-                            //  TakePictureView()
-                            print("Take profile Picture")
-                        } label: {
-                            Text("Take Profile Picture")
-                        }
-                        
-                    }
-                    
+//                    HStack {
+//                        
+//                        Button {
+//                            //  TakePictureView()
+//                            print("Take profile Picture")
+//                        } label: {
+//                            Text("Take Profile Picture")
+//                        }
+//                        
+//                    }
                     Text("Joined TrashMob: \(Date().addingTimeInterval(-2000000).formatted(.dateTime.month().day().year()))")
-                    Text("Targets: 8")
-                    Text("Loves: 220")
-                    Text("Commits: 25")
-                    Text("Clean-ups: 22")
-                    Text("Reliability: 88%")
+                    Text("Targets: \(userViewModel.user?.mobsTargetedCount ?? 0)")
+                    Text("Loves: \(userViewModel.user?.mobsLovedCount ?? 0)")
+                    Text("Commits: \(userViewModel.user?.mobsCommittedCount ?? 0)")
+                    Text("Clean-ups: 22 \(userViewModel.user?.mobsCompletedCount ?? 0)")
+                    Text("Reliability: \(userViewModel.user?.reliability ?? 1.0)")
                     Text("Time spent: 12 hours, 33 minutes")
                 }
                 
@@ -60,10 +58,6 @@ struct MySettings: View {
                         Spacer()
                     }
                 }
-                
-                
-                
-                
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

@@ -102,9 +102,6 @@ struct TrashMob: Identifiable, Hashable {
     func pickDate() {
         
     }
-    var distance: Double {
-        
-    }
     func distance(to userLocation: CLLocation) -> String {
         let distance = userLocation.distance(from: coordinate)
         let mdf = MKDistanceFormatter()

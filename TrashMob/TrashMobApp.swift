@@ -13,6 +13,7 @@ struct TrashMobApp: App {
     @StateObject var vm = TrashMobViewModel()
     @StateObject var viewModel = MapViewModel()
     @StateObject var TMviewModel = TrashMobMapViewModel()
+    @StateObject var userVM = UserViewModel()
     
     
 //    let persistenceController = PersistenceController.shared
@@ -22,6 +23,7 @@ struct TrashMobApp: App {
         _vm = StateObject(wrappedValue: TrashMobViewModel())
         _viewModel = StateObject(wrappedValue: MapViewModel())
         _TMviewModel = StateObject(wrappedValue: TrashMobMapViewModel())
+        _userVM = StateObject(wrappedValue: UserViewModel())
         
         let userIsSignedIn: Bool = ProcessInfo.processInfo.arguments.contains("-UITest_startSignedIn") ? true : false
         self.currentUserIsSignedIn = userIsSignedIn
@@ -43,6 +45,7 @@ struct TrashMobApp: App {
                 .environmentObject(vm)
                 .environmentObject(viewModel)
                 .environmentObject(TMviewModel)
+                .environmentObject(userVM)
         }
     }
 }

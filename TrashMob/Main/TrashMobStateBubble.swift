@@ -26,7 +26,7 @@ struct TrashMobStateBubble: View {
                 HStack {
                     // TODO: User Profile Pic
                     VStack {
-                        Text("\(vm.selectedTrashMob!.trashMobState.capitalizingFirstLetter()) by \(User.testData[0].name ?? "Anonymous")")
+                        Text("\(vm.selectedTrashMob!.trashMobState.capitalizingFirstLetter()) by \(User.testData[0].userName ?? "Anonymous")")
                             .font(.system(.title3))
                         Text("initiated on \(vm.selectedTrashMob!.targetDate.formatted(.dateTime.month().day()))")
                             .font(.caption)
