@@ -7,11 +7,13 @@
 
 import SwiftUI
 import MapKit
+import CloudKit
 
 struct TargetATrashMob: View {
     @EnvironmentObject var vm: TrashMobViewModel
     @StateObject var mapvm = TrashMobMapViewModel()
     @ObservedObject var cameraVM: CameraViewModel
+    @EnvironmentObject var userViewModel: UserViewModel
     
     let screenWidth  = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
@@ -64,7 +66,8 @@ struct TargetATrashMob: View {
                         
                         let mapRegion = mapvm.region
                         
-                        vm.addButtonPressed(targetingUser: targetingUser, beforePicture: cameraVM.photo ?? Photo(originalData: .init()), coordinate2D: CLLocationCoordinate2D(latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude))
+                        print(userViewModel.user?.id)
+                        vm.addButtonPressed(targetingUser: userViewModel.user?.id ?? CKRecord.ID(), beforePicture: cameraVM.photo ?? Photo(originalData: .init()), coordinate2D: CLLocationCoordinate2D(latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude))
                         
                         needsDismissing.toggle()
                     } label: {

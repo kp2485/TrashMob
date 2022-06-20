@@ -29,18 +29,18 @@ class TrashMobViewModel: ObservableObject {
     init() {
         //TODO: fetch nearby trashMobs from cloudkit
         fetchMobs()
-//        trashMobs = TrashMob.testData
+        //        trashMobs = TrashMob.testData
     }
     
-    func addButtonPressed(targetingUser: String, beforePicture: Photo, coordinate2D: CLLocationCoordinate2D) {
+    func addButtonPressed(targetingUser: CKRecord.ID, beforePicture: Photo, coordinate2D: CLLocationCoordinate2D) {
         addMob(targetingUser: targetingUser, beforePicture: beforePicture, coordinate2D: coordinate2D)
     }
     
-    private func addMob(targetingUser: String, beforePicture: Photo, coordinate2D: CLLocationCoordinate2D) {
+    private func addMob(targetingUser: CKRecord.ID, beforePicture: Photo, coordinate2D: CLLocationCoordinate2D) {
         //TODO: Make new addMob function, that adds the correct type of data
-
+        
         let newMob = CKRecord(recordType: "Mobs")
-        newMob["targetingUser"] = targetingUser
+        newMob["targetingUser"] = CKRecord.Reference(recordID: targetingUser, action: .none)
         newMob["targetDate"] = Date.now
         newMob["coordinate"] = CLLocation(latitude: coordinate2D.latitude, longitude: coordinate2D.longitude)
         
@@ -96,21 +96,31 @@ class TrashMobViewModel: ObservableObject {
                 case .success(let record):
                     print("We got record")
                     
-                    guard let targetingUser = record["targetingUser"] as? String else { return }
+                    guard let targetingUser = record["targetingUser"] as? CKRecord.Reference else {
+                        print("error with targeting user")
+                        return
+                    }
                     let imageAsset = record["beforePicture"] as? CKAsset
                     let imageURL = imageAsset?.fileURL
                     let imageAsset2 = record["afterPicture"] as? CKAsset
                     let imageURL2 = imageAsset2?.fileURL
-                    guard let targetDate = record["targetDate"] as? Date else { return }
+                    guard let targetDate = record["targetDate"] as? Date else {
+                        print("error with target date")
+                        return
+                    }
                     let schedulingDate = record["schedulingDate"] as? Date
                     let possibleDates = record["possibleDates"] as? [Date]
                     let scheduledDate = record["scheduledDate"] as? Date
                     let startedDate = record["startedDate"] as? Date
                     let completedDate = record["completedDate"] as? Date
-                    guard let coordinate = record["coordinate"] as? CLLocation else { return }
+                    guard let coordinate = record["coordinate"] as? CLLocation else {
+                        print("error with coordinate")
+                        return
+                    }
                     
                     returnedMobs.append(TrashMob(
-                        targetingUser: targetingUser,
+                        id: returnedRecordID,
+                        targetingUser: targetingUser.recordID,
                         beforePicture: imageURL,
                         afterPicture: imageURL2,
                         targetDate: targetDate,
@@ -121,39 +131,40 @@ class TrashMobViewModel: ObservableObject {
                         completedDate: completedDate,
                         coordinate: coordinate,
                         record: record
-                        ))
+                    ))
                 case .failure(let error):
                     print("Error recordMatchedBlock: \(error)")
                 }
             }
         } else {
             queryOperation.recordFetchedBlock = { (returnedRecord) in
-                guard let targetingUser = returnedRecord["targetingUser"] as? String else { return }
+                guard let targetingUser = returnedRecord["targetingUser"] as? CKRecord.Reference else { return }
                 let imageAsset = returnedRecord["beforePicture"] as? CKAsset
                 let imageURL = imageAsset?.fileURL
                 let imageAsset2 = returnedRecord["afterPicture"] as? CKAsset
                 let imageURL2 = imageAsset2?.fileURL
                 guard let targetDate = returnedRecord["targetDate"] as? Date else { return }
-                guard let schedulingDate = returnedRecord["schedulingDate"] as? Date else { return }
-                guard let possibleDates = returnedRecord["possibleDates"] as? [Date] else { return }
-                guard let scheduledDate = returnedRecord["scheduledDate"] as? Date else { return }
-                guard let startedDate = returnedRecord["startedDate"] as? Date else { return }
-                guard let completedDate = returnedRecord["completedDate"] as? Date else { return }
+                let schedulingDate = returnedRecord["schedulingDate"] as? Date
+                let possibleDates = returnedRecord["possibleDates"] as? [Date]
+                let scheduledDate = returnedRecord["scheduledDate"] as? Date
+                let startedDate = returnedRecord["startedDate"] as? Date
+                let completedDate = returnedRecord["completedDate"] as? Date
                 guard let coordinate = returnedRecord["coordinate"] as? CLLocation else { return }
                 //TODO: Store a new TrashMob for older iOS
-                                returnedMobs.append(TrashMob(
-                                    targetingUser: targetingUser,
-                                    beforePicture: imageURL,
-                                    afterPicture: imageURL2,
-                                    targetDate: targetDate,
-                                    schedulingDate: schedulingDate,
-                                    possibleDates: possibleDates,
-                                    scheduledDate: scheduledDate,
-                                    startedDate: startedDate,
-                                    completedDate: completedDate,
-                                    coordinate: coordinate,
-                                    record: returnedRecord
-                                    ))
+                returnedMobs.append(TrashMob(
+                    id: returnedRecord.recordID,
+                    targetingUser: targetingUser.recordID,
+                    beforePicture: imageURL,
+                    afterPicture: imageURL2,
+                    targetDate: targetDate,
+                    schedulingDate: schedulingDate,
+                    possibleDates: possibleDates,
+                    scheduledDate: scheduledDate,
+                    startedDate: startedDate,
+                    completedDate: completedDate,
+                    coordinate: coordinate,
+                    record: returnedRecord
+                ))
             }
         }
         
@@ -181,23 +192,23 @@ class TrashMobViewModel: ObservableObject {
         CKContainer.default().publicCloudDatabase.add(operation)
     }
     
-//    TODO: Implement update mob with record
-        func updateSchedulingDate(mob: TrashMob) {
-            let record = mob.record
-            record!["schedulingDate"] = Date.now
-            saveMob(record: record!)
-        }
+    //    TODO: Implement update mob with record
+    func updateSchedulingDate(mob: TrashMob) {
+        let record = mob.record
+        record!["schedulingDate"] = Date.now
+        saveMob(record: record!)
+    }
     
-//    func deleteMob(indexSet: IndexSet) {
-//        guard let index =  indexSet.first else { return }
-//        let mob = trashMobs[index]
-////        let record = selectedTrashMob?.record
-//        let record = CKRecord(recordType: "Mobs")
-//
-//        CKContainer.default().publicCloudDatabase.delete(withRecordID: record.recordID) { [weak self] returnedRecordID, returnedError in
-//            DispatchQueue.main.async {
-//                self?.trashMobs.remove(at: index)
-//            }
-//        }
-//    }
+    //    func deleteMob(indexSet: IndexSet) {
+    //        guard let index =  indexSet.first else { return }
+    //        let mob = trashMobs[index]
+    ////        let record = selectedTrashMob?.record
+    //        let record = CKRecord(recordType: "Mobs")
+    //
+    //        CKContainer.default().publicCloudDatabase.delete(withRecordID: record.recordID) { [weak self] returnedRecordID, returnedError in
+    //            DispatchQueue.main.async {
+    //                self?.trashMobs.remove(at: index)
+    //            }
+    //        }
+    //    }
 }

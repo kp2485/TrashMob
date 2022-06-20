@@ -38,6 +38,7 @@
 		D6A6A13828579C5A0012FA55 /* TrashMobMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6A13728579C5A0012FA55 /* TrashMobMapView.swift */; };
 		D6A6A13A2857FF240012FA55 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6A1392857FF240012FA55 /* DatePickerView.swift */; };
 		D6A6A13C285A622B0012FA55 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6A13B285A622B0012FA55 /* UserViewModel.swift */; };
+		D6A6A13E28610D980012FA55 /* LoginView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6A13D28610D980012FA55 /* LoginView2.swift */; };
 		D6E9577A284E90E700D19873 /* TrashMobMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E95779284E90E700D19873 /* TrashMobMapAnnotation.swift */; };
 		D6F8DA6D28412ABD00DE19F9 /* TrashMobStateBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F8DA6C28412ABD00DE19F9 /* TrashMobStateBubble.swift */; };
 		D6F8DA6F28412CAF00DE19F9 /* CountdownBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F8DA6E28412CAF00DE19F9 /* CountdownBubble.swift */; };
@@ -84,6 +85,7 @@
 		D6A6A13728579C5A0012FA55 /* TrashMobMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobMapView.swift; sourceTree = "<group>"; };
 		D6A6A1392857FF240012FA55 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		D6A6A13B285A622B0012FA55 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		D6A6A13D28610D980012FA55 /* LoginView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView2.swift; sourceTree = "<group>"; };
 		D6E95779284E90E700D19873 /* TrashMobMapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobMapAnnotation.swift; sourceTree = "<group>"; };
 		D6F8DA6C28412ABD00DE19F9 /* TrashMobStateBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMobStateBubble.swift; sourceTree = "<group>"; };
 		D6F8DA6E28412CAF00DE19F9 /* CountdownBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownBubble.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				D6A6A1352857976C0012FA55 /* TrashMobMapViewModel.swift */,
 				D65937BC283D5C1A00E50F45 /* TrashMobModel.swift */,
 				5D0643AD28494CB600CF0C9A /* TrashMobViewModel.swift */,
+				D6A6A13D28610D980012FA55 /* LoginView2.swift */,
 				D65937BE283D5C4200E50F45 /* UserModel.swift */,
 				D6A6A13B285A622B0012FA55 /* UserViewModel.swift */,
 				D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */,
@@ -370,6 +373,7 @@
 				D6F980F22815D4820073088D /* TrashMobApp.swift in Sources */,
 				D696D8BA282DA253008B71ED /* CameraService.swift in Sources */,
 				D65937B5283D5B0800E50F45 /* MySettings.swift in Sources */,
+				D6A6A13E28610D980012FA55 /* LoginView2.swift in Sources */,
 				D65937B7283D5B5E00E50F45 /* TargetATrashMob.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

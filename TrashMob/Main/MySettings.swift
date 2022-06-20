@@ -35,7 +35,7 @@ struct MySettings: View {
                     Text("Targets: \(userViewModel.user?.mobsTargetedCount ?? 0)")
                     Text("Loves: \(userViewModel.user?.mobsLovedCount ?? 0)")
                     Text("Commits: \(userViewModel.user?.mobsCommittedCount ?? 0)")
-                    Text("Clean-ups: 22 \(userViewModel.user?.mobsCompletedCount ?? 0)")
+                    Text("Clean-ups: \(userViewModel.user?.mobsCompletedCount ?? 0)")
                     Text("Reliability: \(userViewModel.user?.reliability ?? 1.0)")
                     Text("Time spent: 12 hours, 33 minutes")
                 }

@@ -92,42 +92,47 @@ class LoginViewModel: ObservableObject {
     }
 }
 
-struct LoginView: View {
-    
-    @StateObject private var vm = LoginViewModel()
-    
-    var body: some View {
-        VStack {
-            Spacer()
-            Text("TrashMob validates all participants with their iCloud account")
-                .font(.system(.title))
-                .padding()
-            Spacer()
-            
-            if vm.isSignedIntoiCloud == false {
-                Text("IS SIGNED IN: \(vm.isSignedIntoiCloud.description.uppercased())")
-                Text(vm.error)
-                Text("Permission: \(vm.permissionStatus.description.uppercased())")
-            } else {
-                Text("Welcome, \(vm.userName)!")
-                    .font(.largeTitle)
-            }
-            
-            Spacer()
-            Text("""
-Only your first name
-will be shared
-with fellow trash mobbers
-""")
-            .padding()
-            .font(.system(.title))
-            Text("Posting improper pictures or otherwise disrespectful behavior may lead to the suspension or termination of your TrashMob account")
-            //            Spacer()
-        }
-        .multilineTextAlignment(.center)
-        
-    }
-}
+//struct LoginView: View {
+//    
+//    @StateObject private var vm = LoginViewModel()
+//    
+//    var body: some View {
+//        NavigationView {
+//            VStack {
+//                Spacer()
+//                Text("TrashMob validates all participants with their iCloud account")
+//                    .font(.system(.title))
+//                    .padding()
+//                Spacer()
+//                
+//                if vm.isSignedIntoiCloud == false {
+//                    Text("IS SIGNED IN: \(vm.isSignedIntoiCloud.description.uppercased())")
+//                    Text(vm.error)
+//                    Text("Permission: \(vm.permissionStatus.description.uppercased())")
+//                } else {
+//                    Text("Welcome, \(vm.userName)!")
+//                        .font(.largeTitle)
+//                }
+//                
+//                Spacer()
+//                Text("""
+//Only your first name
+//will be shared
+//with fellow trash mobbers
+//""")
+//                .padding()
+//                .font(.system(.title))
+//                Text("Posting improper pictures or otherwise disrespectful behavior may lead to the suspension or termination of your TrashMob account")
+//                //            Spacer()
+//                NavigationLink("Go home!") {
+//                    SplashView()
+//                }
+//            }
+//            .multilineTextAlignment(.center)
+//        }
+//        
+//    }
+//}
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {

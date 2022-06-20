@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import CloudKit
 
 struct User: Identifiable, Hashable {
-    var id = UUID()
+    var id: CKRecord.ID
     var userName: String?
     var email: String?
     var joinDate: Date = Date()
@@ -40,10 +41,10 @@ struct User: Identifiable, Hashable {
     }
     
     static let testData = [
-        User(userName: "Kyle", premiumStatus: false),
-        User(userName: "Dale", premiumStatus: true),
-        User(userName: "Jaelen", premiumStatus: true),
-        User(userName: "Angel", premiumStatus: false),
-        User(userName: "Ashlei", premiumStatus: true)
+        User(id: CKRecord.ID(), userName: "Kyle", premiumStatus: false),
+        User(id: CKRecord.ID(), userName: "Dale", premiumStatus: true),
+        User(id: CKRecord.ID(), userName: "Jaelen", premiumStatus: true),
+        User(id: CKRecord.ID(), userName: "Angel", premiumStatus: false),
+        User(id: CKRecord.ID(), userName: "Ashlei", premiumStatus: true)
     ]
 }

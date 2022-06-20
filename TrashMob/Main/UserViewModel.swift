@@ -94,6 +94,8 @@ class UserViewModel: ObservableObject {
                 if let email = returnedIdentity?.lookupInfo?.emailAddress{
                     self?.email = email
                 }
+                let user = User(id: id, userName: self?.userName, email: self?.email, joinDate: Date(), premiumStatus: false, mobsTargeted: [], mobsLoved: [], mobsCommitted: [], mobsCompleted: [], totalMobTime: 0.0, profilePicture: nil, notificationsLoved: false, notificationsLocal: false, notificationsDistance: 0.0, notificationsLiked: false)
+                self?.user = user
             }
         }
     }
