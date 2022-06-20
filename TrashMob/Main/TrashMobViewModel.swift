@@ -28,8 +28,8 @@ class TrashMobViewModel: ObservableObject {
     
     init() {
         //TODO: fetch nearby trashMobs from cloudkit
-//        fetchMobs()
-        trashMobs = TrashMob.testData
+        fetchMobs()
+//        trashMobs = TrashMob.testData
     }
     
     func addButtonPressed(targetingUser: String, beforePicture: Photo, coordinate2D: CLLocationCoordinate2D) {
@@ -94,7 +94,7 @@ class TrashMobViewModel: ObservableObject {
             queryOperation.recordMatchedBlock = { (returnedRecordID, returnedResult) in
                 switch returnedResult {
                 case .success(let record):
-                    print("nothing")
+                    print("We got record")
                     
                     guard let targetingUser = record["targetingUser"] as? String else { return }
                     let imageAsset = record["beforePicture"] as? CKAsset
@@ -102,11 +102,11 @@ class TrashMobViewModel: ObservableObject {
                     let imageAsset2 = record["afterPicture"] as? CKAsset
                     let imageURL2 = imageAsset2?.fileURL
                     guard let targetDate = record["targetDate"] as? Date else { return }
-                    guard let schedulingDate = record["schedulingDate"] as? Date else { return }
-                    guard let possibleDates = record["possibleDates"] as? [Date] else { return }
-                    guard let scheduledDate = record["scheduledDate"] as? Date else { return }
-                    guard let startedDate = record["startedDate"] as? Date else { return }
-                    guard let completedDate = record["completedDate"] as? Date else { return }
+                    let schedulingDate = record["schedulingDate"] as? Date
+                    let possibleDates = record["possibleDates"] as? [Date]
+                    let scheduledDate = record["scheduledDate"] as? Date
+                    let startedDate = record["startedDate"] as? Date
+                    let completedDate = record["completedDate"] as? Date
                     guard let coordinate = record["coordinate"] as? CLLocation else { return }
                     
                     returnedMobs.append(TrashMob(
