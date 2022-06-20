@@ -61,21 +61,21 @@ class UserViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     
-    func getCurrentUserName() {
-        CloudKitUtility.discoverUserIdentity()
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] completion in
-                switch completion {
-                case .finished:
-                    break
-                case .failure(let error):
-                    self?.error = error.localizedDescription
-                }
-            } receiveValue: { [weak self] returnedName in
-                self?.userName = returnedName
-            }
-            .store(in: &cancellables)
-    }
+//    func getCurrentUserName() {
+//        CloudKitUtility.discoverUserIdentity()
+//            .receive(on: DispatchQueue.main)
+//            .sink { [weak self] completion in
+//                switch completion {
+//                case .finished:
+//                    break
+//                case .failure(let error):
+//                    self?.error = error.localizedDescription
+//                }
+//            } receiveValue: { [weak self] returnedName in
+//                self?.userName = returnedName
+//            }
+//            .store(in: &cancellables)
+//    }
     
     func fetchiCloudUserID() {
         CKContainer.default().fetchUserRecordID { [weak self] returnedID, returnedError in

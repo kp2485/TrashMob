@@ -28,7 +28,7 @@ class TrashMobViewModel: ObservableObject {
     
     init() {
         //TODO: fetch nearby trashMobs from cloudkit
-        //        fetchMobs()
+//        fetchMobs()
         trashMobs = TrashMob.testData
     }
     
@@ -181,12 +181,12 @@ class TrashMobViewModel: ObservableObject {
         CKContainer.default().publicCloudDatabase.add(operation)
     }
     
-    //TODO: Implement update mob with record
-    //    func updateMob(mob: TrashMob) {
-    //        let record = mob.record
-    //        record["name"] = "NEW NAME!!!"
-    //        saveMob(record: record)
-    //    }
+//    TODO: Implement update mob with record
+        func updateSchedulingDate(mob: TrashMob) {
+            let record = mob.record
+            record!["schedulingDate"] = Date.now
+            saveMob(record: record!)
+        }
     
 //    func deleteMob(indexSet: IndexSet) {
 //        guard let index =  indexSet.first else { return }
