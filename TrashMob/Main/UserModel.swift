@@ -10,6 +10,7 @@ import Foundation
 struct User: Identifiable, Hashable {
     var id = UUID()
     var userName: String?
+    var email: String?
     var joinDate: Date = Date()
     var premiumStatus: Bool = true
     var mobsTargeted: Set<UUID> = []

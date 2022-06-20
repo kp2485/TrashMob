@@ -13,6 +13,7 @@ import Combine
 class UserViewModel: ObservableObject {
     
     @Published var user: User?
+    @Published var email: String?
     @Published var permissionStatus: Bool = false
     @Published var isSignedIntoiCloud: Bool = false
     @Published var error: String = ""
@@ -89,6 +90,9 @@ class UserViewModel: ObservableObject {
             DispatchQueue.main.async {
                 if let name = returnedIdentity?.nameComponents?.givenName {
                     self?.userName = name
+                }
+                if let email = returnedIdentity?.lookupInfo?.emailAddress{
+                    self?.email = email
                 }
             }
         }
