@@ -174,7 +174,6 @@ class TrashMobViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self?.trashMobs = returnedMobs
                 }
-                
             }
         } else {
             queryOperation.queryCompletionBlock = { [weak self] (returnedCursor, returnedError) in
@@ -184,7 +183,6 @@ class TrashMobViewModel: ObservableObject {
                 }
             }
         }
-        
         addOperation(operation: queryOperation)
     }
     
@@ -197,6 +195,26 @@ class TrashMobViewModel: ObservableObject {
         let record = mob.record
         record!["schedulingDate"] = Date.now
         saveMob(record: record!)
+    }
+    
+    func updateScheduledDate(mob: TrashMob) {
+        let record = mob.record
+        record!["scheduledDate"] = mob.scheduledDate
+    }
+    
+    func updateActiveDate(mob: TrashMob) {
+        let record = mob.record
+        record!["startedDate"] = mob.startedDate
+    }
+    
+    func updateCompletedDate(mob: TrashMob) {
+        let record = mob.record
+        record!["completedDate"] = mob.completedDate
+    }
+    
+    func updateLoves(mob: TrashMob) {
+        let record = mob.record
+        
     }
     
     //    func deleteMob(indexSet: IndexSet) {

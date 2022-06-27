@@ -31,11 +31,8 @@ struct TrashMobApp: App {
 
     var body: some Scene {
         WindowGroup {
-            LoginView()
-//            SplashView()
-//            TabsView()
-//            TrashMobFullscreenView(referenceDate: Calendar.current.date(byAdding: .day, value: 7, to: Date())!)
-//            TakePictureView()
+//            LoginView()
+            SplashView()
 //            CameraView()
 //            MainView()
 //            CloudKitPushNotifications()
