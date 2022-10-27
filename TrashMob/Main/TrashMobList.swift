@@ -27,19 +27,8 @@ struct TrashMobList: View {
                 } label: {
                     rowView(trashMob: trashMob)
                 }
-                
             }
-            
-            
-            //                        HStack {
-            //                            Spacer()
-            //                            Text("See more...")
-            //                            Spacer()
-            //                        }
         }
-//        .onAppear(perform: {
-//            UITableView.appearance().contentInset.top = -15
-//        })
         .sheet(isPresented: $isShowingDetails) {
             TrashMobFullscreenView(user: User.testData[0])
         }
@@ -100,7 +89,7 @@ extension TrashMobList {
                 .minimumScaleFactor(0.5)
                 
                 HStack {
-                    Text("Initiated by \(trashMob.targetingUser)")
+                    Text("Initiated by \(trashMob.targetingUser.recordName)")
                         .font(.caption)
                     Spacer()
                 }
@@ -113,8 +102,6 @@ extension TrashMobList {
                     .fontWeight(.light)
                     .lineLimit(1)
             }
-            
-
         }
     }
 }

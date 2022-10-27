@@ -24,6 +24,7 @@ struct TrashMob: Identifiable, Hashable {
     var reported: Bool?
     var startedDate: Date?
     var completedDate: Date?
+// MARK: FIX ME :)
     var duration: TimeInterval {
         3600.0
     }

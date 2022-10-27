@@ -41,7 +41,7 @@ struct ContentView: View {
                             
                             Spacer()
                             
-                            Text ("TrashMob")
+                            Text ("Trash Mob")
                                 .font(.largeTitle)
                                 .lineLimit(1)
                                 .minimumScaleFactor(0.5)

@@ -214,7 +214,7 @@ class TrashMobViewModel: ObservableObject {
     
     func updateLoves(mob: TrashMob) {
         let record = mob.record
-        
+//        record!["loves"] = mob.loves
     }
     
     //    func deleteMob(indexSet: IndexSet) {

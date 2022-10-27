@@ -49,7 +49,7 @@ struct User: Identifiable, Hashable {
         User(id: CKRecord.ID(), userName: "Ashlei", premiumStatus: true)
     ]
         
-    static func convertUser(from record: CKRecord) -> User {
+    public static func convertUser(from record: CKRecord) -> User {
         
         let userName = record["userName"] as? String
         let email = record["email"] as? String

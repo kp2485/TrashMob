@@ -19,6 +19,7 @@
 		D65937BF283D5C4200E50F45 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937BE283D5C4200E50F45 /* UserModel.swift */; };
 		D65937C3284011AC00E50F45 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937C2284011AC00E50F45 /* CameraViewModel.swift */; };
 		D65937C52840124300E50F45 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937C42840124300E50F45 /* CameraView.swift */; };
+		D6668D95290AC5C000C256C5 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6668D94290AC5C000C256C5 /* extensions.swift */; };
 		D696D893282C23E7008B71ED /* CloudKitPushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D892282C23E7008B71ED /* CloudKitPushNotification.swift */; };
 		D696D8B6282DA1A2008B71ED /* CameraService+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8B5282DA1A2008B71ED /* CameraService+Enums.swift */; };
 		D696D8B8282DA1FC008B71ED /* CameraService+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8B7282DA1FC008B71ED /* CameraService+Extensions.swift */; };
@@ -66,6 +67,7 @@
 		D65937BE283D5C4200E50F45 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D65937C2284011AC00E50F45 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		D65937C42840124300E50F45 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		D6668D94290AC5C000C256C5 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		D696D892282C23E7008B71ED /* CloudKitPushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitPushNotification.swift; sourceTree = "<group>"; };
 		D696D8B5282DA1A2008B71ED /* CameraService+Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraService+Enums.swift"; sourceTree = "<group>"; };
 		D696D8B7282DA1FC008B71ED /* CameraService+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraService+Extensions.swift"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				D65937B0283D5A0900E50F45 /* SplashView.swift */,
 				D65937B2283D5A9800E50F45 /* ContentView.swift */,
+				D6668D94290AC5C000C256C5 /* extensions.swift */,
 				D6A6A127284FD0600012FA55 /* TrashMobList.swift */,
 				D65937B4283D5B0800E50F45 /* MySettings.swift */,
 				D65937B6283D5B5E00E50F45 /* TargetATrashMob.swift */,
@@ -351,6 +354,7 @@
 				D6A6A12A285262AF0012FA55 /* AttendeesButton.swift in Sources */,
 				D696D8C728326951008B71ED /* TrashMobFullscreenView.swift in Sources */,
 				D696D8BC282DA27A008B71ED /* ImageResizer.swift in Sources */,
+				D6668D95290AC5C000C256C5 /* extensions.swift in Sources */,
 				D6A6A1362857976C0012FA55 /* TrashMobMapViewModel.swift in Sources */,
 				D6E9577A284E90E700D19873 /* TrashMobMapAnnotation.swift in Sources */,
 				D65937C52840124300E50F45 /* CameraView.swift in Sources */,
