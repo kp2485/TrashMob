@@ -117,34 +117,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D65937AF283D59E300E50F45 /* Main */ = {
+		D6075C972ABA05A80067AB0F /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				D65937B0283D5A0900E50F45 /* SplashView.swift */,
 				D65937B2283D5A9800E50F45 /* ContentView.swift */,
-				D6668D94290AC5C000C256C5 /* extensions.swift */,
 				D6A6A127284FD0600012FA55 /* TrashMobList.swift */,
-				D65937B4283D5B0800E50F45 /* MySettings.swift */,
 				D65937B6283D5B5E00E50F45 /* TargetATrashMob.swift */,
 				D65937B8283D5BBC00E50F45 /* MapView.swift */,
-				D6E95779284E90E700D19873 /* TrashMobMapAnnotation.swift */,
 				D6A6A13728579C5A0012FA55 /* TrashMobMapView.swift */,
-				D65937BA283D5BE300E50F45 /* MapViewModel.swift */,
-				D6A6A1352857976C0012FA55 /* TrashMobMapViewModel.swift */,
-				D65937BC283D5C1A00E50F45 /* TrashMobModel.swift */,
-				5D0643AD28494CB600CF0C9A /* TrashMobViewModel.swift */,
+				D6E95779284E90E700D19873 /* TrashMobMapAnnotation.swift */,
+				D65937B4283D5B0800E50F45 /* MySettings.swift */,
 				D6A6A13D28610D980012FA55 /* LoginView2.swift */,
-				D65937BE283D5C4200E50F45 /* UserModel.swift */,
+				D6075C992ABA0C4B0067AB0F /* TrashMobFullscreenView */,
+				D6A6A1392857FF240012FA55 /* DatePickerView.swift */,
+				D6668D94290AC5C000C256C5 /* extensions.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D6075C982ABA09360067AB0F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
 				D6A6A13B285A622B0012FA55 /* UserViewModel.swift */,
+				5D0643AD28494CB600CF0C9A /* TrashMobViewModel.swift */,
+				D6A6A1352857976C0012FA55 /* TrashMobMapViewModel.swift */,
+				D65937BA283D5BE300E50F45 /* MapViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D6075C992ABA0C4B0067AB0F /* TrashMobFullscreenView */ = {
+			isa = PBXGroup;
+			children = (
 				D696D8C628326951008B71ED /* TrashMobFullscreenView.swift */,
 				D6A6A131285793600012FA55 /* TrashMobBackgroundImage.swift */,
 				D6F8DA6C28412ABD00DE19F9 /* TrashMobStateBubble.swift */,
-				D6A6A1392857FF240012FA55 /* DatePickerView.swift */,
 				D6F8DA6E28412CAF00DE19F9 /* CountdownBubble.swift */,
-				D6A6A129285262AF0012FA55 /* AttendeesButton.swift */,
 				D6A6A12D28578B5C0012FA55 /* LovesButton.swift */,
 				D6A6A12F285793000012FA55 /* CommentsButton.swift */,
 				D6A6A12B285751310012FA55 /* CommentView.swift */,
+				D6A6A129285262AF0012FA55 /* AttendeesButton.swift */,
+			);
+			path = TrashMobFullscreenView;
+			sourceTree = "<group>";
+		};
+		D6075C9A2ABA13180067AB0F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D65937BC283D5C1A00E50F45 /* TrashMobModel.swift */,
+				D65937BE283D5C4200E50F45 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D65937AF283D59E300E50F45 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D6075C972ABA05A80067AB0F /* Views */,
+				D6075C982ABA09360067AB0F /* ViewModels */,
+				D6075C9A2ABA13180067AB0F /* Models */,
 			);
 			path = Main;
 			sourceTree = "<group>";

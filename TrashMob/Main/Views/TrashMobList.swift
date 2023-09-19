@@ -89,7 +89,7 @@ extension TrashMobList {
                 .minimumScaleFactor(0.5)
                 
                 HStack {
-                    Text("Initiated by \(trashMob.targetingUser.recordName)")
+                    Text("Initiated by \(trashMob.targetingUser)")
                         .font(.caption)
                     Spacer()
                 }

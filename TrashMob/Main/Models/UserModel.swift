@@ -49,6 +49,11 @@ struct User: Identifiable, Hashable {
         User(id: CKRecord.ID(), userName: "Ashlei", premiumStatus: true)
     ]
         
+    public static func getUserName(from record: CKRecord) -> String {
+        let userName = record["userName"] as? String
+        return userName ?? "Anonymous"
+    }
+    
     public static func convertUser(from record: CKRecord) -> User {
         
         let userName = record["userName"] as? String

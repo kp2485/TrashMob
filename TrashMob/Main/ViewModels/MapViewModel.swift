@@ -10,7 +10,7 @@ import MapKit
 final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     private enum MapDetails {
-        static let startingLocation = CLLocationCoordinate2D (latitude: 42.3314, longitude: -83.0458)
+        static let startingLocation = CLLocationCoordinate2D(latitude: 42.3314, longitude: -83.0458)
         static let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
         static let zoomedSpan = MKCoordinateSpan(latitudeDelta: 0.003, longitudeDelta: 0.003)
     }
@@ -18,19 +18,6 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
     @Published var region = MKCoordinateRegion(center: MapDetails.startingLocation, span: MapDetails.defaultSpan)
     
     var locationManager: CLLocationManager?
-    
-    func checkIfLocationServicesIsEnabled() {
-        if CLLocationManager.locationServicesEnabled() {
-            // Initialize locationManager as an optional with best location accuracy
-            locationManager = CLLocationManager()
-            locationManager?.desiredAccuracy = kCLLocationAccuracyBest
-            // Set the delegate and force unwraps it
-            locationManager!.delegate = self
-        } else {
-// FIX
-            print ("Prompt user to change location settings")
-        }
-    }
     
     private func checkLocationAuthorization() {
         // Unwrap Optional
@@ -57,5 +44,17 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
         checkLocationAuthorization()
     }
         
+    func checkIfLocationServicesIsEnabled() {
+        if CLLocationManager.locationServicesEnabled() {
+            // Initialize locationManager as an optional with best location accuracy
+            locationManager = CLLocationManager()
+            locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+            // Set the delegate and force unwraps it
+            locationManager!.delegate = self
+        } else {
+// FIX
+            print ("Prompt user to change location settings")
+        }
+    }
 }
 
