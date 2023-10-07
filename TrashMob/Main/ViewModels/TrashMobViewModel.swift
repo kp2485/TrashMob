@@ -214,7 +214,15 @@ class TrashMobViewModel: ObservableObject {
     
     func updateLoves(mob: TrashMob) {
         let record = mob.record
-//        record!["loves"] = mob.loves
+        record!["loves"] = mob.loves
+    }
+    
+    // TODO: move off test data to CloudKit
+    func getUserName(for userId: CKRecord.ID) -> String {
+        if let user = User.testData.first(where: { $0.id == userId }) {
+            return user.userName ?? "Anonymous"
+        }
+        return "Anonymous"
     }
     
     //    func deleteMob(indexSet: IndexSet) {

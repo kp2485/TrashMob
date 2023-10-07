@@ -66,7 +66,7 @@ struct TargetATrashMob: View {
                         
                         let mapRegion = mapvm.region
                         
-                        print(userViewModel.user?.id)
+                        print(userViewModel.user?.id as Any)
                         vm.addButtonPressed(targetingUser: userViewModel.user?.id ?? CKRecord.ID(), beforePicture: cameraVM.photo ?? Photo(originalData: .init()), coordinate2D: CLLocationCoordinate2D(latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude))
                         
                         needsDismissing.toggle()

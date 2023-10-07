@@ -33,8 +33,10 @@ struct MapView: View {
         // dot color
         .accentColor(Color(.systemPink))
         .onAppear {
-            viewModel.checkIfLocationServicesIsEnabled()
-        }
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+               let window = windowScene.windows.first {
+                viewModel.checkIfLocationServicesIsEnabled(presentationContext: window.rootViewController)
+            }        }
         .sheet(isPresented: $isShowingDetails) {
             TrashMobFullscreenView(user: User.testData[0])
         }

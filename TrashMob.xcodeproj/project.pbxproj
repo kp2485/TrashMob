@@ -20,6 +20,7 @@
 		D65937C3284011AC00E50F45 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937C2284011AC00E50F45 /* CameraViewModel.swift */; };
 		D65937C52840124300E50F45 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65937C42840124300E50F45 /* CameraView.swift */; };
 		D6668D95290AC5C000C256C5 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6668D94290AC5C000C256C5 /* extensions.swift */; };
+		D68EAD3A2AD1D54900B55D52 /* OrganizationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EAD392AD1D54900B55D52 /* OrganizationModel.swift */; };
 		D696D893282C23E7008B71ED /* CloudKitPushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D892282C23E7008B71ED /* CloudKitPushNotification.swift */; };
 		D696D8B6282DA1A2008B71ED /* CameraService+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8B5282DA1A2008B71ED /* CameraService+Enums.swift */; };
 		D696D8B8282DA1FC008B71ED /* CameraService+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696D8B7282DA1FC008B71ED /* CameraService+Extensions.swift */; };
@@ -68,6 +69,7 @@
 		D65937C2284011AC00E50F45 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		D65937C42840124300E50F45 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		D6668D94290AC5C000C256C5 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		D68EAD392AD1D54900B55D52 /* OrganizationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationModel.swift; sourceTree = "<group>"; };
 		D696D892282C23E7008B71ED /* CloudKitPushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitPushNotification.swift; sourceTree = "<group>"; };
 		D696D8B5282DA1A2008B71ED /* CameraService+Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraService+Enums.swift"; sourceTree = "<group>"; };
 		D696D8B7282DA1FC008B71ED /* CameraService+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraService+Extensions.swift"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				D65937BC283D5C1A00E50F45 /* TrashMobModel.swift */,
 				D65937BE283D5C4200E50F45 /* UserModel.swift */,
+				D68EAD392AD1D54900B55D52 /* OrganizationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				D6F9810D28185BD00073088D /* CloudKitCRUDView.swift in Sources */,
 				D6A6A12C285751310012FA55 /* CommentView.swift in Sources */,
 				D696D8B8282DA1FC008B71ED /* CameraService+Extensions.swift in Sources */,
+				D68EAD3A2AD1D54900B55D52 /* OrganizationModel.swift in Sources */,
 				5D0643AE28494CB600CF0C9A /* TrashMobViewModel.swift in Sources */,
 				D6F9810B28172FFA0073088D /* LoginView.swift in Sources */,
 				D65937B1283D5A0900E50F45 /* SplashView.swift in Sources */,
