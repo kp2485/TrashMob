@@ -11,7 +11,8 @@ import CloudKit
 struct Organization: Identifiable, Hashable {
     let id = UUID()
     var name: String
-    var mission: String
+    var mission: String?
+    var picture: URL?
     var coordinate: CLLocation?
     
     var leaders: Set<CKRecord.ID>

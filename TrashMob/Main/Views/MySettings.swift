@@ -21,16 +21,14 @@ struct MySettings: View {
             Form{
                 
                 Section(header: Text("My Profile")) {
-//                    HStack {
-//                        
-//                        Button {
-//                            //  TakePictureView()
-//                            print("Take profile Picture")
-//                        } label: {
-//                            Text("Take Profile Picture")
-//                        }
-//                        
-//                    }
+                    //                    HStack {
+                    //                        Button {
+                    //                            //  TakePictureView()
+                    //                            print("Take profile Picture")
+                    //                        } label: {
+                    //                            Text("Take Profile Picture")
+                    //                        }
+                    //                    }
                     Text("Joined TrashMob: \(Date().addingTimeInterval(-2000000).formatted(.dateTime.month().day().year()))")
                     Text("Targets: \(userViewModel.user?.mobsTargetedCount ?? 0)")
                     Text("Loves: \(userViewModel.user?.mobsLovedCount ?? 0)")
@@ -63,28 +61,20 @@ struct MySettings: View {
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     HStack {
-                        
                         Text ("My Settings")
                             .font(.largeTitle)
                             .lineLimit(1)
                             .minimumScaleFactor(0.5)
                             .frame(maxHeight: .infinity)
-                        
                     }
-                    //                        .background()
                 }
             }
         }
-        
-        
     }
-    
-    
-    
-    struct MySettings_Previews: PreviewProvider {
-        static var previews: some View {
-            MySettings()
-        }
+}
+
+struct MySettings_Previews: PreviewProvider {
+    static var previews: some View {
+        MySettings()
     }
-    
 }
